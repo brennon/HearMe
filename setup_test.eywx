@@ -1,0 +1,2663 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<MainPatch version="6">
+
+  <Patch>
+    <Properties>
+      <PropertySet name="gui-mdi">
+        <Property name="Private.ZoomFactor">1</Property>
+        <Property name="Private.RunLevel">1</Property>
+        <Property name="Private.ScrollPos">3;158</Property>
+      </PropertySet>
+      <PropertySet name="subpatch">
+        <Property name="owner_drawn_block"></Property>
+      </PropertySet>
+    </Properties>
+    <Blocks>
+      <Block active="1" catalog="SEC" class-id="MicroDig" id="21" label="MicroDig_1" log_info="2" run_level="1" sync-in_mode="1">
+        <Properties>
+          <PropertySet name="gui-mdi">
+            <Property name="Appearance.Pos">220;220</Property>
+            <Property name="Private.ZOrder">23</Property>
+            <Property name="Private.ObjID">1</Property>
+            <Property name="Appearance.Size">65;140</Property>
+            <Property name="Appearance.Orientation">1</Property>
+            <Property name="Private.ExportedParams">PAR_CONNECT;PAR_DISCONNECT;PAR_START;PAR_STOP;</Property>
+            <Property name="Private.Selected">0</Property>
+            <Property name="Private.ParamsOrder">kernel::active_status;kernel::active_trigger;kernel::run_level;kernel::sync_in_mode;kernel::log_level;PAR_DEVICE_NAME;PAR_INTERVAL;PAR_CHANNEL_BITMAP;PAR_CONNECT;PAR_DISCONNECT;PAR_START;PAR_STOP;PAR_COMMAND;PAR_BUFFERSIZE</Property>
+            <Property name="Private.FullPath">SARC.SensorUnits.MicroDig</Property>
+            <Property name="DisplaySyncInVisible">0</Property>
+            <Property name="DisplaySyncOutVisible">0</Property>
+          </PropertySet>
+        </Properties>
+        <Parameters>
+          <Parameter catalog="kernel" class-id="string" description="Enter the Name of the serial port you wish to connect to here.&#xA;The serial ports are usually identified with COM1, COM2, COM3, etc.&#xA;If just a number is entered it is assumed it is to be preceeded with COM.&#xA;" design-time="1" enabled="1" id="PAR_DEVICE_NAME" name="Serial Port" run-time="0">
+            <Value>COM9</Value>
+            <Domain/>
+            <Layout/>
+            <InitInfo/>
+          </Parameter>
+          <Parameter catalog="kernel" class-id="int" description="Set the sample period of the MicroDig. Value is in milliseconds.  Valid range is 1 to 16383 ms." design-time="1" enabled="1" id="PAR_INTERVAL" name="Interval" run-time="0">
+            <Value>4</Value>
+            <Domain/>
+            <Layout/>
+            <InitInfo/>
+          </Parameter>
+          <Parameter catalog="kernel" class-id="int" description="An 8 bit bitmap indicating which channels are ON." design-time="1" enabled="1" id="PAR_CHANNEL_BITMAP" name="Channels Bitmap" run-time="1">
+            <Value>3</Value>
+            <Domain/>
+            <Layout/>
+            <InitInfo/>
+          </Parameter>
+          <Parameter catalog="kernel" class-id="trigger" description="Connect to the specified serial port" design-time="0" enabled="1" id="PAR_CONNECT" name="Connect" run-time="1">
+            <Value></Value>
+            <Domain/>
+            <Layout/>
+            <InitInfo/>
+          </Parameter>
+          <Parameter catalog="kernel" class-id="trigger" description="Disconnect from serial port" design-time="1" enabled="1" id="PAR_DISCONNECT" name="Disconnect" run-time="1">
+            <Value></Value>
+            <Domain/>
+            <Layout/>
+            <InitInfo/>
+          </Parameter>
+          <Parameter catalog="kernel" class-id="trigger" description="Start Streaming data from the microDig device" design-time="1" enabled="1" id="PAR_START" name="Start" run-time="1">
+            <Value></Value>
+            <Domain/>
+            <Layout/>
+            <InitInfo/>
+          </Parameter>
+          <Parameter catalog="kernel" class-id="trigger" description="Stop Streaming data from the microDig device" design-time="1" enabled="1" id="PAR_STOP" name="Stop" run-time="1">
+            <Value></Value>
+            <Domain/>
+            <Layout/>
+            <InitInfo/>
+          </Parameter>
+          <Parameter catalog="kernel" class-id="string" description="This parameter should contain the command that the user wants to send to the serial device. &#xA;It should be a series of ASCII values that will be sent directly to the microDig device&#xA;It will be sent to the Device when the parameter changes&#xA;Max size = 32 Bytes&#xA;" design-time="0" enabled="1" id="PAR_COMMAND" name="Command" run-time="1">
+            <Value></Value>
+            <Domain/>
+            <Layout/>
+            <InitInfo/>
+          </Parameter>
+          <Parameter catalog="kernel" class-id="int" description="The size of the output buffer size" design-time="1" enabled="1" id="PAR_BUFFERSIZE" name="Buffer Size" run-time="0">
+            <Value>1</Value>
+            <Domain/>
+            <Layout/>
+            <InitInfo/>
+          </Parameter>
+        </Parameters>
+        <Inputs/>
+        <Outputs>
+          <Output catalog="kernel" class-id="double-matrix" description="This output contains the data received from the microDig Device." id="OUT_PIN1" inherited-id="" inplace-id="" name="Channel 0"/>
+          <Output catalog="kernel" class-id="double-matrix" description="This output contains the data received from the microDig Device." id="OUT_PIN2" inherited-id="" inplace-id="" name="Channel 1"/>
+          <Output catalog="kernel" class-id="double-matrix" description="This output contains the data received from the microDig Device." id="OUT_PIN3" inherited-id="" inplace-id="" name="Channel 2"/>
+          <Output catalog="kernel" class-id="double-matrix" description="This output contains the data received from the microDig Device." id="OUT_PIN4" inherited-id="" inplace-id="" name="Channel 3"/>
+          <Output catalog="kernel" class-id="double-matrix" description="This output contains the data received from the microDig Device." id="OUT_PIN5" inherited-id="" inplace-id="" name="Channel 4"/>
+          <Output catalog="kernel" class-id="double-matrix" description="This output contains the data received from the microDig Device." id="OUT_PIN6" inherited-id="" inplace-id="" name="Channel 5"/>
+          <Output catalog="kernel" class-id="double-matrix" description="This output contains the data received from the microDig Device." id="OUT_PIN7" inherited-id="" inplace-id="" name="Channel 6"/>
+          <Output catalog="kernel" class-id="double-matrix" description="This output contains the data received from the microDig Device." id="OUT_PIN8" inherited-id="" inplace-id="" name="Channel 7"/>
+          <Output catalog="kernel" class-id="int" description="This output contains a byte describing the status of the microDig Device. &#xA;0 = Disconnected, 1 = Connected, 2 = Receiving data, &#xA;3 = still connected but there was some data lost, 4 = some data lost again, etc." id="OUT_STATUS" inherited-id="" inplace-id="" name="Device Status"/>
+        </Outputs>
+        <PrivateData/>
+      </Block>
+      <Block active="1" catalog="kernel" class-id="bang_generator" id="91" label="BangGenerator_1" log_info="2" run_level="1" sync-in_mode="1">
+        <Properties>
+          <PropertySet name="gui-mdi">
+            <Property name="Appearance.Pos">20;220</Property>
+            <Property name="Private.ZOrder">22</Property>
+            <Property name="Private.ObjID">2</Property>
+            <Property name="Appearance.Size">190;30</Property>
+            <Property name="Appearance.Orientation">1</Property>
+            <Property name="Private.ExportedParams"></Property>
+            <Property name="Private.Selected">0</Property>
+            <Property name="Private.ParamsOrder">kernel::active_status;kernel::active_trigger;kernel::run_level;kernel::sync_in_mode;kernel::log_level;bang;patch_start;key_press;key_release;key;system-key_press;system-key_release;systemkey;periodic;period;phase;absolute;absolute_time_instant</Property>
+            <Property name="Private.FullPath">GUI Objects.BangGenerator</Property>
+            <Property name="DisplaySyncInVisible">0</Property>
+            <Property name="DisplaySyncOutVisible">0</Property>
+            <Property name="Appearance.Caption">Connect to Sensor</Property>
+            <Property name="Appearance.Font">MS Shell Dlg; 8.25; </Property>
+            <Property name="Appearance.FontColor">0; 0; 0</Property>
+            <Property name="Appearance.FillColor">240; 240; 240</Property>
+            <Property name="Appearance.Flat">0</Property>
+          </PropertySet>
+        </Properties>
+        <Parameters>
+          <Parameter catalog="kernel" class-id="trigger" description="Bang generator (kernel catalog)" design-time="0" enabled="1" id="bang" name="BangGenerator" run-time="1">
+            <Value></Value>
+            <Domain/>
+            <Layout/>
+            <InitInfo/>
+          </Parameter>
+          <Parameter catalog="kernel" class-id="bool" description="Generates a bang when the patch starts." design-time="1" enabled="1" id="patch_start" name="Patch start" run-time="1">
+            <Value>0</Value>
+            <Domain/>
+            <Layout/>
+            <InitInfo/>
+          </Parameter>
+          <Parameter catalog="kernel" class-id="bool" description="Generates a bang when a key is pressed in the main EyesWeb application." design-time="1" enabled="1" id="key_press" name="KeyPress" run-time="1">
+            <Value>0</Value>
+            <Domain/>
+            <Layout/>
+            <InitInfo/>
+          </Parameter>
+          <Parameter catalog="kernel" class-id="bool" description="Generates a bang when a key is released in the main EyesWeb application." design-time="1" enabled="1" id="key_release" name="KeyRelease" run-time="1">
+            <Value>0</Value>
+            <Domain/>
+            <Layout/>
+            <InitInfo/>
+          </Parameter>
+          <Parameter catalog="kernel" class-id="acceleratorkey" description="Specifies the keyboard code generating the event. It is ignored if KeyPress is set to false." design-time="1" enabled="1" id="key" name="Key" run-time="1">
+            <Value></Value>
+            <Domain/>
+            <Layout/>
+            <InitInfo/>
+          </Parameter>
+          <Parameter catalog="kernel" class-id="bool" description="Generates a bang when a key is pressed even outside the main EyesWeb application." design-time="1" enabled="1" id="system-key_press" name="System KeyPress" run-time="1">
+            <Value>0</Value>
+            <Domain/>
+            <Layout/>
+            <InitInfo/>
+          </Parameter>
+          <Parameter catalog="kernel" class-id="bool" description="Generates a bang when a key is released even outside the main EyesWeb application." design-time="1" enabled="1" id="system-key_release" name="System KeyRelease" run-time="1">
+            <Value>0</Value>
+            <Domain/>
+            <Layout/>
+            <InitInfo/>
+          </Parameter>
+          <Parameter catalog="kernel" class-id="acceleratorkey" description="Specifies the keyboard code generating the event. It is ignored if SystemKeyPress is set to false." design-time="1" enabled="1" id="systemkey" name="SystemKey" run-time="1">
+            <Value></Value>
+            <Domain/>
+            <Layout/>
+            <InitInfo/>
+          </Parameter>
+          <Parameter catalog="kernel" class-id="bool" description="Generates a bang periodically." design-time="1" enabled="1" id="periodic" name="Periodic" run-time="1">
+            <Value>0</Value>
+            <Domain/>
+            <Layout/>
+            <InitInfo/>
+          </Parameter>
+          <Parameter catalog="kernel" class-id="time" description="Period is expressed in 100nanoseconds unit (i.e., 10milliseconds must be specified as 100000)" design-time="1" enabled="1" id="period" name="Period" run-time="1">
+            <Value>10000000</Value>
+            <Domain/>
+            <Layout/>
+            <InitInfo/>
+          </Parameter>
+          <Parameter catalog="kernel" class-id="time" description="Phase" design-time="1" enabled="1" id="phase" name="Phase" run-time="1">
+            <Value>0</Value>
+            <Domain/>
+            <Layout/>
+            <InitInfo/>
+          </Parameter>
+          <Parameter catalog="kernel" class-id="bool" description="Generates a bang at a specified absolute time." design-time="1" enabled="1" id="absolute" name="Absolute time" run-time="1">
+            <Value>0</Value>
+            <Domain/>
+            <Layout/>
+            <InitInfo/>
+          </Parameter>
+          <Parameter catalog="kernel" class-id="time" description="Absolute time" design-time="1" enabled="1" id="absolute_time_instant" name="AbsoluteTime" run-time="1">
+            <Value>0</Value>
+            <Domain/>
+            <Layout/>
+            <InitInfo/>
+          </Parameter>
+        </Parameters>
+        <Inputs/>
+        <Outputs>
+          <Output catalog="kernel" class-id="trigger" description="Bang" id="bang" inherited-id="" inplace-id="" name="Bang"/>
+        </Outputs>
+        <PrivateData/>
+      </Block>
+      <Block active="1" catalog="kernel" class-id="bang_generator" id="161" label="BangGenerator_2" log_info="2" run_level="1" sync-in_mode="1">
+        <Properties>
+          <PropertySet name="gui-mdi">
+            <Property name="Appearance.Pos">20;300</Property>
+            <Property name="Private.ZOrder">21</Property>
+            <Property name="Private.ObjID">3</Property>
+            <Property name="Appearance.Size">190;30</Property>
+            <Property name="Appearance.Orientation">1</Property>
+            <Property name="Private.ExportedParams"></Property>
+            <Property name="Private.Selected">0</Property>
+            <Property name="Private.ParamsOrder">kernel::active_status;kernel::active_trigger;kernel::run_level;kernel::sync_in_mode;kernel::log_level;bang;patch_start;key_press;key_release;key;system-key_press;system-key_release;systemkey;periodic;period;phase;absolute;absolute_time_instant</Property>
+            <Property name="Private.FullPath">GUI Objects.BangGenerator</Property>
+            <Property name="DisplaySyncInVisible">0</Property>
+            <Property name="DisplaySyncOutVisible">0</Property>
+            <Property name="Appearance.Caption">Start Data Streaming from Sensor</Property>
+            <Property name="Appearance.Font">MS Shell Dlg; 8.25; </Property>
+            <Property name="Appearance.FontColor">0; 0; 0</Property>
+            <Property name="Appearance.FillColor">240; 240; 240</Property>
+            <Property name="Appearance.Flat">0</Property>
+          </PropertySet>
+        </Properties>
+        <Parameters>
+          <Parameter catalog="kernel" class-id="trigger" description="Bang generator (kernel catalog)" design-time="0" enabled="1" id="bang" name="BangGenerator" run-time="1">
+            <Value></Value>
+            <Domain/>
+            <Layout/>
+            <InitInfo/>
+          </Parameter>
+          <Parameter catalog="kernel" class-id="bool" description="Generates a bang when the patch starts." design-time="1" enabled="1" id="patch_start" name="Patch start" run-time="1">
+            <Value>0</Value>
+            <Domain/>
+            <Layout/>
+            <InitInfo/>
+          </Parameter>
+          <Parameter catalog="kernel" class-id="bool" description="Generates a bang when a key is pressed in the main EyesWeb application." design-time="1" enabled="1" id="key_press" name="KeyPress" run-time="1">
+            <Value>0</Value>
+            <Domain/>
+            <Layout/>
+            <InitInfo/>
+          </Parameter>
+          <Parameter catalog="kernel" class-id="bool" description="Generates a bang when a key is released in the main EyesWeb application." design-time="1" enabled="1" id="key_release" name="KeyRelease" run-time="1">
+            <Value>0</Value>
+            <Domain/>
+            <Layout/>
+            <InitInfo/>
+          </Parameter>
+          <Parameter catalog="kernel" class-id="acceleratorkey" description="Specifies the keyboard code generating the event. It is ignored if KeyPress is set to false." design-time="1" enabled="1" id="key" name="Key" run-time="1">
+            <Value></Value>
+            <Domain/>
+            <Layout/>
+            <InitInfo/>
+          </Parameter>
+          <Parameter catalog="kernel" class-id="bool" description="Generates a bang when a key is pressed even outside the main EyesWeb application." design-time="1" enabled="1" id="system-key_press" name="System KeyPress" run-time="1">
+            <Value>0</Value>
+            <Domain/>
+            <Layout/>
+            <InitInfo/>
+          </Parameter>
+          <Parameter catalog="kernel" class-id="bool" description="Generates a bang when a key is released even outside the main EyesWeb application." design-time="1" enabled="1" id="system-key_release" name="System KeyRelease" run-time="1">
+            <Value>0</Value>
+            <Domain/>
+            <Layout/>
+            <InitInfo/>
+          </Parameter>
+          <Parameter catalog="kernel" class-id="acceleratorkey" description="Specifies the keyboard code generating the event. It is ignored if SystemKeyPress is set to false." design-time="1" enabled="1" id="systemkey" name="SystemKey" run-time="1">
+            <Value></Value>
+            <Domain/>
+            <Layout/>
+            <InitInfo/>
+          </Parameter>
+          <Parameter catalog="kernel" class-id="bool" description="Generates a bang periodically." design-time="1" enabled="1" id="periodic" name="Periodic" run-time="1">
+            <Value>0</Value>
+            <Domain/>
+            <Layout/>
+            <InitInfo/>
+          </Parameter>
+          <Parameter catalog="kernel" class-id="time" description="Period is expressed in 100nanoseconds unit (i.e., 10milliseconds must be specified as 100000)" design-time="1" enabled="1" id="period" name="Period" run-time="1">
+            <Value>10000000</Value>
+            <Domain/>
+            <Layout/>
+            <InitInfo/>
+          </Parameter>
+          <Parameter catalog="kernel" class-id="time" description="Phase" design-time="1" enabled="1" id="phase" name="Phase" run-time="1">
+            <Value>0</Value>
+            <Domain/>
+            <Layout/>
+            <InitInfo/>
+          </Parameter>
+          <Parameter catalog="kernel" class-id="bool" description="Generates a bang at a specified absolute time." design-time="1" enabled="1" id="absolute" name="Absolute time" run-time="1">
+            <Value>0</Value>
+            <Domain/>
+            <Layout/>
+            <InitInfo/>
+          </Parameter>
+          <Parameter catalog="kernel" class-id="time" description="Absolute time" design-time="1" enabled="1" id="absolute_time_instant" name="AbsoluteTime" run-time="1">
+            <Value>0</Value>
+            <Domain/>
+            <Layout/>
+            <InitInfo/>
+          </Parameter>
+        </Parameters>
+        <Inputs/>
+        <Outputs>
+          <Output catalog="kernel" class-id="trigger" description="Bang" id="bang" inherited-id="" inplace-id="" name="Bang"/>
+        </Outputs>
+        <PrivateData/>
+      </Block>
+      <Block active="1" catalog="base" class-id="GetItem" id="231" label="MatrixGetItem_1" log_info="2" run_level="1" sync-in_mode="1">
+        <Properties>
+          <PropertySet name="gui-mdi">
+            <Property name="Appearance.Pos">300;220</Property>
+            <Property name="Private.ZOrder">20</Property>
+            <Property name="Private.ObjID">4</Property>
+            <Property name="Appearance.Size">70;69</Property>
+            <Property name="Appearance.Orientation">1</Property>
+            <Property name="Private.ExportedParams"></Property>
+            <Property name="Private.Selected">0</Property>
+            <Property name="Private.ParamsOrder">kernel::active_status;kernel::active_trigger;kernel::run_level;kernel::sync_in_mode;kernel::log_level;RowNumber;ColNumber;Type</Property>
+            <Property name="Private.FullPath">Math.Matrix.Operations.MatrixGetItem</Property>
+            <Property name="DisplaySyncInVisible">0</Property>
+            <Property name="DisplaySyncOutVisible">0</Property>
+          </PropertySet>
+        </Properties>
+        <Parameters>
+          <Parameter catalog="kernel" class-id="int" description="position in row number of the Item to extract" design-time="1" enabled="1" id="RowNumber" name="Row Index" run-time="1">
+            <Value>0</Value>
+            <Domain catalog="kernel" class-id="int-domain">0;1;0;0</Domain>
+            <Layout/>
+            <InitInfo/>
+          </Parameter>
+          <Parameter catalog="kernel" class-id="int" description="position in column number of the Item to extract" design-time="1" enabled="1" id="ColNumber" name="Column Index" run-time="1">
+            <Value>0</Value>
+            <Domain catalog="kernel" class-id="int-domain">0;1;0;0</Domain>
+            <Layout/>
+            <InitInfo/>
+          </Parameter>
+          <Parameter catalog="kernel" class-id="int" description="Domain" design-time="1" enabled="1" id="Type" name="Domain" run-time="0">
+            <Value>0</Value>
+            <Domain catalog="kernel" class-id="int-domain">0;1;2;2</Domain>
+            <Layout catalog="kernel" class-id="combo">Double;Int</Layout>
+            <InitInfo/>
+          </Parameter>
+        </Parameters>
+        <Inputs>
+          <Input catalog="kernel" class-id="double-matrix" description="Input GetItem" id="InputMatrix" name="Input GetItem" read-write="0" required_for_execution="1" required_for_initialization="1">
+            <RequiredInterfaces/>
+          </Input>
+        </Inputs>
+        <Outputs>
+          <Output catalog="kernel" class-id="double" description="Output GetItem" id="OutputItem" inherited-id="" inplace-id="" name="Output GetItem"/>
+        </Outputs>
+        <PrivateData/>
+      </Block>
+      <Block active="1" catalog="base" class-id="GetItem" id="286" label="MatrixGetItem_2" log_info="2" run_level="1" sync-in_mode="1">
+        <Properties>
+          <PropertySet name="gui-mdi">
+            <Property name="Appearance.Pos">300;290</Property>
+            <Property name="Private.ZOrder">19</Property>
+            <Property name="Private.ObjID">5</Property>
+            <Property name="Appearance.Size">70;69</Property>
+            <Property name="Appearance.Orientation">1</Property>
+            <Property name="Private.ExportedParams"></Property>
+            <Property name="Private.Selected">0</Property>
+            <Property name="Private.ParamsOrder">kernel::active_status;kernel::active_trigger;kernel::run_level;kernel::sync_in_mode;kernel::log_level;RowNumber;ColNumber;Type</Property>
+            <Property name="Private.FullPath">Math.Matrix.Operations.MatrixGetItem</Property>
+            <Property name="DisplaySyncInVisible">0</Property>
+            <Property name="DisplaySyncOutVisible">0</Property>
+          </PropertySet>
+        </Properties>
+        <Parameters>
+          <Parameter catalog="kernel" class-id="int" description="position in row number of the Item to extract" design-time="1" enabled="1" id="RowNumber" name="Row Index" run-time="1">
+            <Value>0</Value>
+            <Domain catalog="kernel" class-id="int-domain">0;1;0;0</Domain>
+            <Layout/>
+            <InitInfo/>
+          </Parameter>
+          <Parameter catalog="kernel" class-id="int" description="position in column number of the Item to extract" design-time="1" enabled="1" id="ColNumber" name="Column Index" run-time="1">
+            <Value>0</Value>
+            <Domain catalog="kernel" class-id="int-domain">0;1;0;0</Domain>
+            <Layout/>
+            <InitInfo/>
+          </Parameter>
+          <Parameter catalog="kernel" class-id="int" description="Domain" design-time="1" enabled="1" id="Type" name="Domain" run-time="0">
+            <Value>0</Value>
+            <Domain catalog="kernel" class-id="int-domain">0;1;2;2</Domain>
+            <Layout catalog="kernel" class-id="combo">Double;Int</Layout>
+            <InitInfo/>
+          </Parameter>
+        </Parameters>
+        <Inputs>
+          <Input catalog="kernel" class-id="double-matrix" description="Input GetItem" id="InputMatrix" name="Input GetItem" read-write="0" required_for_execution="1" required_for_initialization="1">
+            <RequiredInterfaces/>
+          </Input>
+        </Inputs>
+        <Outputs>
+          <Output catalog="kernel" class-id="double" description="Output GetItem" id="OutputItem" inherited-id="" inplace-id="" name="Output GetItem"/>
+        </Outputs>
+        <PrivateData/>
+      </Block>
+      <Block active="1" catalog="kernel" class-id="bang_generator" id="341" label="BangGenerator_32" log_info="2" run_level="1" sync-in_mode="1">
+        <Properties>
+          <PropertySet name="gui-mdi">
+            <Property name="Appearance.Pos">20;340</Property>
+            <Property name="Private.ZOrder">18</Property>
+            <Property name="Private.ObjID">6</Property>
+            <Property name="Appearance.Size">190;30</Property>
+            <Property name="Appearance.Orientation">1</Property>
+            <Property name="Private.ExportedParams"></Property>
+            <Property name="Private.Selected">0</Property>
+            <Property name="Private.ParamsOrder">kernel::active_status;kernel::active_trigger;kernel::run_level;kernel::sync_in_mode;kernel::log_level;bang;patch_start;key_press;key_release;key;system-key_press;system-key_release;systemkey;periodic;period;phase;absolute;absolute_time_instant</Property>
+            <Property name="Private.FullPath">GUI Objects.BangGenerator</Property>
+            <Property name="DisplaySyncInVisible">0</Property>
+            <Property name="DisplaySyncOutVisible">0</Property>
+            <Property name="Appearance.Caption">Stop Data Streaming from Sensor</Property>
+            <Property name="Appearance.Font">MS Shell Dlg; 8.25; </Property>
+            <Property name="Appearance.FontColor">0; 0; 0</Property>
+            <Property name="Appearance.FillColor">240; 240; 240</Property>
+            <Property name="Appearance.Flat">0</Property>
+          </PropertySet>
+        </Properties>
+        <Parameters>
+          <Parameter catalog="kernel" class-id="trigger" description="Bang generator (kernel catalog)" design-time="0" enabled="1" id="bang" name="BangGenerator" run-time="1">
+            <Value></Value>
+            <Domain/>
+            <Layout/>
+            <InitInfo/>
+          </Parameter>
+          <Parameter catalog="kernel" class-id="bool" description="Generates a bang when the patch starts." design-time="1" enabled="1" id="patch_start" name="Patch start" run-time="1">
+            <Value>0</Value>
+            <Domain/>
+            <Layout/>
+            <InitInfo/>
+          </Parameter>
+          <Parameter catalog="kernel" class-id="bool" description="Generates a bang when a key is pressed in the main EyesWeb application." design-time="1" enabled="1" id="key_press" name="KeyPress" run-time="1">
+            <Value>0</Value>
+            <Domain/>
+            <Layout/>
+            <InitInfo/>
+          </Parameter>
+          <Parameter catalog="kernel" class-id="bool" description="Generates a bang when a key is released in the main EyesWeb application." design-time="1" enabled="1" id="key_release" name="KeyRelease" run-time="1">
+            <Value>0</Value>
+            <Domain/>
+            <Layout/>
+            <InitInfo/>
+          </Parameter>
+          <Parameter catalog="kernel" class-id="acceleratorkey" description="Specifies the keyboard code generating the event. It is ignored if KeyPress is set to false." design-time="1" enabled="1" id="key" name="Key" run-time="1">
+            <Value></Value>
+            <Domain/>
+            <Layout/>
+            <InitInfo/>
+          </Parameter>
+          <Parameter catalog="kernel" class-id="bool" description="Generates a bang when a key is pressed even outside the main EyesWeb application." design-time="1" enabled="1" id="system-key_press" name="System KeyPress" run-time="1">
+            <Value>0</Value>
+            <Domain/>
+            <Layout/>
+            <InitInfo/>
+          </Parameter>
+          <Parameter catalog="kernel" class-id="bool" description="Generates a bang when a key is released even outside the main EyesWeb application." design-time="1" enabled="1" id="system-key_release" name="System KeyRelease" run-time="1">
+            <Value>0</Value>
+            <Domain/>
+            <Layout/>
+            <InitInfo/>
+          </Parameter>
+          <Parameter catalog="kernel" class-id="acceleratorkey" description="Specifies the keyboard code generating the event. It is ignored if SystemKeyPress is set to false." design-time="1" enabled="1" id="systemkey" name="SystemKey" run-time="1">
+            <Value></Value>
+            <Domain/>
+            <Layout/>
+            <InitInfo/>
+          </Parameter>
+          <Parameter catalog="kernel" class-id="bool" description="Generates a bang periodically." design-time="1" enabled="1" id="periodic" name="Periodic" run-time="1">
+            <Value>0</Value>
+            <Domain/>
+            <Layout/>
+            <InitInfo/>
+          </Parameter>
+          <Parameter catalog="kernel" class-id="time" description="Period is expressed in 100nanoseconds unit (i.e., 10milliseconds must be specified as 100000)" design-time="1" enabled="1" id="period" name="Period" run-time="1">
+            <Value>10000000</Value>
+            <Domain/>
+            <Layout/>
+            <InitInfo/>
+          </Parameter>
+          <Parameter catalog="kernel" class-id="time" description="Phase" design-time="1" enabled="1" id="phase" name="Phase" run-time="1">
+            <Value>0</Value>
+            <Domain/>
+            <Layout/>
+            <InitInfo/>
+          </Parameter>
+          <Parameter catalog="kernel" class-id="bool" description="Generates a bang at a specified absolute time." design-time="1" enabled="1" id="absolute" name="Absolute time" run-time="1">
+            <Value>0</Value>
+            <Domain/>
+            <Layout/>
+            <InitInfo/>
+          </Parameter>
+          <Parameter catalog="kernel" class-id="time" description="Absolute time" design-time="1" enabled="1" id="absolute_time_instant" name="AbsoluteTime" run-time="1">
+            <Value>0</Value>
+            <Domain/>
+            <Layout/>
+            <InitInfo/>
+          </Parameter>
+        </Parameters>
+        <Inputs/>
+        <Outputs>
+          <Output catalog="kernel" class-id="trigger" description="Bang" id="bang" inherited-id="" inplace-id="" name="Bang"/>
+        </Outputs>
+        <PrivateData/>
+      </Block>
+      <Block active="1" catalog="kernel" class-id="bang_generator" id="411" label="BangGenerator_33" log_info="2" run_level="1" sync-in_mode="1">
+        <Properties>
+          <PropertySet name="gui-mdi">
+            <Property name="Appearance.Pos">20;260</Property>
+            <Property name="Private.ZOrder">17</Property>
+            <Property name="Private.ObjID">7</Property>
+            <Property name="Appearance.Size">190;30</Property>
+            <Property name="Appearance.Orientation">1</Property>
+            <Property name="Private.ExportedParams"></Property>
+            <Property name="Private.Selected">0</Property>
+            <Property name="Private.ParamsOrder">kernel::active_status;kernel::active_trigger;kernel::run_level;kernel::sync_in_mode;kernel::log_level;bang;patch_start;key_press;key_release;key;system-key_press;system-key_release;systemkey;periodic;period;phase;absolute;absolute_time_instant</Property>
+            <Property name="Private.FullPath">GUI Objects.BangGenerator</Property>
+            <Property name="DisplaySyncInVisible">0</Property>
+            <Property name="DisplaySyncOutVisible">0</Property>
+            <Property name="Appearance.Caption">Disconnect from Sensor</Property>
+            <Property name="Appearance.Font">MS Shell Dlg; 8.25; </Property>
+            <Property name="Appearance.FontColor">0; 0; 0</Property>
+            <Property name="Appearance.FillColor">240; 240; 240</Property>
+            <Property name="Appearance.Flat">0</Property>
+          </PropertySet>
+        </Properties>
+        <Parameters>
+          <Parameter catalog="kernel" class-id="trigger" description="Bang generator (kernel catalog)" design-time="0" enabled="1" id="bang" name="BangGenerator" run-time="1">
+            <Value></Value>
+            <Domain/>
+            <Layout/>
+            <InitInfo/>
+          </Parameter>
+          <Parameter catalog="kernel" class-id="bool" description="Generates a bang when the patch starts." design-time="1" enabled="1" id="patch_start" name="Patch start" run-time="1">
+            <Value>0</Value>
+            <Domain/>
+            <Layout/>
+            <InitInfo/>
+          </Parameter>
+          <Parameter catalog="kernel" class-id="bool" description="Generates a bang when a key is pressed in the main EyesWeb application." design-time="1" enabled="1" id="key_press" name="KeyPress" run-time="1">
+            <Value>0</Value>
+            <Domain/>
+            <Layout/>
+            <InitInfo/>
+          </Parameter>
+          <Parameter catalog="kernel" class-id="bool" description="Generates a bang when a key is released in the main EyesWeb application." design-time="1" enabled="1" id="key_release" name="KeyRelease" run-time="1">
+            <Value>0</Value>
+            <Domain/>
+            <Layout/>
+            <InitInfo/>
+          </Parameter>
+          <Parameter catalog="kernel" class-id="acceleratorkey" description="Specifies the keyboard code generating the event. It is ignored if KeyPress is set to false." design-time="1" enabled="1" id="key" name="Key" run-time="1">
+            <Value></Value>
+            <Domain/>
+            <Layout/>
+            <InitInfo/>
+          </Parameter>
+          <Parameter catalog="kernel" class-id="bool" description="Generates a bang when a key is pressed even outside the main EyesWeb application." design-time="1" enabled="1" id="system-key_press" name="System KeyPress" run-time="1">
+            <Value>0</Value>
+            <Domain/>
+            <Layout/>
+            <InitInfo/>
+          </Parameter>
+          <Parameter catalog="kernel" class-id="bool" description="Generates a bang when a key is released even outside the main EyesWeb application." design-time="1" enabled="1" id="system-key_release" name="System KeyRelease" run-time="1">
+            <Value>0</Value>
+            <Domain/>
+            <Layout/>
+            <InitInfo/>
+          </Parameter>
+          <Parameter catalog="kernel" class-id="acceleratorkey" description="Specifies the keyboard code generating the event. It is ignored if SystemKeyPress is set to false." design-time="1" enabled="1" id="systemkey" name="SystemKey" run-time="1">
+            <Value></Value>
+            <Domain/>
+            <Layout/>
+            <InitInfo/>
+          </Parameter>
+          <Parameter catalog="kernel" class-id="bool" description="Generates a bang periodically." design-time="1" enabled="1" id="periodic" name="Periodic" run-time="1">
+            <Value>0</Value>
+            <Domain/>
+            <Layout/>
+            <InitInfo/>
+          </Parameter>
+          <Parameter catalog="kernel" class-id="time" description="Period is expressed in 100nanoseconds unit (i.e., 10milliseconds must be specified as 100000)" design-time="1" enabled="1" id="period" name="Period" run-time="1">
+            <Value>10000000</Value>
+            <Domain/>
+            <Layout/>
+            <InitInfo/>
+          </Parameter>
+          <Parameter catalog="kernel" class-id="time" description="Phase" design-time="1" enabled="1" id="phase" name="Phase" run-time="1">
+            <Value>0</Value>
+            <Domain/>
+            <Layout/>
+            <InitInfo/>
+          </Parameter>
+          <Parameter catalog="kernel" class-id="bool" description="Generates a bang at a specified absolute time." design-time="1" enabled="1" id="absolute" name="Absolute time" run-time="1">
+            <Value>0</Value>
+            <Domain/>
+            <Layout/>
+            <InitInfo/>
+          </Parameter>
+          <Parameter catalog="kernel" class-id="time" description="Absolute time" design-time="1" enabled="1" id="absolute_time_instant" name="AbsoluteTime" run-time="1">
+            <Value>0</Value>
+            <Domain/>
+            <Layout/>
+            <InitInfo/>
+          </Parameter>
+        </Parameters>
+        <Inputs/>
+        <Outputs>
+          <Output catalog="kernel" class-id="trigger" description="Bang" id="bang" inherited-id="" inplace-id="" name="Bang"/>
+        </Outputs>
+        <PrivateData/>
+      </Block>
+      <Block active="1" catalog="system" class-id="matrix_value_vs_index_graph_display" id="481" label="MatrixValueVsIndexDisplay_1" log_info="2" run_level="1" sync-in_mode="1" window_docked="1" window_fit_mode="1" window_full_screen="0" window_full_screen_monitor_index="0" window_horizontal_scroll_pos="0" window_keep_aspect_ratio="0" window_rect_height="38" window_rect_width="160" window_rect_x="160" window_rect_y="1013" window_refresh_rate_max_frequency="25" window_refresh_rate_min_interval="400000" window_refresh_rate_mode="0" window_title="EDA" window_title_bar_visible="1" window_vertical_scroll_pos="0" window_zoom="0.35037878155708313">
+        <Properties>
+          <PropertySet name="gui-mdi">
+            <Property name="Appearance.Pos">470;220</Property>
+            <Property name="Private.ZOrder">13</Property>
+            <Property name="Private.ObjID">8</Property>
+            <Property name="Appearance.Size">160;100</Property>
+            <Property name="Appearance.Orientation">1</Property>
+            <Property name="Private.ExportedParams"></Property>
+            <Property name="Private.Selected">0</Property>
+            <Property name="Private.ParamsOrder">kernel::active_status;kernel::active_trigger;kernel::run_level;kernel::sync_in_mode;kernel::log_level;double_buffering;reset;canvas_fill_color;plot_bgnd_fill_color;plot_border_line_style;plot_border_line_color;plot_border_line_thickness;legend_pos;legend_border_line_style;legend_border_line_color;legend_border_line_thickness;legend_labels_font;legend_labels_font_color;x_axis_orientation;x_axis_label;x_axis_label_pos;x_axis_label_font;x_axis_label_font_color;x_axis_tick_step;x_axis_tick_labels_pos;x_axis_tick_labels_font;x_axis_tick_labels_font_color;x_axis_tick_line_line_style;x_axis_tick_line_line_color;x_axis_tick_line_line_thickness;y_axis_range_min;y_axis_range_max;y_axis_range_mode;y_axis_orientation;y_axis_label;y_axis_label_pos;y_axis_label_font;y_axis_label_font_color;y_axis_tick_step;y_axis_tick_labels_pos;y_axis_tick_labels_font;y_axis_tick_labels_font_color;y_axis_tick_line_line_style;y_axis_tick_line_line_color;y_axis_tick_line_line_thickness;sample_mode;y_axis_scale;num_plots;plot_1_label;plot_1_line_style;plot_1_line_color;plot_1_line_thickness;plot_1_no_autoscale;kernel::window_title;kernel::window_rect_x;kernel::window_rect_y;kernel::window_rect_width;kernel::window_rect_height;kernel::window_docked;kernel::window_full_screen;kernel::window_full_screen_monitor_index;kernel::window_zoom;kernel::window_keep_aspect_ratio;kernel::window_horizontal_scroll_pos;kernel::window_vertical_scroll_pos;kernel::window_title_visible;kernel::window_refresh_rate_mode;kernel::window_refresh_rate_min_interval;kernel::window_refresh_rate_max_frequency;kernel::fit_mode</Property>
+            <Property name="Private.FullPath">Math.Matrix.Graphs.MatrixValueVsIndexDisplay</Property>
+            <Property name="DisplaySyncInVisible">0</Property>
+            <Property name="DisplaySyncOutVisible">0</Property>
+          </PropertySet>
+        </Properties>
+        <Parameters>
+          <Parameter catalog="kernel" class-id="bool" description="Render the graph using a back buffer to avoid flickering, paying a slight performance cost" design-time="1" enabled="1" id="double_buffering" name="Double Buffering" run-time="1">
+            <Value>1</Value>
+            <Domain/>
+            <Layout/>
+            <InitInfo/>
+          </Parameter>
+          <Parameter catalog="kernel" class-id="trigger" description="Reset graph, clearing plot data and setting axes to the initial state" design-time="1" enabled="1" id="reset" name="Reset" run-time="1">
+            <Value></Value>
+            <Domain/>
+            <Layout/>
+            <InitInfo/>
+          </Parameter>
+          <Parameter catalog="kernel" class-id="rgbcolor" description="Determine the color used to fill the Canvas" design-time="1" enabled="1" id="canvas_fill_color" name="Canvas Fill Color" run-time="1">
+            <Value>rgb: 0;0;0</Value>
+            <Domain/>
+            <Layout/>
+            <InitInfo/>
+          </Parameter>
+          <Parameter catalog="kernel" class-id="rgbcolor" description="Determine the color used to fill the Plot Background" design-time="1" enabled="1" id="plot_bgnd_fill_color" name="Plot Background Fill Color" run-time="1">
+            <Value>rgb: 0;0;0</Value>
+            <Domain/>
+            <Layout/>
+            <InitInfo/>
+          </Parameter>
+          <Parameter catalog="kernel" class-id="int" description="Control how the Plot Border line will be painted:&#xA; - Null: the line will not be painted&#xA; - Solid: the line is solid&#xA; - Dash: the line is dashed&#xA; - Dot: the line is dotted&#xA; - DashDot: the line has alternating dashes and dots&#xA; - DashDotDot: the line has alternating dashes and double dots&#xA;NOTE: if the line thickness is > 1 then the line will be solid (this is due to a Win32 GDI limitation)" design-time="1" enabled="1" id="plot_border_line_style" name="Plot Border Line Style" run-time="1">
+            <Value>0</Value>
+            <Domain catalog="kernel" class-id="int-domain">0;1;6;2</Domain>
+            <Layout catalog="kernel" class-id="combo">Null;Solid;Dash;Dot;DashDot;DashDotDot</Layout>
+            <InitInfo/>
+          </Parameter>
+          <Parameter catalog="kernel" class-id="rgbcolor" description="Determine the color used to paint the Plot Border line" design-time="1" enabled="1" id="plot_border_line_color" name="Plot Border Line Color" run-time="1">
+            <Value>rgb: 0;0.40000000000000002;0</Value>
+            <Domain/>
+            <Layout/>
+            <InitInfo/>
+          </Parameter>
+          <Parameter catalog="kernel" class-id="int" description="Specifies the width of the Plot Border line, in logical units.&#xA;NOTE: if the line thickness is > 1 then the line will be solid (this is due to a Win32 GDI limitation)" design-time="1" enabled="1" id="plot_border_line_thickness" name="Plot Border Line Thickness" run-time="1">
+            <Value>1</Value>
+            <Domain catalog="kernel" class-id="int-domain">1;1;0;0</Domain>
+            <Layout/>
+            <InitInfo/>
+          </Parameter>
+          <Parameter catalog="kernel" class-id="int" description="Set the legend position around the plot area" design-time="1" enabled="1" id="legend_pos" name="Legend Position" run-time="1">
+            <Value>0</Value>
+            <Domain catalog="kernel" class-id="int-domain">0;1;5;2</Domain>
+            <Layout catalog="kernel" class-id="combo">No Legend;Left;Right;Top;Bottom</Layout>
+            <InitInfo/>
+          </Parameter>
+          <Parameter catalog="kernel" class-id="int" description="Control how the Legend Border line will be painted:&#xA; - Null: the line will not be painted&#xA; - Solid: the line is solid&#xA; - Dash: the line is dashed&#xA; - Dot: the line is dotted&#xA; - DashDot: the line has alternating dashes and dots&#xA; - DashDotDot: the line has alternating dashes and double dots&#xA;NOTE: if the line thickness is > 1 then the line will be solid (this is due to a Win32 GDI limitation)" design-time="1" enabled="1" id="legend_border_line_style" name="Legend Border Line Style" run-time="1">
+            <Value>0</Value>
+            <Domain catalog="kernel" class-id="int-domain">0;1;6;2</Domain>
+            <Layout catalog="kernel" class-id="combo">Null;Solid;Dash;Dot;DashDot;DashDotDot</Layout>
+            <InitInfo/>
+          </Parameter>
+          <Parameter catalog="kernel" class-id="rgbcolor" description="Determine the color used to paint the Legend Border line" design-time="1" enabled="1" id="legend_border_line_color" name="Legend Border Line Color" run-time="1">
+            <Value>rgb: 0.5;0.5;0.5</Value>
+            <Domain/>
+            <Layout/>
+            <InitInfo/>
+          </Parameter>
+          <Parameter catalog="kernel" class-id="int" description="Specifies the width of the Legend Border line, in logical units.&#xA;NOTE: if the line thickness is > 1 then the line will be solid (this is due to a Win32 GDI limitation)" design-time="1" enabled="1" id="legend_border_line_thickness" name="Legend Border Line Thickness" run-time="1">
+            <Value>1</Value>
+            <Domain catalog="kernel" class-id="int-domain">1;1;0;0</Domain>
+            <Layout/>
+            <InitInfo/>
+          </Parameter>
+          <Parameter catalog="kernel" class-id="font" description="Specify the font used to draw the Legend Labels" design-time="1" enabled="1" id="legend_labels_font" name="Legend Labels Font" run-time="1">
+            <Value>Times New Roman;-12;0;0;400</Value>
+            <Domain/>
+            <Layout/>
+            <InitInfo/>
+          </Parameter>
+          <Parameter catalog="kernel" class-id="rgbcolor" description="Determine the color used to draw the Legend Labels font" design-time="1" enabled="1" id="legend_labels_font_color" name="Legend Labels Font Color" run-time="1">
+            <Value>rgb: 1;1;1</Value>
+            <Domain/>
+            <Layout/>
+            <InitInfo/>
+          </Parameter>
+          <Parameter catalog="kernel" class-id="int" description="Determine the the x axis orientation" design-time="1" enabled="1" id="x_axis_orientation" name="X Axis Orientation" run-time="1">
+            <Value>0</Value>
+            <Domain catalog="kernel" class-id="int-domain">0;1;2;2</Domain>
+            <Layout catalog="kernel" class-id="combo">LeftToRight;RightToLeft</Layout>
+            <InitInfo/>
+          </Parameter>
+          <Parameter catalog="kernel" class-id="string" description="The label drawn near the X Axis, leave blank for no label" design-time="1" enabled="1" id="x_axis_label" name="X Axis Label" run-time="1">
+            <Value></Value>
+            <Domain/>
+            <Layout/>
+            <InitInfo/>
+          </Parameter>
+          <Parameter catalog="kernel" class-id="int" description="Set the x axis label position around the plot area" design-time="1" enabled="1" id="x_axis_label_pos" name="X Axis Label Position" run-time="1">
+            <Value>0</Value>
+            <Domain catalog="kernel" class-id="int-domain">0;1;3;2</Domain>
+            <Layout catalog="kernel" class-id="combo">No Label;Top;Bottom</Layout>
+            <InitInfo/>
+          </Parameter>
+          <Parameter catalog="kernel" class-id="font" description="Specify the font used to draw the X Axis Label" design-time="1" enabled="1" id="x_axis_label_font" name="X Axis Label Font" run-time="1">
+            <Value>Times New Roman;-12;0;0;0</Value>
+            <Domain/>
+            <Layout/>
+            <InitInfo/>
+          </Parameter>
+          <Parameter catalog="kernel" class-id="rgbcolor" description="Determine the color used to draw the X Axis Label font" design-time="1" enabled="1" id="x_axis_label_font_color" name="X Axis Label Font Color" run-time="1">
+            <Value>rgb: 0.69999999999999996;0.69999999999999996;0.69999999999999996</Value>
+            <Domain/>
+            <Layout/>
+            <InitInfo/>
+          </Parameter>
+          <Parameter catalog="kernel" class-id="double" description="The step for the x axis tick marks" design-time="1" enabled="1" id="x_axis_tick_step" name="X Axis Tick Step" run-time="1">
+            <Value>0.10000000000000001</Value>
+            <Domain/>
+            <Layout/>
+            <InitInfo/>
+          </Parameter>
+          <Parameter catalog="kernel" class-id="int" description="Set the x axis tick labels position around the plot area" design-time="1" enabled="1" id="x_axis_tick_labels_pos" name="X Axis Tick Labels Position" run-time="1">
+            <Value>0</Value>
+            <Domain catalog="kernel" class-id="int-domain">0;1;3;2</Domain>
+            <Layout catalog="kernel" class-id="combo">No Label;Top;Bottom</Layout>
+            <InitInfo/>
+          </Parameter>
+          <Parameter catalog="kernel" class-id="font" description="Specify the font used to draw the X Axis Tick Labels" design-time="1" enabled="1" id="x_axis_tick_labels_font" name="X Axis Tick Labels Font" run-time="1">
+            <Value>Times New Roman;-12;0;0;0</Value>
+            <Domain/>
+            <Layout/>
+            <InitInfo/>
+          </Parameter>
+          <Parameter catalog="kernel" class-id="rgbcolor" description="Determine the color used to draw the X Axis Tick Labels font" design-time="1" enabled="1" id="x_axis_tick_labels_font_color" name="X Axis Tick Labels Font Color" run-time="1">
+            <Value>rgb: 0.69999999999999996;0.69999999999999996;0.69999999999999996</Value>
+            <Domain/>
+            <Layout/>
+            <InitInfo/>
+          </Parameter>
+          <Parameter catalog="kernel" class-id="int" description="Control how the X Axis Tick Line line will be painted:&#xA; - Null: the line will not be painted&#xA; - Solid: the line is solid&#xA; - Dash: the line is dashed&#xA; - Dot: the line is dotted&#xA; - DashDot: the line has alternating dashes and dots&#xA; - DashDotDot: the line has alternating dashes and double dots&#xA;NOTE: if the line thickness is > 1 then the line will be solid (this is due to a Win32 GDI limitation)" design-time="1" enabled="1" id="x_axis_tick_line_line_style" name="X Axis Tick Line Line Style" run-time="1">
+            <Value>0</Value>
+            <Domain catalog="kernel" class-id="int-domain">0;1;6;2</Domain>
+            <Layout catalog="kernel" class-id="combo">Null;Solid;Dash;Dot;DashDot;DashDotDot</Layout>
+            <InitInfo/>
+          </Parameter>
+          <Parameter catalog="kernel" class-id="rgbcolor" description="Determine the color used to paint the X Axis Tick Line line" design-time="1" enabled="1" id="x_axis_tick_line_line_color" name="X Axis Tick Line Line Color" run-time="1">
+            <Value>rgb: 0;0.40000000000000002;0</Value>
+            <Domain/>
+            <Layout/>
+            <InitInfo/>
+          </Parameter>
+          <Parameter catalog="kernel" class-id="int" description="Specifies the width of the X Axis Tick Line line, in logical units.&#xA;NOTE: if the line thickness is > 1 then the line will be solid (this is due to a Win32 GDI limitation)" design-time="1" enabled="1" id="x_axis_tick_line_line_thickness" name="X Axis Tick Line Line Thickness" run-time="1">
+            <Value>1</Value>
+            <Domain catalog="kernel" class-id="int-domain">1;1;0;0</Domain>
+            <Layout/>
+            <InitInfo/>
+          </Parameter>
+          <Parameter catalog="kernel" class-id="double" description="The minimum value for the y axis" design-time="1" enabled="1" id="y_axis_range_min" name="Y Axis Range Min" run-time="1">
+            <Value>0</Value>
+            <Domain/>
+            <Layout/>
+            <InitInfo/>
+          </Parameter>
+          <Parameter catalog="kernel" class-id="double" description="The maximum value for the y axis" design-time="1" enabled="1" id="y_axis_range_max" name="Y Axis Range Max" run-time="1">
+            <Value>1023</Value>
+            <Domain/>
+            <Layout/>
+            <InitInfo/>
+          </Parameter>
+          <Parameter catalog="kernel" class-id="int" description="Controls the y axis autoscale behaviour" design-time="1" enabled="1" id="y_axis_range_mode" name="Y Axis Range Mode" run-time="1">
+            <Value>0</Value>
+            <Domain catalog="kernel" class-id="int-domain">0;1;3;2</Domain>
+            <Layout catalog="kernel" class-id="combo">Fixed;AutoScale;AutoScaleInc</Layout>
+            <InitInfo/>
+          </Parameter>
+          <Parameter catalog="kernel" class-id="int" description="Determine the the y axis orientation" design-time="1" enabled="1" id="y_axis_orientation" name="Y Axis Orientation" run-time="1">
+            <Value>1</Value>
+            <Domain catalog="kernel" class-id="int-domain">0;1;2;2</Domain>
+            <Layout catalog="kernel" class-id="combo">TopDown;BottomUp</Layout>
+            <InitInfo/>
+          </Parameter>
+          <Parameter catalog="kernel" class-id="string" description="The label drawn near the Y Axis, leave blank for no label" design-time="1" enabled="1" id="y_axis_label" name="Y Axis Label" run-time="1">
+            <Value></Value>
+            <Domain/>
+            <Layout/>
+            <InitInfo/>
+          </Parameter>
+          <Parameter catalog="kernel" class-id="int" description="Set the y axis label position around the plot area" design-time="1" enabled="1" id="y_axis_label_pos" name="Y Axis Label Position" run-time="1">
+            <Value>2</Value>
+            <Domain catalog="kernel" class-id="int-domain">0;1;3;2</Domain>
+            <Layout catalog="kernel" class-id="combo">No Label;Right;Left</Layout>
+            <InitInfo/>
+          </Parameter>
+          <Parameter catalog="kernel" class-id="font" description="Specify the font used to draw the Y Axis Label" design-time="1" enabled="1" id="y_axis_label_font" name="Y Axis Label Font" run-time="1">
+            <Value>Times New Roman;-12;0;0;0</Value>
+            <Domain/>
+            <Layout/>
+            <InitInfo/>
+          </Parameter>
+          <Parameter catalog="kernel" class-id="rgbcolor" description="Determine the color used to draw the Y Axis Label font" design-time="1" enabled="1" id="y_axis_label_font_color" name="Y Axis Label Font Color" run-time="1">
+            <Value>rgb: 0.69999999999999996;0.69999999999999996;0.69999999999999996</Value>
+            <Domain/>
+            <Layout/>
+            <InitInfo/>
+          </Parameter>
+          <Parameter catalog="kernel" class-id="double" description="The step for the y axis tick marks" design-time="1" enabled="1" id="y_axis_tick_step" name="Y Axis Tick Step" run-time="1">
+            <Value>0.10000000000000001</Value>
+            <Domain/>
+            <Layout/>
+            <InitInfo/>
+          </Parameter>
+          <Parameter catalog="kernel" class-id="int" description="Set the y axis tick labels position around the plot area" design-time="1" enabled="1" id="y_axis_tick_labels_pos" name="Y Axis Tick Labels Position" run-time="1">
+            <Value>0</Value>
+            <Domain catalog="kernel" class-id="int-domain">0;1;3;2</Domain>
+            <Layout catalog="kernel" class-id="combo">No Label;Right;Left</Layout>
+            <InitInfo/>
+          </Parameter>
+          <Parameter catalog="kernel" class-id="font" description="Specify the font used to draw the Y Axis Tick Labels" design-time="1" enabled="1" id="y_axis_tick_labels_font" name="Y Axis Tick Labels Font" run-time="1">
+            <Value>Times New Roman;-12;0;0;0</Value>
+            <Domain/>
+            <Layout/>
+            <InitInfo/>
+          </Parameter>
+          <Parameter catalog="kernel" class-id="rgbcolor" description="Determine the color used to draw the Y Axis Tick Labels font" design-time="1" enabled="1" id="y_axis_tick_labels_font_color" name="Y Axis Tick Labels Font Color" run-time="1">
+            <Value>rgb: 0.69999999999999996;0.69999999999999996;0.69999999999999996</Value>
+            <Domain/>
+            <Layout/>
+            <InitInfo/>
+          </Parameter>
+          <Parameter catalog="kernel" class-id="int" description="Control how the Y Axis Tick Line line will be painted:&#xA; - Null: the line will not be painted&#xA; - Solid: the line is solid&#xA; - Dash: the line is dashed&#xA; - Dot: the line is dotted&#xA; - DashDot: the line has alternating dashes and dots&#xA; - DashDotDot: the line has alternating dashes and double dots&#xA;NOTE: if the line thickness is > 1 then the line will be solid (this is due to a Win32 GDI limitation)" design-time="1" enabled="1" id="y_axis_tick_line_line_style" name="Y Axis Tick Line Line Style" run-time="1">
+            <Value>1</Value>
+            <Domain catalog="kernel" class-id="int-domain">0;1;6;2</Domain>
+            <Layout catalog="kernel" class-id="combo">Null;Solid;Dash;Dot;DashDot;DashDotDot</Layout>
+            <InitInfo/>
+          </Parameter>
+          <Parameter catalog="kernel" class-id="rgbcolor" description="Determine the color used to paint the Y Axis Tick Line line" design-time="1" enabled="1" id="y_axis_tick_line_line_color" name="Y Axis Tick Line Line Color" run-time="1">
+            <Value>rgb: 0;0.40000000000000002;0</Value>
+            <Domain/>
+            <Layout/>
+            <InitInfo/>
+          </Parameter>
+          <Parameter catalog="kernel" class-id="int" description="Specifies the width of the Y Axis Tick Line line, in logical units.&#xA;NOTE: if the line thickness is > 1 then the line will be solid (this is due to a Win32 GDI limitation)" design-time="1" enabled="1" id="y_axis_tick_line_line_thickness" name="Y Axis Tick Line Line Thickness" run-time="1">
+            <Value>1</Value>
+            <Domain catalog="kernel" class-id="int-domain">1;1;0;0</Domain>
+            <Layout/>
+            <InitInfo/>
+          </Parameter>
+          <Parameter catalog="kernel" class-id="int" description="Determine how matrix rows and columns are interpreted&#xA;  - By Row: a plot for each row of the matrix&#xA;  - By Column: a plot for each column of the matrix&#xA;  - Automatic: by row or by column, determined by the minimum matrix dimension (ex. rows &lt; columns -> by row)" design-time="1" enabled="1" id="sample_mode" name="Sample Mode" run-time="1">
+            <Value>2</Value>
+            <Domain catalog="kernel" class-id="int-domain">0;1;3;2</Domain>
+            <Layout catalog="kernel" class-id="combo">By Row;By Column;Automatic</Layout>
+            <InitInfo/>
+          </Parameter>
+          <Parameter catalog="kernel" class-id="int" description="Determine the scale of the y axis. Note that when a logarithmic scale is selected, also the axis boundaries and the tick step will be expressed in the same scale" design-time="1" enabled="1" id="y_axis_scale" name="Y Axis Scale" run-time="1">
+            <Value>0</Value>
+            <Domain catalog="kernel" class-id="int-domain">0;1;3;2</Domain>
+            <Layout catalog="kernel" class-id="combo">Linear;10Log10 (dB);20Log10</Layout>
+            <InitInfo/>
+          </Parameter>
+          <Parameter catalog="kernel" class-id="int" description="Number of configured plots. If the input matrix contains more than the specified number of plots these will have default parameters" design-time="1" enabled="1" id="num_plots" name="Number of Plots" run-time="0">
+            <Value>1</Value>
+            <Domain catalog="kernel" class-id="int-domain">1;1;0;0</Domain>
+            <Layout/>
+            <InitInfo/>
+          </Parameter>
+          <Parameter catalog="kernel" class-id="string" description="Plot 1 label" design-time="1" enabled="1" id="plot_1_label" name="Plot 1 Label" run-time="1">
+            <Value>Plot 1</Value>
+            <Domain/>
+            <Layout/>
+            <InitInfo/>
+          </Parameter>
+          <Parameter catalog="kernel" class-id="int" description="Control how the Plot 1 line will be painted:&#xA; - Null: the line will not be painted&#xA; - Solid: the line is solid&#xA; - Dash: the line is dashed&#xA; - Dot: the line is dotted&#xA; - DashDot: the line has alternating dashes and dots&#xA; - DashDotDot: the line has alternating dashes and double dots&#xA;NOTE: if the line thickness is > 1 then the line will be solid (this is due to a Win32 GDI limitation)" design-time="1" enabled="1" id="plot_1_line_style" name="Plot 1 Line Style" run-time="1">
+            <Value>1</Value>
+            <Domain catalog="kernel" class-id="int-domain">0;1;6;2</Domain>
+            <Layout catalog="kernel" class-id="combo">Null;Solid;Dash;Dot;DashDot;DashDotDot</Layout>
+            <InitInfo/>
+          </Parameter>
+          <Parameter catalog="kernel" class-id="rgbcolor" description="Determine the color used to paint the Plot 1 line" design-time="1" enabled="1" id="plot_1_line_color" name="Plot 1 Line Color" run-time="1">
+            <Value>rgb: 0;1;0</Value>
+            <Domain/>
+            <Layout/>
+            <InitInfo/>
+          </Parameter>
+          <Parameter catalog="kernel" class-id="int" description="Specifies the width of the Plot 1 line, in logical units.&#xA;NOTE: if the line thickness is > 1 then the line will be solid (this is due to a Win32 GDI limitation)" design-time="1" enabled="1" id="plot_1_line_thickness" name="Plot 1 Line Thickness" run-time="1">
+            <Value>2</Value>
+            <Domain catalog="kernel" class-id="int-domain">1;1;0;0</Domain>
+            <Layout/>
+            <InitInfo/>
+          </Parameter>
+          <Parameter catalog="kernel" class-id="bool" description="Determine if Plot 1 is excluded from autoscale or not" design-time="1" enabled="1" id="plot_1_no_autoscale" name="Plot 1 No Autoscale" run-time="1">
+            <Value>1</Value>
+            <Domain/>
+            <Layout/>
+            <InitInfo/>
+          </Parameter>
+        </Parameters>
+        <Inputs>
+          <Input catalog="kernel" class-id="double-matrix" description="The input matrix. Its entries will be drawn in a graph according different criteria" id="input" name="Input Matrix" read-write="0" required_for_execution="1" required_for_initialization="1">
+            <RequiredInterfaces/>
+          </Input>
+        </Inputs>
+        <Outputs/>
+        <PrivateData/>
+      </Block>
+      <Block active="1" catalog="system" class-id="matrix_value_vs_index_graph_display" id="691" label="MatrixValueVsIndexDisplay_2" log_info="2" run_level="1" sync-in_mode="1" window_docked="1" window_fit_mode="1" window_full_screen="0" window_full_screen_monitor_index="0" window_horizontal_scroll_pos="0" window_keep_aspect_ratio="0" window_rect_height="38" window_rect_width="160" window_rect_x="0" window_rect_y="1013" window_refresh_rate_max_frequency="25" window_refresh_rate_min_interval="400000" window_refresh_rate_mode="0" window_title="ECG" window_title_bar_visible="1" window_vertical_scroll_pos="0" window_zoom="0.35037878155708313">
+        <Properties>
+          <PropertySet name="gui-mdi">
+            <Property name="Appearance.Pos">470;330</Property>
+            <Property name="Private.ZOrder">14</Property>
+            <Property name="Private.ObjID">9</Property>
+            <Property name="Appearance.Size">160;100</Property>
+            <Property name="Appearance.Orientation">1</Property>
+            <Property name="Private.ExportedParams"></Property>
+            <Property name="Private.Selected">0</Property>
+            <Property name="Private.ParamsOrder">kernel::active_status;kernel::active_trigger;kernel::run_level;kernel::sync_in_mode;kernel::log_level;double_buffering;reset;canvas_fill_color;plot_bgnd_fill_color;plot_border_line_style;plot_border_line_color;plot_border_line_thickness;legend_pos;legend_border_line_style;legend_border_line_color;legend_border_line_thickness;legend_labels_font;legend_labels_font_color;x_axis_orientation;x_axis_label;x_axis_label_pos;x_axis_label_font;x_axis_label_font_color;x_axis_tick_step;x_axis_tick_labels_pos;x_axis_tick_labels_font;x_axis_tick_labels_font_color;x_axis_tick_line_line_style;x_axis_tick_line_line_color;x_axis_tick_line_line_thickness;y_axis_range_min;y_axis_range_max;y_axis_range_mode;y_axis_orientation;y_axis_label;y_axis_label_pos;y_axis_label_font;y_axis_label_font_color;y_axis_tick_step;y_axis_tick_labels_pos;y_axis_tick_labels_font;y_axis_tick_labels_font_color;y_axis_tick_line_line_style;y_axis_tick_line_line_color;y_axis_tick_line_line_thickness;sample_mode;y_axis_scale;num_plots;plot_1_label;plot_1_line_style;plot_1_line_color;plot_1_line_thickness;plot_1_no_autoscale;kernel::window_title;kernel::window_rect_x;kernel::window_rect_y;kernel::window_rect_width;kernel::window_rect_height;kernel::window_docked;kernel::window_full_screen;kernel::window_full_screen_monitor_index;kernel::window_zoom;kernel::window_keep_aspect_ratio;kernel::window_horizontal_scroll_pos;kernel::window_vertical_scroll_pos;kernel::window_title_visible;kernel::window_refresh_rate_mode;kernel::window_refresh_rate_min_interval;kernel::window_refresh_rate_max_frequency;kernel::fit_mode</Property>
+            <Property name="Private.FullPath">Math.Matrix.Graphs.MatrixValueVsIndexDisplay</Property>
+            <Property name="DisplaySyncInVisible">0</Property>
+            <Property name="DisplaySyncOutVisible">0</Property>
+          </PropertySet>
+        </Properties>
+        <Parameters>
+          <Parameter catalog="kernel" class-id="bool" description="Render the graph using a back buffer to avoid flickering, paying a slight performance cost" design-time="1" enabled="1" id="double_buffering" name="Double Buffering" run-time="1">
+            <Value>1</Value>
+            <Domain/>
+            <Layout/>
+            <InitInfo/>
+          </Parameter>
+          <Parameter catalog="kernel" class-id="trigger" description="Reset graph, clearing plot data and setting axes to the initial state" design-time="1" enabled="1" id="reset" name="Reset" run-time="1">
+            <Value></Value>
+            <Domain/>
+            <Layout/>
+            <InitInfo/>
+          </Parameter>
+          <Parameter catalog="kernel" class-id="rgbcolor" description="Determine the color used to fill the Canvas" design-time="1" enabled="1" id="canvas_fill_color" name="Canvas Fill Color" run-time="1">
+            <Value>rgb: 0;0;0</Value>
+            <Domain/>
+            <Layout/>
+            <InitInfo/>
+          </Parameter>
+          <Parameter catalog="kernel" class-id="rgbcolor" description="Determine the color used to fill the Plot Background" design-time="1" enabled="1" id="plot_bgnd_fill_color" name="Plot Background Fill Color" run-time="1">
+            <Value>rgb: 0;0;0</Value>
+            <Domain/>
+            <Layout/>
+            <InitInfo/>
+          </Parameter>
+          <Parameter catalog="kernel" class-id="int" description="Control how the Plot Border line will be painted:&#xA; - Null: the line will not be painted&#xA; - Solid: the line is solid&#xA; - Dash: the line is dashed&#xA; - Dot: the line is dotted&#xA; - DashDot: the line has alternating dashes and dots&#xA; - DashDotDot: the line has alternating dashes and double dots&#xA;NOTE: if the line thickness is > 1 then the line will be solid (this is due to a Win32 GDI limitation)" design-time="1" enabled="1" id="plot_border_line_style" name="Plot Border Line Style" run-time="1">
+            <Value>0</Value>
+            <Domain catalog="kernel" class-id="int-domain">0;1;6;2</Domain>
+            <Layout catalog="kernel" class-id="combo">Null;Solid;Dash;Dot;DashDot;DashDotDot</Layout>
+            <InitInfo/>
+          </Parameter>
+          <Parameter catalog="kernel" class-id="rgbcolor" description="Determine the color used to paint the Plot Border line" design-time="1" enabled="1" id="plot_border_line_color" name="Plot Border Line Color" run-time="1">
+            <Value>rgb: 0;0.40000000000000002;0</Value>
+            <Domain/>
+            <Layout/>
+            <InitInfo/>
+          </Parameter>
+          <Parameter catalog="kernel" class-id="int" description="Specifies the width of the Plot Border line, in logical units.&#xA;NOTE: if the line thickness is > 1 then the line will be solid (this is due to a Win32 GDI limitation)" design-time="1" enabled="1" id="plot_border_line_thickness" name="Plot Border Line Thickness" run-time="1">
+            <Value>1</Value>
+            <Domain catalog="kernel" class-id="int-domain">1;1;0;0</Domain>
+            <Layout/>
+            <InitInfo/>
+          </Parameter>
+          <Parameter catalog="kernel" class-id="int" description="Set the legend position around the plot area" design-time="1" enabled="1" id="legend_pos" name="Legend Position" run-time="1">
+            <Value>0</Value>
+            <Domain catalog="kernel" class-id="int-domain">0;1;5;2</Domain>
+            <Layout catalog="kernel" class-id="combo">No Legend;Left;Right;Top;Bottom</Layout>
+            <InitInfo/>
+          </Parameter>
+          <Parameter catalog="kernel" class-id="int" description="Control how the Legend Border line will be painted:&#xA; - Null: the line will not be painted&#xA; - Solid: the line is solid&#xA; - Dash: the line is dashed&#xA; - Dot: the line is dotted&#xA; - DashDot: the line has alternating dashes and dots&#xA; - DashDotDot: the line has alternating dashes and double dots&#xA;NOTE: if the line thickness is > 1 then the line will be solid (this is due to a Win32 GDI limitation)" design-time="1" enabled="1" id="legend_border_line_style" name="Legend Border Line Style" run-time="1">
+            <Value>0</Value>
+            <Domain catalog="kernel" class-id="int-domain">0;1;6;2</Domain>
+            <Layout catalog="kernel" class-id="combo">Null;Solid;Dash;Dot;DashDot;DashDotDot</Layout>
+            <InitInfo/>
+          </Parameter>
+          <Parameter catalog="kernel" class-id="rgbcolor" description="Determine the color used to paint the Legend Border line" design-time="1" enabled="1" id="legend_border_line_color" name="Legend Border Line Color" run-time="1">
+            <Value>rgb: 0.5;0.5;0.5</Value>
+            <Domain/>
+            <Layout/>
+            <InitInfo/>
+          </Parameter>
+          <Parameter catalog="kernel" class-id="int" description="Specifies the width of the Legend Border line, in logical units.&#xA;NOTE: if the line thickness is > 1 then the line will be solid (this is due to a Win32 GDI limitation)" design-time="1" enabled="1" id="legend_border_line_thickness" name="Legend Border Line Thickness" run-time="1">
+            <Value>1</Value>
+            <Domain catalog="kernel" class-id="int-domain">1;1;0;0</Domain>
+            <Layout/>
+            <InitInfo/>
+          </Parameter>
+          <Parameter catalog="kernel" class-id="font" description="Specify the font used to draw the Legend Labels" design-time="1" enabled="1" id="legend_labels_font" name="Legend Labels Font" run-time="1">
+            <Value>Times New Roman;-12;0;0;400</Value>
+            <Domain/>
+            <Layout/>
+            <InitInfo/>
+          </Parameter>
+          <Parameter catalog="kernel" class-id="rgbcolor" description="Determine the color used to draw the Legend Labels font" design-time="1" enabled="1" id="legend_labels_font_color" name="Legend Labels Font Color" run-time="1">
+            <Value>rgb: 1;1;1</Value>
+            <Domain/>
+            <Layout/>
+            <InitInfo/>
+          </Parameter>
+          <Parameter catalog="kernel" class-id="int" description="Determine the the x axis orientation" design-time="1" enabled="1" id="x_axis_orientation" name="X Axis Orientation" run-time="1">
+            <Value>0</Value>
+            <Domain catalog="kernel" class-id="int-domain">0;1;2;2</Domain>
+            <Layout catalog="kernel" class-id="combo">LeftToRight;RightToLeft</Layout>
+            <InitInfo/>
+          </Parameter>
+          <Parameter catalog="kernel" class-id="string" description="The label drawn near the X Axis, leave blank for no label" design-time="1" enabled="1" id="x_axis_label" name="X Axis Label" run-time="1">
+            <Value></Value>
+            <Domain/>
+            <Layout/>
+            <InitInfo/>
+          </Parameter>
+          <Parameter catalog="kernel" class-id="int" description="Set the x axis label position around the plot area" design-time="1" enabled="1" id="x_axis_label_pos" name="X Axis Label Position" run-time="1">
+            <Value>0</Value>
+            <Domain catalog="kernel" class-id="int-domain">0;1;3;2</Domain>
+            <Layout catalog="kernel" class-id="combo">No Label;Top;Bottom</Layout>
+            <InitInfo/>
+          </Parameter>
+          <Parameter catalog="kernel" class-id="font" description="Specify the font used to draw the X Axis Label" design-time="1" enabled="1" id="x_axis_label_font" name="X Axis Label Font" run-time="1">
+            <Value>Times New Roman;-12;0;0;0</Value>
+            <Domain/>
+            <Layout/>
+            <InitInfo/>
+          </Parameter>
+          <Parameter catalog="kernel" class-id="rgbcolor" description="Determine the color used to draw the X Axis Label font" design-time="1" enabled="1" id="x_axis_label_font_color" name="X Axis Label Font Color" run-time="1">
+            <Value>rgb: 0.69999999999999996;0.69999999999999996;0.69999999999999996</Value>
+            <Domain/>
+            <Layout/>
+            <InitInfo/>
+          </Parameter>
+          <Parameter catalog="kernel" class-id="double" description="The step for the x axis tick marks" design-time="1" enabled="1" id="x_axis_tick_step" name="X Axis Tick Step" run-time="1">
+            <Value>0.10000000000000001</Value>
+            <Domain/>
+            <Layout/>
+            <InitInfo/>
+          </Parameter>
+          <Parameter catalog="kernel" class-id="int" description="Set the x axis tick labels position around the plot area" design-time="1" enabled="1" id="x_axis_tick_labels_pos" name="X Axis Tick Labels Position" run-time="1">
+            <Value>0</Value>
+            <Domain catalog="kernel" class-id="int-domain">0;1;3;2</Domain>
+            <Layout catalog="kernel" class-id="combo">No Label;Top;Bottom</Layout>
+            <InitInfo/>
+          </Parameter>
+          <Parameter catalog="kernel" class-id="font" description="Specify the font used to draw the X Axis Tick Labels" design-time="1" enabled="1" id="x_axis_tick_labels_font" name="X Axis Tick Labels Font" run-time="1">
+            <Value>Times New Roman;-12;0;0;0</Value>
+            <Domain/>
+            <Layout/>
+            <InitInfo/>
+          </Parameter>
+          <Parameter catalog="kernel" class-id="rgbcolor" description="Determine the color used to draw the X Axis Tick Labels font" design-time="1" enabled="1" id="x_axis_tick_labels_font_color" name="X Axis Tick Labels Font Color" run-time="1">
+            <Value>rgb: 0.69999999999999996;0.69999999999999996;0.69999999999999996</Value>
+            <Domain/>
+            <Layout/>
+            <InitInfo/>
+          </Parameter>
+          <Parameter catalog="kernel" class-id="int" description="Control how the X Axis Tick Line line will be painted:&#xA; - Null: the line will not be painted&#xA; - Solid: the line is solid&#xA; - Dash: the line is dashed&#xA; - Dot: the line is dotted&#xA; - DashDot: the line has alternating dashes and dots&#xA; - DashDotDot: the line has alternating dashes and double dots&#xA;NOTE: if the line thickness is > 1 then the line will be solid (this is due to a Win32 GDI limitation)" design-time="1" enabled="1" id="x_axis_tick_line_line_style" name="X Axis Tick Line Line Style" run-time="1">
+            <Value>0</Value>
+            <Domain catalog="kernel" class-id="int-domain">0;1;6;2</Domain>
+            <Layout catalog="kernel" class-id="combo">Null;Solid;Dash;Dot;DashDot;DashDotDot</Layout>
+            <InitInfo/>
+          </Parameter>
+          <Parameter catalog="kernel" class-id="rgbcolor" description="Determine the color used to paint the X Axis Tick Line line" design-time="1" enabled="1" id="x_axis_tick_line_line_color" name="X Axis Tick Line Line Color" run-time="1">
+            <Value>rgb: 0;0.40000000000000002;0</Value>
+            <Domain/>
+            <Layout/>
+            <InitInfo/>
+          </Parameter>
+          <Parameter catalog="kernel" class-id="int" description="Specifies the width of the X Axis Tick Line line, in logical units.&#xA;NOTE: if the line thickness is > 1 then the line will be solid (this is due to a Win32 GDI limitation)" design-time="1" enabled="1" id="x_axis_tick_line_line_thickness" name="X Axis Tick Line Line Thickness" run-time="1">
+            <Value>1</Value>
+            <Domain catalog="kernel" class-id="int-domain">1;1;0;0</Domain>
+            <Layout/>
+            <InitInfo/>
+          </Parameter>
+          <Parameter catalog="kernel" class-id="double" description="The minimum value for the y axis" design-time="1" enabled="1" id="y_axis_range_min" name="Y Axis Range Min" run-time="1">
+            <Value>0</Value>
+            <Domain/>
+            <Layout/>
+            <InitInfo/>
+          </Parameter>
+          <Parameter catalog="kernel" class-id="double" description="The maximum value for the y axis" design-time="1" enabled="1" id="y_axis_range_max" name="Y Axis Range Max" run-time="1">
+            <Value>1023</Value>
+            <Domain/>
+            <Layout/>
+            <InitInfo/>
+          </Parameter>
+          <Parameter catalog="kernel" class-id="int" description="Controls the y axis autoscale behaviour" design-time="1" enabled="1" id="y_axis_range_mode" name="Y Axis Range Mode" run-time="1">
+            <Value>0</Value>
+            <Domain catalog="kernel" class-id="int-domain">0;1;3;2</Domain>
+            <Layout catalog="kernel" class-id="combo">Fixed;AutoScale;AutoScaleInc</Layout>
+            <InitInfo/>
+          </Parameter>
+          <Parameter catalog="kernel" class-id="int" description="Determine the the y axis orientation" design-time="1" enabled="1" id="y_axis_orientation" name="Y Axis Orientation" run-time="1">
+            <Value>1</Value>
+            <Domain catalog="kernel" class-id="int-domain">0;1;2;2</Domain>
+            <Layout catalog="kernel" class-id="combo">TopDown;BottomUp</Layout>
+            <InitInfo/>
+          </Parameter>
+          <Parameter catalog="kernel" class-id="string" description="The label drawn near the Y Axis, leave blank for no label" design-time="1" enabled="1" id="y_axis_label" name="Y Axis Label" run-time="1">
+            <Value></Value>
+            <Domain/>
+            <Layout/>
+            <InitInfo/>
+          </Parameter>
+          <Parameter catalog="kernel" class-id="int" description="Set the y axis label position around the plot area" design-time="1" enabled="1" id="y_axis_label_pos" name="Y Axis Label Position" run-time="1">
+            <Value>2</Value>
+            <Domain catalog="kernel" class-id="int-domain">0;1;3;2</Domain>
+            <Layout catalog="kernel" class-id="combo">No Label;Right;Left</Layout>
+            <InitInfo/>
+          </Parameter>
+          <Parameter catalog="kernel" class-id="font" description="Specify the font used to draw the Y Axis Label" design-time="1" enabled="1" id="y_axis_label_font" name="Y Axis Label Font" run-time="1">
+            <Value>Times New Roman;-12;0;0;0</Value>
+            <Domain/>
+            <Layout/>
+            <InitInfo/>
+          </Parameter>
+          <Parameter catalog="kernel" class-id="rgbcolor" description="Determine the color used to draw the Y Axis Label font" design-time="1" enabled="1" id="y_axis_label_font_color" name="Y Axis Label Font Color" run-time="1">
+            <Value>rgb: 0.69999999999999996;0.69999999999999996;0.69999999999999996</Value>
+            <Domain/>
+            <Layout/>
+            <InitInfo/>
+          </Parameter>
+          <Parameter catalog="kernel" class-id="double" description="The step for the y axis tick marks" design-time="1" enabled="1" id="y_axis_tick_step" name="Y Axis Tick Step" run-time="1">
+            <Value>0.10000000000000001</Value>
+            <Domain/>
+            <Layout/>
+            <InitInfo/>
+          </Parameter>
+          <Parameter catalog="kernel" class-id="int" description="Set the y axis tick labels position around the plot area" design-time="1" enabled="1" id="y_axis_tick_labels_pos" name="Y Axis Tick Labels Position" run-time="1">
+            <Value>0</Value>
+            <Domain catalog="kernel" class-id="int-domain">0;1;3;2</Domain>
+            <Layout catalog="kernel" class-id="combo">No Label;Right;Left</Layout>
+            <InitInfo/>
+          </Parameter>
+          <Parameter catalog="kernel" class-id="font" description="Specify the font used to draw the Y Axis Tick Labels" design-time="1" enabled="1" id="y_axis_tick_labels_font" name="Y Axis Tick Labels Font" run-time="1">
+            <Value>Times New Roman;-12;0;0;0</Value>
+            <Domain/>
+            <Layout/>
+            <InitInfo/>
+          </Parameter>
+          <Parameter catalog="kernel" class-id="rgbcolor" description="Determine the color used to draw the Y Axis Tick Labels font" design-time="1" enabled="1" id="y_axis_tick_labels_font_color" name="Y Axis Tick Labels Font Color" run-time="1">
+            <Value>rgb: 0.69999999999999996;0.69999999999999996;0.69999999999999996</Value>
+            <Domain/>
+            <Layout/>
+            <InitInfo/>
+          </Parameter>
+          <Parameter catalog="kernel" class-id="int" description="Control how the Y Axis Tick Line line will be painted:&#xA; - Null: the line will not be painted&#xA; - Solid: the line is solid&#xA; - Dash: the line is dashed&#xA; - Dot: the line is dotted&#xA; - DashDot: the line has alternating dashes and dots&#xA; - DashDotDot: the line has alternating dashes and double dots&#xA;NOTE: if the line thickness is > 1 then the line will be solid (this is due to a Win32 GDI limitation)" design-time="1" enabled="1" id="y_axis_tick_line_line_style" name="Y Axis Tick Line Line Style" run-time="1">
+            <Value>1</Value>
+            <Domain catalog="kernel" class-id="int-domain">0;1;6;2</Domain>
+            <Layout catalog="kernel" class-id="combo">Null;Solid;Dash;Dot;DashDot;DashDotDot</Layout>
+            <InitInfo/>
+          </Parameter>
+          <Parameter catalog="kernel" class-id="rgbcolor" description="Determine the color used to paint the Y Axis Tick Line line" design-time="1" enabled="1" id="y_axis_tick_line_line_color" name="Y Axis Tick Line Line Color" run-time="1">
+            <Value>rgb: 0;0.40000000000000002;0</Value>
+            <Domain/>
+            <Layout/>
+            <InitInfo/>
+          </Parameter>
+          <Parameter catalog="kernel" class-id="int" description="Specifies the width of the Y Axis Tick Line line, in logical units.&#xA;NOTE: if the line thickness is > 1 then the line will be solid (this is due to a Win32 GDI limitation)" design-time="1" enabled="1" id="y_axis_tick_line_line_thickness" name="Y Axis Tick Line Line Thickness" run-time="1">
+            <Value>1</Value>
+            <Domain catalog="kernel" class-id="int-domain">1;1;0;0</Domain>
+            <Layout/>
+            <InitInfo/>
+          </Parameter>
+          <Parameter catalog="kernel" class-id="int" description="Determine how matrix rows and columns are interpreted&#xA;  - By Row: a plot for each row of the matrix&#xA;  - By Column: a plot for each column of the matrix&#xA;  - Automatic: by row or by column, determined by the minimum matrix dimension (ex. rows &lt; columns -> by row)" design-time="1" enabled="1" id="sample_mode" name="Sample Mode" run-time="1">
+            <Value>2</Value>
+            <Domain catalog="kernel" class-id="int-domain">0;1;3;2</Domain>
+            <Layout catalog="kernel" class-id="combo">By Row;By Column;Automatic</Layout>
+            <InitInfo/>
+          </Parameter>
+          <Parameter catalog="kernel" class-id="int" description="Determine the scale of the y axis. Note that when a logarithmic scale is selected, also the axis boundaries and the tick step will be expressed in the same scale" design-time="1" enabled="1" id="y_axis_scale" name="Y Axis Scale" run-time="1">
+            <Value>0</Value>
+            <Domain catalog="kernel" class-id="int-domain">0;1;3;2</Domain>
+            <Layout catalog="kernel" class-id="combo">Linear;10Log10 (dB);20Log10</Layout>
+            <InitInfo/>
+          </Parameter>
+          <Parameter catalog="kernel" class-id="int" description="Number of configured plots. If the input matrix contains more than the specified number of plots these will have default parameters" design-time="1" enabled="1" id="num_plots" name="Number of Plots" run-time="0">
+            <Value>1</Value>
+            <Domain catalog="kernel" class-id="int-domain">1;1;0;0</Domain>
+            <Layout/>
+            <InitInfo/>
+          </Parameter>
+          <Parameter catalog="kernel" class-id="string" description="Plot 1 label" design-time="1" enabled="1" id="plot_1_label" name="Plot 1 Label" run-time="1">
+            <Value>Plot 1</Value>
+            <Domain/>
+            <Layout/>
+            <InitInfo/>
+          </Parameter>
+          <Parameter catalog="kernel" class-id="int" description="Control how the Plot 1 line will be painted:&#xA; - Null: the line will not be painted&#xA; - Solid: the line is solid&#xA; - Dash: the line is dashed&#xA; - Dot: the line is dotted&#xA; - DashDot: the line has alternating dashes and dots&#xA; - DashDotDot: the line has alternating dashes and double dots&#xA;NOTE: if the line thickness is > 1 then the line will be solid (this is due to a Win32 GDI limitation)" design-time="1" enabled="1" id="plot_1_line_style" name="Plot 1 Line Style" run-time="1">
+            <Value>1</Value>
+            <Domain catalog="kernel" class-id="int-domain">0;1;6;2</Domain>
+            <Layout catalog="kernel" class-id="combo">Null;Solid;Dash;Dot;DashDot;DashDotDot</Layout>
+            <InitInfo/>
+          </Parameter>
+          <Parameter catalog="kernel" class-id="rgbcolor" description="Determine the color used to paint the Plot 1 line" design-time="1" enabled="1" id="plot_1_line_color" name="Plot 1 Line Color" run-time="1">
+            <Value>rgb: 0;1;0</Value>
+            <Domain/>
+            <Layout/>
+            <InitInfo/>
+          </Parameter>
+          <Parameter catalog="kernel" class-id="int" description="Specifies the width of the Plot 1 line, in logical units.&#xA;NOTE: if the line thickness is > 1 then the line will be solid (this is due to a Win32 GDI limitation)" design-time="1" enabled="1" id="plot_1_line_thickness" name="Plot 1 Line Thickness" run-time="1">
+            <Value>2</Value>
+            <Domain catalog="kernel" class-id="int-domain">1;1;0;0</Domain>
+            <Layout/>
+            <InitInfo/>
+          </Parameter>
+          <Parameter catalog="kernel" class-id="bool" description="Determine if Plot 1 is excluded from autoscale or not" design-time="1" enabled="1" id="plot_1_no_autoscale" name="Plot 1 No Autoscale" run-time="1">
+            <Value>1</Value>
+            <Domain/>
+            <Layout/>
+            <InitInfo/>
+          </Parameter>
+        </Parameters>
+        <Inputs>
+          <Input catalog="kernel" class-id="double-matrix" description="The input matrix. Its entries will be drawn in a graph according different criteria" id="input" name="Input Matrix" read-write="0" required_for_execution="1" required_for_initialization="1">
+            <RequiredInterfaces/>
+          </Input>
+        </Inputs>
+        <Outputs/>
+        <PrivateData/>
+      </Block>
+      <Block active="1" catalog="SEC" class-id="CyclicalBuffer" id="901" label="CyclicalBuffer_1" log_info="2" run_level="1" sync-in_mode="1">
+        <Properties>
+          <PropertySet name="gui-mdi">
+            <Property name="Appearance.Pos">390;220</Property>
+            <Property name="Private.ZOrder">15</Property>
+            <Property name="Private.ObjID">10</Property>
+            <Property name="Appearance.Size">65;65</Property>
+            <Property name="Appearance.Orientation">1</Property>
+            <Property name="Private.ExportedParams"></Property>
+            <Property name="Private.Selected">0</Property>
+            <Property name="Private.ParamsOrder">kernel::active_status;kernel::active_trigger;kernel::run_level;kernel::sync_in_mode;kernel::log_level;ParIOType;ParBufferSize;ParHopSize;ParWaitFill</Property>
+            <Property name="Private.FullPath">SARC.General.CyclicalBuffer</Property>
+            <Property name="DisplaySyncInVisible">0</Property>
+            <Property name="DisplaySyncOutVisible">0</Property>
+          </PropertySet>
+        </Properties>
+        <Parameters>
+          <Parameter catalog="kernel" class-id="int" description="Set the input type.  This can be Int, Double, Int Matrix or Double Matrix" design-time="1" enabled="1" id="ParIOType" name="IOType" run-time="1">
+            <Value>1</Value>
+            <Domain catalog="kernel" class-id="int-domain">0;1;4;2</Domain>
+            <Layout catalog="kernel" class-id="combo">Int;Double;Int Matrix;Double Matrix</Layout>
+            <InitInfo/>
+          </Parameter>
+          <Parameter catalog="kernel" class-id="int" description="Set the size of the buffer" design-time="1" enabled="1" id="ParBufferSize" name="BufferSize" run-time="0">
+            <Value>128</Value>
+            <Domain/>
+            <Layout/>
+            <InitInfo/>
+          </Parameter>
+          <Parameter catalog="kernel" class-id="int" description="Set the hop size of the block.  This sets how often the block will output the data. If set to 10 for example, the block will only output data each time it receives 10 inputs" design-time="1" enabled="1" id="ParHopSize" name="HopSize" run-time="0">
+            <Value>1</Value>
+            <Domain/>
+            <Layout/>
+            <InitInfo/>
+          </Parameter>
+          <Parameter catalog="kernel" class-id="bool" description="If set to true then the block will wait for the buffer to be completely filled with data before the first output is activated.  If set to false then the block will output as soon as the hop size value is reached, with the remaining empty values in the buffer being filled with zeros" design-time="1" enabled="1" id="ParWaitFill" name="Wait For Fill" run-time="1">
+            <Value>1</Value>
+            <Domain/>
+            <Layout/>
+            <InitInfo/>
+          </Parameter>
+        </Parameters>
+        <Inputs>
+          <Input catalog="kernel" class-id="double" description="Double Input" id="InputPin" name="Double" read-write="0" required_for_execution="1" required_for_initialization="1">
+            <RequiredInterfaces/>
+          </Input>
+        </Inputs>
+        <Outputs>
+          <Output catalog="kernel" class-id="double-matrix" description="A [N x 1] Double Matrix, where N = BufferSize" id="OutputPin" inherited-id="" inplace-id="" name="DoubleMatrix"/>
+        </Outputs>
+        <PrivateData/>
+      </Block>
+      <Block active="1" catalog="SEC" class-id="CyclicalBuffer" id="956" label="CyclicalBuffer_2" log_info="2" run_level="1" sync-in_mode="1">
+        <Properties>
+          <PropertySet name="gui-mdi">
+            <Property name="Appearance.Pos">390;330</Property>
+            <Property name="Private.ZOrder">16</Property>
+            <Property name="Private.ObjID">11</Property>
+            <Property name="Appearance.Size">65;65</Property>
+            <Property name="Appearance.Orientation">1</Property>
+            <Property name="Private.ExportedParams"></Property>
+            <Property name="Private.Selected">0</Property>
+            <Property name="Private.ParamsOrder">kernel::active_status;kernel::active_trigger;kernel::run_level;kernel::sync_in_mode;kernel::log_level;ParIOType;ParBufferSize;ParHopSize;ParWaitFill</Property>
+            <Property name="Private.FullPath">SARC.General.CyclicalBuffer</Property>
+            <Property name="DisplaySyncInVisible">0</Property>
+            <Property name="DisplaySyncOutVisible">0</Property>
+          </PropertySet>
+        </Properties>
+        <Parameters>
+          <Parameter catalog="kernel" class-id="int" description="Set the input type.  This can be Int, Double, Int Matrix or Double Matrix" design-time="1" enabled="1" id="ParIOType" name="IOType" run-time="1">
+            <Value>1</Value>
+            <Domain catalog="kernel" class-id="int-domain">0;1;4;2</Domain>
+            <Layout catalog="kernel" class-id="combo">Int;Double;Int Matrix;Double Matrix</Layout>
+            <InitInfo/>
+          </Parameter>
+          <Parameter catalog="kernel" class-id="int" description="Set the size of the buffer" design-time="1" enabled="1" id="ParBufferSize" name="BufferSize" run-time="0">
+            <Value>128</Value>
+            <Domain/>
+            <Layout/>
+            <InitInfo/>
+          </Parameter>
+          <Parameter catalog="kernel" class-id="int" description="Set the hop size of the block.  This sets how often the block will output the data. If set to 10 for example, the block will only output data each time it receives 10 inputs" design-time="1" enabled="1" id="ParHopSize" name="HopSize" run-time="0">
+            <Value>1</Value>
+            <Domain/>
+            <Layout/>
+            <InitInfo/>
+          </Parameter>
+          <Parameter catalog="kernel" class-id="bool" description="If set to true then the block will wait for the buffer to be completely filled with data before the first output is activated.  If set to false then the block will output as soon as the hop size value is reached, with the remaining empty values in the buffer being filled with zeros" design-time="1" enabled="1" id="ParWaitFill" name="Wait For Fill" run-time="1">
+            <Value>1</Value>
+            <Domain/>
+            <Layout/>
+            <InitInfo/>
+          </Parameter>
+        </Parameters>
+        <Inputs>
+          <Input catalog="kernel" class-id="double" description="Double Input" id="InputPin" name="Double" read-write="0" required_for_execution="1" required_for_initialization="1">
+            <RequiredInterfaces/>
+          </Input>
+        </Inputs>
+        <Outputs>
+          <Output catalog="kernel" class-id="double-matrix" description="A [N x 1] Double Matrix, where N = BufferSize" id="OutputPin" inherited-id="" inplace-id="" name="DoubleMatrix"/>
+        </Outputs>
+        <PrivateData/>
+      </Block>
+      <Block active="1" catalog="system" class-id="video-file-reader_ver_2" id="1011" label="VideoFileReader_1" log_info="2" run_level="1" sync-in_mode="0">
+        <Properties>
+          <PropertySet name="gui-mdi">
+            <Property name="Appearance.Pos">120;500</Property>
+            <Property name="Private.ZOrder">36</Property>
+            <Property name="Private.ObjID">12</Property>
+            <Property name="Appearance.Size">65;72</Property>
+            <Property name="Appearance.Orientation">1</Property>
+            <Property name="Private.ExportedParams">play;pause;stop;</Property>
+            <Property name="Private.Selected">0</Property>
+            <Property name="Private.ParamsOrder">kernel::active_status;kernel::active_trigger;kernel::run_level;kernel::sync_in_mode;kernel::log_level;filename;color_model;pixel_model;size;roi;fps;goto_time;goto;endto;interpolation;algorithm;frames_before_seek;media_startime;media_duration;playback_rate;letterbox_mode;status;eof;play;pause;stop;frameup;framedown;keep_last_frame_if_mediatime_is_unknown;genearte_frame_on_stop_and_pause;master_id;sync_type</Property>
+            <Property name="Private.FullPath">ImageAndVideo.Input.VideoFileReader</Property>
+            <Property name="DisplaySyncInVisible">1</Property>
+            <Property name="DisplaySyncOutVisible">0</Property>
+          </PropertySet>
+        </Properties>
+        <Parameters>
+          <Parameter catalog="kernel" class-id="string" description="Specifies the name of file to read." design-time="1" enabled="1" id="filename" name="File name" run-time="1">
+            <Value>..\..\Public\Videos\Sample Videos\Wildlife.wmv</Value>
+            <Domain/>
+            <Layout catalog="kernel" class-id="filename">Multimedia files (*.mpg,*.mpeg,*.avi,*.wmv,*.bmp,*.gif,*.jpeg,*.png,*.tiff)|*.mpg;*.mpeg;*.avi;*.wmv;*.bmp;*.gif;*.jpg;*.png;*.tiff|All files (*.*)|*.*||</Layout>
+            <InitInfo/>
+          </Parameter>
+          <Parameter catalog="kernel" class-id="int" description="The color model define the way a color is stored into the image.May assume one of following values:&#xD;&#xA;BW (1 channel: grayscale);&#xD;&#xA;BGR (3 channel packed: Blue, Green, Red);&#xD;&#xA;RGB (3 channel packed: Red, Green, Blue);&#xD;&#xA;YUV (3 channel packed: Y, Cb, Cr);&#xD;&#xA;YUYV (3 channel packed, undersampled 422: Y, Cb, Cr);&#xD;&#xA;UYVY (3 channel packed, undersampled 422: Y, Cb, Cr);&#xD;&#xA;I420 (3 channel planar, undersampled 411: Y, Cb, Cr);&#xD;&#xA;YV12 (3 channel planar, undersampled 411: Y, Cb, Cr);&#xD;&#xA;HSV (3 channel packed: Hue, Saturation, Value).&#xD;&#xA;" design-time="1" enabled="1" id="color_model" name="Color model" run-time="0">
+            <Value>2</Value>
+            <Domain catalog="kernel" class-id="int-domain">0;1;17;2</Domain>
+            <Layout catalog="kernel" class-id="combo">BW;RGB;BGR;YUV;YUYV;UYVY;I420;YV12;HSV;BGRA;RGBA;YUVA;HSVA;ABGR;ARGB;AYUV;AHSV</Layout>
+            <InitInfo/>
+          </Parameter>
+          <Parameter catalog="kernel" class-id="int" description="Pixel model of the image. Specifies the number of bits used for each channel, hence the color definition. May assume one of the following values:&#xD;&#xA;8 bits unsigned integer;&#xD;&#xA;16 bits unsigned integer;&#xD;&#xA;16 bits signed integer;&#xD;&#xA;32 bits floating point." design-time="1" enabled="1" id="pixel_model" name="Pixel model" run-time="0">
+            <Value>0</Value>
+            <Domain catalog="kernel" class-id="int-domain">0;1;4;2</Domain>
+            <Layout catalog="kernel" class-id="combo">8_unsigned;16_unsigned;16_signed;32_Float</Layout>
+            <InitInfo/>
+          </Parameter>
+          <Parameter catalog="base" class-id="size2d_int" description="Output video size, in pixel" design-time="1" enabled="1" id="size" name="Video size" run-time="0">
+            <Value>1920;1080</Value>
+            <Domain/>
+            <Layout/>
+            <InitInfo/>
+          </Parameter>
+          <Parameter catalog="base" class-id="roi2d_int" description="The ROI (Region of Interest) of an image specifies a rectangular are of the image which contains valid data. The image outside this are is ignored, thus, operations on the image will only be applied in the area of interest. In many cases, this may reduce the amount of calculations performed. If set to NULL, then the ROI is ignored, i.e., the whole image is always used." design-time="1" enabled="1" id="roi" name="ROI" run-time="1">
+            <Value>1;0;0;0;0</Value>
+            <Domain/>
+            <Layout/>
+            <InitInfo/>
+          </Parameter>
+          <Parameter catalog="kernel" class-id="double" description="Frames per second of the output streams. Usually 25 (PAL) or 30 (NTSC)." design-time="0" enabled="1" id="fps" name="Frames per second" run-time="0">
+            <Value>29.970089850329373</Value>
+            <Domain catalog="kernel" class-id="double-domain">0;1;0;0</Domain>
+            <Layout/>
+            <InitInfo/>
+          </Parameter>
+          <Parameter catalog="kernel" class-id="time" description="Specifies the time to be reached/finished" design-time="1" enabled="1" id="goto_time" name="Time to goto/end" run-time="1">
+            <Value>0</Value>
+            <Domain/>
+            <Layout/>
+            <InitInfo/>
+          </Parameter>
+          <Parameter catalog="kernel" class-id="trigger" description="Forces the file to reach the specified position" design-time="0" enabled="1" id="goto" name="Goto" run-time="1">
+            <Value></Value>
+            <Domain/>
+            <Layout/>
+            <InitInfo/>
+          </Parameter>
+          <Parameter catalog="kernel" class-id="trigger" description="Change Duration" design-time="0" enabled="1" id="endto" name="Change Duration" run-time="1">
+            <Value></Value>
+            <Domain/>
+            <Layout/>
+            <InitInfo/>
+          </Parameter>
+          <Parameter catalog="kernel" class-id="int" description="Specifies the color model of the output image" design-time="1" enabled="1" id="interpolation" name="Interpolation" run-time="1">
+            <Value>1</Value>
+            <Domain catalog="kernel" class-id="int-domain">0;1;2;1</Domain>
+            <Layout catalog="kernel" class-id="combo">Nearest neighbour;Linear;Cubic</Layout>
+            <InitInfo/>
+          </Parameter>
+          <Parameter catalog="kernel" class-id="int" description="Typpe of algorithm used when performing operations on images" design-time="1" enabled="1" id="algorithm" name="Algorithm" run-time="1">
+            <Value>0</Value>
+            <Domain catalog="kernel" class-id="int-domain">0;1;2;1</Domain>
+            <Layout catalog="kernel" class-id="combo">Algorithm is chosen by EyesWeb;Fast;Accurate</Layout>
+            <InitInfo/>
+          </Parameter>
+          <Parameter catalog="kernel" class-id="int" description="Specifies the number of frames to skip before performing a seek. In many cases, decompressing and skipping frames gives a better performance than seeking to the desired position." design-time="1" enabled="1" id="frames_before_seek" name="Frames before seek" run-time="0">
+            <Value>20</Value>
+            <Domain catalog="kernel" class-id="int-domain">0;1;0;0</Domain>
+            <Layout/>
+            <InitInfo/>
+          </Parameter>
+          <Parameter catalog="kernel" class-id="time" description="Specifies the start position of the file" design-time="1" enabled="1" id="media_startime" name="Start time" run-time="1">
+            <Value>0</Value>
+            <Domain/>
+            <Layout/>
+            <InitInfo/>
+          </Parameter>
+          <Parameter catalog="kernel" class-id="time" description="Specifies the length of the portion of the file to be read. Use zero to specify the whole file." design-time="1" enabled="1" id="media_duration" name="Duration" run-time="1">
+            <Value>0</Value>
+            <Domain/>
+            <Layout/>
+            <InitInfo/>
+          </Parameter>
+          <Parameter catalog="kernel" class-id="double" description="Specifies the playback rate. Use 1.0 for normal speed, higher values (e.g., 2.0) for fast-forward, lower values for slow motion. Negative values mean going backward. Note that audio is always muted for playback rate different from 1.0." design-time="1" enabled="1" id="playback_rate" name="Playback rate" run-time="1">
+            <Value>1</Value>
+            <Domain catalog="kernel" class-id="double-domain">0;2;0;0</Domain>
+            <Layout/>
+            <InitInfo/>
+          </Parameter>
+          <Parameter catalog="kernel" class-id="int" description="Specifies where to place mattes and image when using letterboxing. in 'No letterbox' the aspectRatio is not preserved, and the source image is stretched or shrinked to cover all available space. In the other cases, the aspect ratio is (or might be) preserved, thus a black frame might be needed on the horizontal or vertical side to cover the unused space. This enumerator specifies where to place such black frame.&#xA;Since the user might not know in advance whether letterboxing will place mattes above/below or left/right, each mode specifies how to behave in both cases. As an example, the letterbox mode left-middle means that if the image needs mattes on the sides, the image will be put to the extreme left, and the matte will span the right side; if the image needs mattes above/below, the image will be vertically centered. Hence, the mode is made of two terms, the first referring to the horizontal centering of the image, the second referring to the vertical centering. Horizontal centering may assume values none, left, center, or right. Vertical centering may assume values none, top, middle, or bottom. The term none means that if letterboxing is needed on that direction, than the image is stretched to fill the whole size. E.g., elmNoneTop means that is image is thinner than the destination rect, than no letterboxing is applied and the image is stretched horizontally. However, it the image is larger than the destination rect, than letterboxing is applied by putting the image on the top and a single matte below." design-time="1" enabled="1" id="letterbox_mode" name="LetterBox Mode" run-time="1">
+            <Value>1</Value>
+            <Domain catalog="kernel" class-id="int-domain">0;1;16;2</Domain>
+            <Layout catalog="kernel" class-id="combo">No letterbox;CenterMiddle;NoneTop;NoneMiddle;NoneBottom;LeftNone;LeftTop;LeftMiddle;LeftBottom;CenterNone;CenterTop;CenterBottom;RightNone;RightTop;RightMiddle;RightBottom</Layout>
+            <InitInfo/>
+          </Parameter>
+          <Parameter catalog="kernel" class-id="int" description="Specifies the status of the player. If no file is currently executing, this parameter is ignored, however it specifies whether the block is stopped, is paused, or is playing. When the block is stopped the output is a black frame; when the block is paused the output is a fixed frame (the last played one); when the block is playing the output changes at each step. If this parameter is changed at design time or when no file is playing, its value is used as an initial status." design-time="1" enabled="1" id="status" name="Player status" run-time="0">
+            <Value>0</Value>
+            <Domain catalog="kernel" class-id="int-domain">0;1;3;2</Domain>
+            <Layout catalog="kernel" class-id="combo">Stopped;Paused;Playing</Layout>
+            <InitInfo/>
+          </Parameter>
+          <Parameter catalog="kernel" class-id="int" description="Specifies the behaviour when end of file is reached. It can stop (black frames), pause (last frame) or loop (rewind and play)." design-time="1" enabled="1" id="eof" name="End of file" run-time="1">
+            <Value>0</Value>
+            <Domain catalog="kernel" class-id="int-domain">0;1;2;1</Domain>
+            <Layout catalog="kernel" class-id="combo">Stop;Pause;Loop</Layout>
+            <InitInfo/>
+          </Parameter>
+          <Parameter catalog="kernel" class-id="trigger" description="Start (or resume) playing the selected file" design-time="0" enabled="1" id="play" name="Play" run-time="1">
+            <Value></Value>
+            <Domain/>
+            <Layout/>
+            <InitInfo/>
+          </Parameter>
+          <Parameter catalog="kernel" class-id="trigger" description="Pause at the currently reached frame" design-time="0" enabled="1" id="pause" name="Pause" run-time="1">
+            <Value></Value>
+            <Domain/>
+            <Layout/>
+            <InitInfo/>
+          </Parameter>
+          <Parameter catalog="kernel" class-id="trigger" description="Stop playing, produces a black frame as output" design-time="0" enabled="1" id="stop" name="Stop" run-time="1">
+            <Value></Value>
+            <Domain/>
+            <Layout/>
+            <InitInfo/>
+          </Parameter>
+          <Parameter catalog="kernel" class-id="trigger" description="Go to the next frame." design-time="0" enabled="1" id="frameup" name="Frame up" run-time="1">
+            <Value></Value>
+            <Domain/>
+            <Layout/>
+            <InitInfo/>
+          </Parameter>
+          <Parameter catalog="kernel" class-id="trigger" description="Go to the previous frame." design-time="0" enabled="1" id="framedown" name="Frame down" run-time="1">
+            <Value></Value>
+            <Domain/>
+            <Layout/>
+            <InitInfo/>
+          </Parameter>
+          <Parameter catalog="kernel" class-id="bool" description="If the block is in slave mode and receive from master an UNKNOWN time the last frame is kept otherwise a back frame is generated" design-time="1" enabled="1" id="keep_last_frame_if_mediatime_is_unknown" name="Keep last if mediatime unknown" run-time="1">
+            <Value>0</Value>
+            <Domain/>
+            <Layout/>
+            <InitInfo/>
+          </Parameter>
+          <Parameter catalog="kernel" class-id="bool" description="After a request of stop or pause state, the blocks generate a frame. Black for stop and last used frame for pause" design-time="1" enabled="1" id="genearte_frame_on_stop_and_pause" name="Generate frame on stop and pause" run-time="1">
+            <Value>1</Value>
+            <Domain/>
+            <Layout/>
+            <InitInfo/>
+          </Parameter>
+          <Parameter catalog="kernel" class-id="string" description="Master identifier" design-time="1" enabled="1" id="master_id" name="Master ID" run-time="0">
+            <Value></Value>
+            <Domain/>
+            <Layout/>
+            <InitInfo/>
+          </Parameter>
+          <Parameter catalog="kernel" class-id="int" description="Set the type of syncronization" design-time="1" enabled="1" id="sync_type" name="Syncronization Type" run-time="0">
+            <Value>0</Value>
+            <Domain catalog="kernel" class-id="int-domain">0;1;3;2</Domain>
+            <Layout catalog="kernel" class-id="combo">Standalone;Master;Slave</Layout>
+            <InitInfo/>
+          </Parameter>
+        </Parameters>
+        <Inputs/>
+        <Outputs>
+          <Output catalog="base" class-id="image" description="Output video buffer." id="video_stream" inherited-id="" inplace-id="" name="Output video buffer."/>
+          <Output catalog="kernel" class-id="trigger" description="Generate a bang when the file is cued successfully" id="cued_file" inherited-id="" inplace-id="" name="File cued"/>
+          <Output catalog="kernel" class-id="time" description="Contains the time of the actual frame" id="outputtime" inherited-id="" inplace-id="" name="Current frame time"/>
+        </Outputs>
+        <PrivateData/>
+      </Block>
+      <Block active="1" catalog="system" class-id="image_display" id="1210" label="DisplayDirectX_1" log_info="2" run_level="1" sync-in_mode="1" window_docked="1" window_fit_mode="1" window_full_screen="0" window_full_screen_monitor_index="0" window_horizontal_scroll_pos="0" window_keep_aspect_ratio="1" window_rect_height="734" window_rect_width="745" window_rect_x="959" window_rect_y="127" window_refresh_rate_max_frequency="25" window_refresh_rate_min_interval="400000" window_refresh_rate_mode="0" window_title="DisplayDirectX" window_title_bar_visible="1" window_vertical_scroll_pos="0" window_zoom="0.1796296238899231">
+        <Properties>
+          <PropertySet name="gui-mdi">
+            <Property name="Appearance.Pos">110;500</Property>
+            <Property name="Private.ZOrder">25</Property>
+            <Property name="Private.ObjID">13</Property>
+            <Property name="Appearance.Size">520;210</Property>
+            <Property name="Appearance.Orientation">1</Property>
+            <Property name="Private.ExportedParams"></Property>
+            <Property name="Private.Selected">0</Property>
+            <Property name="Private.ParamsOrder">kernel::active_status;kernel::active_trigger;kernel::run_level;kernel::sync_in_mode;kernel::log_level;letterbox_mode;filtering;delay;kernel::window_title;kernel::window_rect_x;kernel::window_rect_y;kernel::window_rect_width;kernel::window_rect_height;kernel::window_docked;kernel::window_full_screen;kernel::window_full_screen_monitor_index;kernel::window_zoom;kernel::window_keep_aspect_ratio;kernel::window_horizontal_scroll_pos;kernel::window_vertical_scroll_pos;kernel::window_title_visible;kernel::window_refresh_rate_mode;kernel::window_refresh_rate_min_interval;kernel::window_refresh_rate_max_frequency;kernel::fit_mode</Property>
+            <Property name="Private.FullPath">ImageAndVideo.Output.DisplayDirectX</Property>
+            <Property name="DisplaySyncInVisible">0</Property>
+            <Property name="DisplaySyncOutVisible">0</Property>
+          </PropertySet>
+        </Properties>
+        <Parameters>
+          <Parameter catalog="kernel" class-id="int" description="Specifies where to place mattes and image when using letterboxing. in 'No letterbox' the aspectRatio is not preserved, and the source image is stretched or shrinked to cover all available space. In the other cases, the aspect ratio is (or might be) preserved, thus a black frame might be needed on the horizontal or vertical side to cover the unused space. This enumerator specifies where to place such black frame.&#xA;Since the user might not know in advance whether letterboxing will place mattes above/below or left/right, each mode specifies how to behave in both cases. As an example, the letterbox mode left-middle means that if the image needs mattes on the sides, the image will be put to the extreme left, and the matte will span the right side; if the image needs mattes above/below, the image will be vertically centered. Hence, the mode is made of two terms, the first referring to the horizontal centering of the image, the second referring to the vertical centering. Horizontal centering may assume values none, left, center, or right. Vertical centering may assume values none, top, middle, or bottom. The term none means that if letterboxing is needed on that direction, than the image is stretched to fill the whole size. E.g., elmNoneTop means that is image is thinner than the destination rect, than no letterboxing is applied and the image is stretched horizontally. However, it the image is larger than the destination rect, than letterboxing is applied by putting the image on the top and a single matte below." design-time="1" enabled="1" id="letterbox_mode" name="LetterBox Mode" run-time="1">
+            <Value>0</Value>
+            <Domain catalog="kernel" class-id="int-domain">0;1;16;2</Domain>
+            <Layout catalog="kernel" class-id="combo">No letterbox;CenterMiddle;NoneTop;NoneMiddle;NoneBottom;LeftNone;LeftTop;LeftMiddle;LeftBottom;CenterNone;CenterTop;CenterBottom;RightNone;RightTop;RightMiddle;RightBottom</Layout>
+            <InitInfo/>
+          </Parameter>
+          <Parameter catalog="kernel" class-id="int" description="Interpolation" design-time="1" enabled="1" id="filtering" name="Interpolation" run-time="1">
+            <Value>2</Value>
+            <Domain catalog="kernel" class-id="int-domain">0;1;5;2</Domain>
+            <Layout catalog="kernel" class-id="combo">Point;Linear;Anisotropic;Pyramidal;Gaussian</Layout>
+            <InitInfo/>
+          </Parameter>
+          <Parameter catalog="kernel" class-id="time" description="Delay" design-time="1" enabled="1" id="delay" name="Delay" run-time="1">
+            <Value>400000</Value>
+            <Domain/>
+            <Layout/>
+            <InitInfo/>
+          </Parameter>
+        </Parameters>
+        <Inputs>
+          <Input catalog="kernel" class-id="generic_datatype" description="Image to be painted on the display. The I420, YV12 and HSV color spaces are not supported. the alpha channel is not supported on BW, YUYV, UYVY color spaces. " id="video_stream" name="Image" read-write="1" required_for_execution="1" required_for_initialization="1">
+            <RequiredInterfaces>
+              <RequiredInterface catalog="base" class-id="image_conversion"/>
+              <RequiredInterface catalog="base" class-id="image_roi"/>
+            </RequiredInterfaces>
+          </Input>
+        </Inputs>
+        <Outputs/>
+        <PrivateData/>
+      </Block>
+      <Block active="1" catalog="system" class-id="wave_output" id="1299" label="WaveOutput_1" log_info="2" run_level="1" sync-in_mode="1">
+        <Properties>
+          <PropertySet name="gui-mdi">
+            <Property name="Appearance.Pos">200;530</Property>
+            <Property name="Private.ZOrder">37</Property>
+            <Property name="Private.ObjID">14</Property>
+            <Property name="Appearance.Size">48;50</Property>
+            <Property name="Appearance.Orientation">1</Property>
+            <Property name="Private.ExportedParams"></Property>
+            <Property name="Private.Selected">0</Property>
+            <Property name="Private.ParamsOrder">kernel::active_status;kernel::active_trigger;kernel::run_level;kernel::sync_in_mode;kernel::log_level;device;min_num_device_buffers;num_device_buffers</Property>
+            <Property name="Private.FullPath">Audio.Output.WaveOutput</Property>
+            <Property name="DisplaySyncInVisible">0</Property>
+            <Property name="DisplaySyncOutVisible">0</Property>
+          </PropertySet>
+        </Properties>
+        <Parameters>
+          <Parameter catalog="kernel" class-id="string" description="The virtual name of the device. If none is specified the default device will be used" design-time="1" enabled="1" id="device" name="Device name" run-time="0">
+            <Value></Value>
+            <Domain/>
+            <Layout/>
+            <InitInfo/>
+          </Parameter>
+          <Parameter catalog="kernel" class-id="int" description="This value affects output latency. When the device is idle, and new data is available from EyesWeb, the device might send this new data out immediately (thus reducing the latency to zero) or wait for more buffers to be available. This increase the output latency but makes audio more robust when the data is not provided with a stable datarate (e.g., due to high computational load)" design-time="1" enabled="1" id="min_num_device_buffers" name="Min num device buffers" run-time="1">
+            <Value>1</Value>
+            <Domain catalog="kernel" class-id="int-domain">0;1;0;0</Domain>
+            <Layout/>
+            <InitInfo/>
+          </Parameter>
+          <Parameter catalog="kernel" class-id="int" description="The maximum number of buffers stored by the device. This may affect data loss" design-time="1" enabled="1" id="num_device_buffers" name="Num device buffers" run-time="1">
+            <Value>2</Value>
+            <Domain catalog="kernel" class-id="int-domain">2;1;0;0</Domain>
+            <Layout/>
+            <InitInfo/>
+          </Parameter>
+        </Parameters>
+        <Inputs>
+          <Input catalog="base" class-id="pcm_audio_buffer" description="Audio stream captured from the specified device&#xA;" id="input" name="Audio stream" read-write="1" required_for_execution="1" required_for_initialization="1">
+            <RequiredInterfaces/>
+          </Input>
+        </Inputs>
+        <Outputs/>
+        <PrivateData/>
+      </Block>
+      <Block active="1" catalog="system" class-id="audio_file_reader_mmstream" id="1351" label="AudioFileReader_1" log_info="2" run_level="1" sync-in_mode="0">
+        <Properties>
+          <PropertySet name="gui-mdi">
+            <Property name="Appearance.Pos">120;590</Property>
+            <Property name="Private.ZOrder">38</Property>
+            <Property name="Private.ObjID">15</Property>
+            <Property name="Appearance.Size">50;50</Property>
+            <Property name="Appearance.Orientation">1</Property>
+            <Property name="Private.ExportedParams">play;pause;stop;</Property>
+            <Property name="Private.Selected">0</Property>
+            <Property name="Private.ParamsOrder">kernel::active_status;kernel::active_trigger;kernel::run_level;kernel::sync_in_mode;kernel::log_level;filename;sampling_rate;goto_time;goto;frames_before_seek;num_channels;media_startime;media_duration;playback_rate;status;eof;play;pause;stop;master_id;sync_type;auto_generate_mediatime;generate_cued_if_failed;type_of_buffering;number_of_samples</Property>
+            <Property name="Private.FullPath">Audio.Input.AudioFileReader</Property>
+            <Property name="DisplaySyncInVisible">0</Property>
+            <Property name="DisplaySyncOutVisible">0</Property>
+          </PropertySet>
+        </Properties>
+        <Parameters>
+          <Parameter catalog="kernel" class-id="string" description="Specifies the name of file to read." design-time="1" enabled="1" id="filename" name="Audio file reader" run-time="1">
+            <Value>..\..\Public\Videos\Sample Videos\Wildlife.wmv</Value>
+            <Domain/>
+            <Layout catalog="kernel" class-id="filename">Audio files (*.wav,*.mp3, *.wma)|*.wav;*.mp3;*.wma|All files (*.*)|*.*||</Layout>
+            <InitInfo/>
+          </Parameter>
+          <Parameter catalog="kernel" class-id="double" description="Sampling rate of the output buffer. It can be different from the sampling rate of the file, even because the file can change at runtime. Moreover, files with a dynamic sampling rate are supported." design-time="1" enabled="1" id="sampling_rate" name="Sampling rate" run-time="0">
+            <Value>44100</Value>
+            <Domain catalog="kernel" class-id="double-domain">1;1;0;0</Domain>
+            <Layout/>
+            <InitInfo/>
+          </Parameter>
+          <Parameter catalog="kernel" class-id="time" description="Specifies the time to be reached" design-time="1" enabled="1" id="goto_time" name="Time to goto" run-time="1">
+            <Value>0</Value>
+            <Domain/>
+            <Layout/>
+            <InitInfo/>
+          </Parameter>
+          <Parameter catalog="kernel" class-id="trigger" description="Forces the file to reach the specified position" design-time="0" enabled="1" id="goto" name="Goto" run-time="1">
+            <Value></Value>
+            <Domain/>
+            <Layout/>
+            <InitInfo/>
+          </Parameter>
+          <Parameter catalog="kernel" class-id="int" description="Specifies the number of frames to skip before performing a seek. In many cases, decompressing and skipping frames gives a better performance than seeking to the desired position." design-time="1" enabled="1" id="frames_before_seek" name="Frames before seek" run-time="0">
+            <Value>20</Value>
+            <Domain catalog="kernel" class-id="int-domain">0;1;0;0</Domain>
+            <Layout/>
+            <InitInfo/>
+          </Parameter>
+          <Parameter catalog="kernel" class-id="int" description="Specifiies the number of channels of the output buffer. Can be mono (1 channel) or stereo (2 channels)." design-time="1" enabled="1" id="num_channels" name="Number of channels" run-time="0">
+            <Value>2</Value>
+            <Domain catalog="kernel" class-id="int-domain">1;1;0;0</Domain>
+            <Layout/>
+            <InitInfo/>
+          </Parameter>
+          <Parameter catalog="kernel" class-id="time" description="Specifies the start position of the file" design-time="1" enabled="1" id="media_startime" name="Start time" run-time="1">
+            <Value>0</Value>
+            <Domain/>
+            <Layout/>
+            <InitInfo/>
+          </Parameter>
+          <Parameter catalog="kernel" class-id="time" description="Specifies the length of the portion of the file to be read. Use zero to specify the whole file." design-time="1" enabled="1" id="media_duration" name="Duration" run-time="1">
+            <Value>0</Value>
+            <Domain/>
+            <Layout/>
+            <InitInfo/>
+          </Parameter>
+          <Parameter catalog="kernel" class-id="double" description="Specifies the playback rate. Use 1.0 for normal speed, higher values (e.g., 2.0) for fast-forward, lower values for slow motion. Negative values mean going backward. Note that audio is always muted for playback rate different from 1.0." design-time="1" enabled="1" id="playback_rate" name="Playback rate" run-time="1">
+            <Value>1</Value>
+            <Domain/>
+            <Layout/>
+            <InitInfo/>
+          </Parameter>
+          <Parameter catalog="kernel" class-id="int" description="Specifies the status of the player. If no file is currently executing, this parameter is ignored, however it specifies whether the block is stopped, is paused, or is playing. When the block is stopped the output is a black frame; when the block is paused the output is a fixed frame (the last played one); when the block is playing the output changes at each step. If this parameter is changed at design time or when no file is playing, its value is used as an initial status." design-time="1" enabled="1" id="status" name="Player status" run-time="1">
+            <Value>0</Value>
+            <Domain catalog="kernel" class-id="int-domain">0;1;3;2</Domain>
+            <Layout catalog="kernel" class-id="combo">Stopped;Paused;Playing</Layout>
+            <InitInfo/>
+          </Parameter>
+          <Parameter catalog="kernel" class-id="int" description="Specifies the behaviour when end of file is reached." design-time="1" enabled="1" id="eof" name="End of file" run-time="1">
+            <Value>0</Value>
+            <Domain catalog="kernel" class-id="int-domain">0;1;3;2</Domain>
+            <Layout catalog="kernel" class-id="combo">Stop;Pause;Loop</Layout>
+            <InitInfo/>
+          </Parameter>
+          <Parameter catalog="kernel" class-id="trigger" description="Start (or resume) playing the selected file" design-time="0" enabled="1" id="play" name="Play" run-time="1">
+            <Value></Value>
+            <Domain/>
+            <Layout/>
+            <InitInfo/>
+          </Parameter>
+          <Parameter catalog="kernel" class-id="trigger" description="Pause at the currently reached frame" design-time="0" enabled="1" id="pause" name="Pause" run-time="1">
+            <Value></Value>
+            <Domain/>
+            <Layout/>
+            <InitInfo/>
+          </Parameter>
+          <Parameter catalog="kernel" class-id="trigger" description="Stop playing, produces a black frame as output" design-time="0" enabled="1" id="stop" name="Stop" run-time="1">
+            <Value></Value>
+            <Domain/>
+            <Layout/>
+            <InitInfo/>
+          </Parameter>
+          <Parameter catalog="kernel" class-id="string" description="Master identifier" design-time="1" enabled="1" id="master_id" name="Master ID" run-time="0">
+            <Value></Value>
+            <Domain/>
+            <Layout/>
+            <InitInfo/>
+          </Parameter>
+          <Parameter catalog="kernel" class-id="int" description="Set the type of syncronization" design-time="1" enabled="1" id="sync_type" name="Syncronization Type" run-time="0">
+            <Value>0</Value>
+            <Domain catalog="kernel" class-id="int-domain">0;1;3;2</Domain>
+            <Layout catalog="kernel" class-id="combo">Standalone;Master;Slave</Layout>
+            <InitInfo/>
+          </Parameter>
+          <Parameter catalog="kernel" class-id="bool" description="If the file set has not an audio stream and the block is set as Master, It generate a silent sound buffer with valid mediatime" design-time="1" enabled="1" id="auto_generate_mediatime" name="Auto generate mediatime" run-time="1">
+            <Value>1</Value>
+            <Domain/>
+            <Layout/>
+            <InitInfo/>
+          </Parameter>
+          <Parameter catalog="kernel" class-id="bool" description="Generate cued bang after a failure of a change filename" design-time="1" enabled="1" id="generate_cued_if_failed" name="Generate cued bang after failure" run-time="1">
+            <Value>1</Value>
+            <Domain/>
+            <Layout/>
+            <InitInfo/>
+          </Parameter>
+          <Parameter catalog="kernel" class-id="int" description="It specifies how the block calculates the buffer lenght. It's possible set the dimension according to number of samples value, buffer time duration or in frame per second." design-time="1" enabled="1" id="type_of_buffering" name="Buffering type" run-time="0">
+            <Value>0</Value>
+            <Domain catalog="kernel" class-id="int-domain">0;1;3;2</Domain>
+            <Layout catalog="kernel" class-id="combo">numsamples;buffertime;fps</Layout>
+            <InitInfo/>
+          </Parameter>
+          <Parameter catalog="kernel" class-id="int" description="It specifies the number of samples for each buffer. Usually 1764." design-time="1" enabled="1" id="number_of_samples" name="number of samples" run-time="0">
+            <Value>1764</Value>
+            <Domain catalog="kernel" class-id="int-domain">1;1;0;0</Domain>
+            <Layout/>
+            <InitInfo/>
+          </Parameter>
+        </Parameters>
+        <Inputs/>
+        <Outputs>
+          <Output catalog="base" class-id="audio_buffer" description="Output buffer. It's and audio buffer datatype." id="audio_stream" inherited-id="" inplace-id="" name="Output buffer."/>
+          <Output catalog="kernel" class-id="trigger" description="Generate a bang when the file is cued successfully" id="file_cued" inherited-id="" inplace-id="" name="File cued"/>
+          <Output catalog="kernel" class-id="bool" description="Generate true when the file is played" id="file_end" inherited-id="" inplace-id="" name="EndFile"/>
+        </Outputs>
+        <PrivateData/>
+      </Block>
+      <Block active="1" catalog="base" class-id="convert_to_pcm" id="1450" label="ConvertAudioToPCM_1" log_info="2" run_level="1" sync-in_mode="1">
+        <Properties>
+          <PropertySet name="gui-mdi">
+            <Property name="Appearance.Pos">190;590</Property>
+            <Property name="Private.ZOrder">39</Property>
+            <Property name="Private.ObjID">16</Property>
+            <Property name="Appearance.Size">64;64</Property>
+            <Property name="Appearance.Orientation">1</Property>
+            <Property name="Private.ExportedParams"></Property>
+            <Property name="Private.Selected">0</Property>
+            <Property name="Private.ParamsOrder">kernel::active_status;kernel::active_trigger;kernel::run_level;kernel::sync_in_mode;kernel::log_level;pcm_type</Property>
+            <Property name="Private.FullPath">Audio.Converter.ConvertAudioToPCM</Property>
+            <Property name="DisplaySyncInVisible">0</Property>
+            <Property name="DisplaySyncOutVisible">0</Property>
+          </PropertySet>
+        </Properties>
+        <Parameters>
+          <Parameter catalog="kernel" class-id="int" description="Specifies the format of each sample of the output PCM audio buffer" design-time="1" enabled="1" id="pcm_type" name="PCMSampleFormat" run-time="0">
+            <Value>7</Value>
+            <Domain catalog="kernel" class-id="int-domain">0;1;11;2</Domain>
+            <Layout catalog="kernel" class-id="combo">8 bits unsigned;8 bits signed;16 bits unsigned;16 bits signed;24 bits unsigned (unpacked, 32bits storage);24 bits signed (unpacked, 32bits storage);24 bits unsigned (packed, 24bits storage);24 bits signed (packed, 24bits storage);32 bits unsigned;32 bits signed;32 bits float</Layout>
+            <InitInfo/>
+          </Parameter>
+        </Parameters>
+        <Inputs>
+          <Input catalog="base" class-id="audio_buffer" description="" id="input_sound_buffer" name="Audio Buffer" read-write="0" required_for_execution="1" required_for_initialization="1">
+            <RequiredInterfaces/>
+          </Input>
+        </Inputs>
+        <Outputs>
+          <Output catalog="base" class-id="pcm_audio_buffer" description="" id="output_pcm_buffer" inherited-id="" inplace-id="" name="PCM Buffer"/>
+        </Outputs>
+        <PrivateData/>
+      </Block>
+      <Block active="1" catalog="kernel" class-id="bang_generator" id="1499" label="BangGenerator_3" log_info="2" run_level="1" sync-in_mode="1">
+        <Properties>
+          <PropertySet name="gui-mdi">
+            <Property name="Appearance.Pos">20;500</Property>
+            <Property name="Private.ZOrder">29</Property>
+            <Property name="Private.ObjID">17</Property>
+            <Property name="Appearance.Size">80;30</Property>
+            <Property name="Appearance.Orientation">1</Property>
+            <Property name="Private.ExportedParams"></Property>
+            <Property name="Private.Selected">0</Property>
+            <Property name="Private.ParamsOrder">kernel::active_status;kernel::active_trigger;kernel::run_level;kernel::sync_in_mode;kernel::log_level;bang;patch_start;key_press;key_release;key;system-key_press;system-key_release;systemkey;periodic;period;phase;absolute;absolute_time_instant</Property>
+            <Property name="Private.FullPath">GUI Objects.BangGenerator</Property>
+            <Property name="DisplaySyncInVisible">0</Property>
+            <Property name="DisplaySyncOutVisible">0</Property>
+            <Property name="Appearance.Caption">Play</Property>
+            <Property name="Appearance.Font">MS Shell Dlg; 8.25; </Property>
+            <Property name="Appearance.FontColor">0; 0; 0</Property>
+            <Property name="Appearance.FillColor">240; 240; 240</Property>
+            <Property name="Appearance.Flat">0</Property>
+          </PropertySet>
+        </Properties>
+        <Parameters>
+          <Parameter catalog="kernel" class-id="trigger" description="Bang generator (kernel catalog)" design-time="0" enabled="1" id="bang" name="BangGenerator" run-time="1">
+            <Value></Value>
+            <Domain/>
+            <Layout/>
+            <InitInfo/>
+          </Parameter>
+          <Parameter catalog="kernel" class-id="bool" description="Generates a bang when the patch starts." design-time="1" enabled="1" id="patch_start" name="Patch start" run-time="1">
+            <Value>0</Value>
+            <Domain/>
+            <Layout/>
+            <InitInfo/>
+          </Parameter>
+          <Parameter catalog="kernel" class-id="bool" description="Generates a bang when a key is pressed in the main EyesWeb application." design-time="1" enabled="1" id="key_press" name="KeyPress" run-time="1">
+            <Value>0</Value>
+            <Domain/>
+            <Layout/>
+            <InitInfo/>
+          </Parameter>
+          <Parameter catalog="kernel" class-id="bool" description="Generates a bang when a key is released in the main EyesWeb application." design-time="1" enabled="1" id="key_release" name="KeyRelease" run-time="1">
+            <Value>0</Value>
+            <Domain/>
+            <Layout/>
+            <InitInfo/>
+          </Parameter>
+          <Parameter catalog="kernel" class-id="acceleratorkey" description="Specifies the keyboard code generating the event. It is ignored if KeyPress is set to false." design-time="1" enabled="1" id="key" name="Key" run-time="1">
+            <Value></Value>
+            <Domain/>
+            <Layout/>
+            <InitInfo/>
+          </Parameter>
+          <Parameter catalog="kernel" class-id="bool" description="Generates a bang when a key is pressed even outside the main EyesWeb application." design-time="1" enabled="1" id="system-key_press" name="System KeyPress" run-time="1">
+            <Value>0</Value>
+            <Domain/>
+            <Layout/>
+            <InitInfo/>
+          </Parameter>
+          <Parameter catalog="kernel" class-id="bool" description="Generates a bang when a key is released even outside the main EyesWeb application." design-time="1" enabled="1" id="system-key_release" name="System KeyRelease" run-time="1">
+            <Value>0</Value>
+            <Domain/>
+            <Layout/>
+            <InitInfo/>
+          </Parameter>
+          <Parameter catalog="kernel" class-id="acceleratorkey" description="Specifies the keyboard code generating the event. It is ignored if SystemKeyPress is set to false." design-time="1" enabled="1" id="systemkey" name="SystemKey" run-time="1">
+            <Value></Value>
+            <Domain/>
+            <Layout/>
+            <InitInfo/>
+          </Parameter>
+          <Parameter catalog="kernel" class-id="bool" description="Generates a bang periodically." design-time="1" enabled="1" id="periodic" name="Periodic" run-time="1">
+            <Value>0</Value>
+            <Domain/>
+            <Layout/>
+            <InitInfo/>
+          </Parameter>
+          <Parameter catalog="kernel" class-id="time" description="Period is expressed in 100nanoseconds unit (i.e., 10milliseconds must be specified as 100000)" design-time="1" enabled="1" id="period" name="Period" run-time="1">
+            <Value>10000000</Value>
+            <Domain/>
+            <Layout/>
+            <InitInfo/>
+          </Parameter>
+          <Parameter catalog="kernel" class-id="time" description="Phase" design-time="1" enabled="1" id="phase" name="Phase" run-time="1">
+            <Value>0</Value>
+            <Domain/>
+            <Layout/>
+            <InitInfo/>
+          </Parameter>
+          <Parameter catalog="kernel" class-id="bool" description="Generates a bang at a specified absolute time." design-time="1" enabled="1" id="absolute" name="Absolute time" run-time="1">
+            <Value>0</Value>
+            <Domain/>
+            <Layout/>
+            <InitInfo/>
+          </Parameter>
+          <Parameter catalog="kernel" class-id="time" description="Absolute time" design-time="1" enabled="1" id="absolute_time_instant" name="AbsoluteTime" run-time="1">
+            <Value>0</Value>
+            <Domain/>
+            <Layout/>
+            <InitInfo/>
+          </Parameter>
+        </Parameters>
+        <Inputs/>
+        <Outputs>
+          <Output catalog="kernel" class-id="trigger" description="Bang" id="bang" inherited-id="" inplace-id="" name="Bang"/>
+        </Outputs>
+        <PrivateData/>
+      </Block>
+      <Block active="1" catalog="kernel" class-id="bang_generator" id="1569" label="BangGenerator_5" log_info="2" run_level="1" sync-in_mode="1">
+        <Properties>
+          <PropertySet name="gui-mdi">
+            <Property name="Appearance.Pos">20;540</Property>
+            <Property name="Private.ZOrder">30</Property>
+            <Property name="Private.ObjID">18</Property>
+            <Property name="Appearance.Size">80;30</Property>
+            <Property name="Appearance.Orientation">1</Property>
+            <Property name="Private.ExportedParams"></Property>
+            <Property name="Private.Selected">0</Property>
+            <Property name="Private.ParamsOrder">kernel::active_status;kernel::active_trigger;kernel::run_level;kernel::sync_in_mode;kernel::log_level;bang;patch_start;key_press;key_release;key;system-key_press;system-key_release;systemkey;periodic;period;phase;absolute;absolute_time_instant</Property>
+            <Property name="Private.FullPath">GUI Objects.BangGenerator</Property>
+            <Property name="DisplaySyncInVisible">0</Property>
+            <Property name="DisplaySyncOutVisible">0</Property>
+            <Property name="Appearance.Caption">Stop</Property>
+            <Property name="Appearance.Font">MS Shell Dlg; 8.25; </Property>
+            <Property name="Appearance.FontColor">0; 0; 0</Property>
+            <Property name="Appearance.FillColor">240; 240; 240</Property>
+            <Property name="Appearance.Flat">0</Property>
+          </PropertySet>
+        </Properties>
+        <Parameters>
+          <Parameter catalog="kernel" class-id="trigger" description="Bang generator (kernel catalog)" design-time="0" enabled="1" id="bang" name="BangGenerator" run-time="1">
+            <Value></Value>
+            <Domain/>
+            <Layout/>
+            <InitInfo/>
+          </Parameter>
+          <Parameter catalog="kernel" class-id="bool" description="Generates a bang when the patch starts." design-time="1" enabled="1" id="patch_start" name="Patch start" run-time="1">
+            <Value>0</Value>
+            <Domain/>
+            <Layout/>
+            <InitInfo/>
+          </Parameter>
+          <Parameter catalog="kernel" class-id="bool" description="Generates a bang when a key is pressed in the main EyesWeb application." design-time="1" enabled="1" id="key_press" name="KeyPress" run-time="1">
+            <Value>0</Value>
+            <Domain/>
+            <Layout/>
+            <InitInfo/>
+          </Parameter>
+          <Parameter catalog="kernel" class-id="bool" description="Generates a bang when a key is released in the main EyesWeb application." design-time="1" enabled="1" id="key_release" name="KeyRelease" run-time="1">
+            <Value>0</Value>
+            <Domain/>
+            <Layout/>
+            <InitInfo/>
+          </Parameter>
+          <Parameter catalog="kernel" class-id="acceleratorkey" description="Specifies the keyboard code generating the event. It is ignored if KeyPress is set to false." design-time="1" enabled="1" id="key" name="Key" run-time="1">
+            <Value></Value>
+            <Domain/>
+            <Layout/>
+            <InitInfo/>
+          </Parameter>
+          <Parameter catalog="kernel" class-id="bool" description="Generates a bang when a key is pressed even outside the main EyesWeb application." design-time="1" enabled="1" id="system-key_press" name="System KeyPress" run-time="1">
+            <Value>0</Value>
+            <Domain/>
+            <Layout/>
+            <InitInfo/>
+          </Parameter>
+          <Parameter catalog="kernel" class-id="bool" description="Generates a bang when a key is released even outside the main EyesWeb application." design-time="1" enabled="1" id="system-key_release" name="System KeyRelease" run-time="1">
+            <Value>0</Value>
+            <Domain/>
+            <Layout/>
+            <InitInfo/>
+          </Parameter>
+          <Parameter catalog="kernel" class-id="acceleratorkey" description="Specifies the keyboard code generating the event. It is ignored if SystemKeyPress is set to false." design-time="1" enabled="1" id="systemkey" name="SystemKey" run-time="1">
+            <Value></Value>
+            <Domain/>
+            <Layout/>
+            <InitInfo/>
+          </Parameter>
+          <Parameter catalog="kernel" class-id="bool" description="Generates a bang periodically." design-time="1" enabled="1" id="periodic" name="Periodic" run-time="1">
+            <Value>0</Value>
+            <Domain/>
+            <Layout/>
+            <InitInfo/>
+          </Parameter>
+          <Parameter catalog="kernel" class-id="time" description="Period is expressed in 100nanoseconds unit (i.e., 10milliseconds must be specified as 100000)" design-time="1" enabled="1" id="period" name="Period" run-time="1">
+            <Value>10000000</Value>
+            <Domain/>
+            <Layout/>
+            <InitInfo/>
+          </Parameter>
+          <Parameter catalog="kernel" class-id="time" description="Phase" design-time="1" enabled="1" id="phase" name="Phase" run-time="1">
+            <Value>0</Value>
+            <Domain/>
+            <Layout/>
+            <InitInfo/>
+          </Parameter>
+          <Parameter catalog="kernel" class-id="bool" description="Generates a bang at a specified absolute time." design-time="1" enabled="1" id="absolute" name="Absolute time" run-time="1">
+            <Value>0</Value>
+            <Domain/>
+            <Layout/>
+            <InitInfo/>
+          </Parameter>
+          <Parameter catalog="kernel" class-id="time" description="Absolute time" design-time="1" enabled="1" id="absolute_time_instant" name="AbsoluteTime" run-time="1">
+            <Value>0</Value>
+            <Domain/>
+            <Layout/>
+            <InitInfo/>
+          </Parameter>
+        </Parameters>
+        <Inputs/>
+        <Outputs>
+          <Output catalog="kernel" class-id="trigger" description="Bang" id="bang" inherited-id="" inplace-id="" name="Bang"/>
+        </Outputs>
+        <PrivateData/>
+      </Block>
+      <Block active="1" catalog="system" class-id="image_display" id="1659" label="DisplayDirectX_2" log_info="2" run_level="1" sync-in_mode="1" window_docked="1" window_fit_mode="1" window_full_screen="0" window_full_screen_monitor_index="0" window_horizontal_scroll_pos="0" window_keep_aspect_ratio="1" window_rect_height="38" window_rect_width="160" window_rect_x="0" window_rect_y="873" window_refresh_rate_max_frequency="25" window_refresh_rate_min_interval="400000" window_refresh_rate_mode="0" window_title="Recording Preview" window_title_bar_visible="1" window_vertical_scroll_pos="0" window_zoom="0.1302083283662796">
+        <Properties>
+          <PropertySet name="gui-mdi">
+            <Property name="Appearance.Pos">670;220</Property>
+            <Property name="Private.ZOrder">40</Property>
+            <Property name="Private.ObjID">38</Property>
+            <Property name="Appearance.Size">450;260</Property>
+            <Property name="Appearance.Orientation">1</Property>
+            <Property name="Private.ExportedParams"></Property>
+            <Property name="Private.Selected">0</Property>
+            <Property name="Private.ParamsOrder">kernel::active_status;kernel::active_trigger;kernel::run_level;kernel::sync_in_mode;kernel::log_level;letterbox_mode;filtering;delay;kernel::window_title;kernel::window_rect_x;kernel::window_rect_y;kernel::window_rect_width;kernel::window_rect_height;kernel::window_docked;kernel::window_full_screen;kernel::window_full_screen_monitor_index;kernel::window_zoom;kernel::window_keep_aspect_ratio;kernel::window_horizontal_scroll_pos;kernel::window_vertical_scroll_pos;kernel::window_title_visible;kernel::window_refresh_rate_mode;kernel::window_refresh_rate_min_interval;kernel::window_refresh_rate_max_frequency;kernel::fit_mode</Property>
+            <Property name="Private.FullPath">ImageAndVideo.Output.DisplayDirectX</Property>
+            <Property name="DisplaySyncInVisible">0</Property>
+            <Property name="DisplaySyncOutVisible">0</Property>
+          </PropertySet>
+        </Properties>
+        <Parameters>
+          <Parameter catalog="kernel" class-id="int" description="Specifies where to place mattes and image when using letterboxing. in 'No letterbox' the aspectRatio is not preserved, and the source image is stretched or shrinked to cover all available space. In the other cases, the aspect ratio is (or might be) preserved, thus a black frame might be needed on the horizontal or vertical side to cover the unused space. This enumerator specifies where to place such black frame.&#xA;Since the user might not know in advance whether letterboxing will place mattes above/below or left/right, each mode specifies how to behave in both cases. As an example, the letterbox mode left-middle means that if the image needs mattes on the sides, the image will be put to the extreme left, and the matte will span the right side; if the image needs mattes above/below, the image will be vertically centered. Hence, the mode is made of two terms, the first referring to the horizontal centering of the image, the second referring to the vertical centering. Horizontal centering may assume values none, left, center, or right. Vertical centering may assume values none, top, middle, or bottom. The term none means that if letterboxing is needed on that direction, than the image is stretched to fill the whole size. E.g., elmNoneTop means that is image is thinner than the destination rect, than no letterboxing is applied and the image is stretched horizontally. However, it the image is larger than the destination rect, than letterboxing is applied by putting the image on the top and a single matte below." design-time="1" enabled="1" id="letterbox_mode" name="LetterBox Mode" run-time="1">
+            <Value>0</Value>
+            <Domain catalog="kernel" class-id="int-domain">0;1;16;2</Domain>
+            <Layout catalog="kernel" class-id="combo">No letterbox;CenterMiddle;NoneTop;NoneMiddle;NoneBottom;LeftNone;LeftTop;LeftMiddle;LeftBottom;CenterNone;CenterTop;CenterBottom;RightNone;RightTop;RightMiddle;RightBottom</Layout>
+            <InitInfo/>
+          </Parameter>
+          <Parameter catalog="kernel" class-id="int" description="Interpolation" design-time="1" enabled="1" id="filtering" name="Interpolation" run-time="1">
+            <Value>2</Value>
+            <Domain catalog="kernel" class-id="int-domain">0;1;5;2</Domain>
+            <Layout catalog="kernel" class-id="combo">Point;Linear;Anisotropic;Pyramidal;Gaussian</Layout>
+            <InitInfo/>
+          </Parameter>
+          <Parameter catalog="kernel" class-id="time" description="Delay" design-time="1" enabled="1" id="delay" name="Delay" run-time="1">
+            <Value>400000</Value>
+            <Domain/>
+            <Layout/>
+            <InitInfo/>
+          </Parameter>
+        </Parameters>
+        <Inputs>
+          <Input catalog="kernel" class-id="generic_datatype" description="Image to be painted on the display. The I420, YV12 and HSV color spaces are not supported. the alpha channel is not supported on BW, YUYV, UYVY color spaces. " id="video_stream" name="Image" read-write="1" required_for_execution="1" required_for_initialization="1">
+            <RequiredInterfaces>
+              <RequiredInterface catalog="base" class-id="image_conversion"/>
+              <RequiredInterface catalog="base" class-id="image_roi"/>
+            </RequiredInterfaces>
+          </Input>
+        </Inputs>
+        <Outputs/>
+        <PrivateData/>
+      </Block>
+      <Block active="1" catalog="system" class-id="wdmvideo_input" id="1748" label="FrameGrabber_1" log_info="2" run_level="1" sync-in_mode="0">
+        <Properties>
+          <PropertySet name="gui-mdi">
+            <Property name="Appearance.Pos">670;270</Property>
+            <Property name="Private.ZOrder">41</Property>
+            <Property name="Private.ObjID">39</Property>
+            <Property name="Appearance.Size">48;48</Property>
+            <Property name="Appearance.Orientation">1</Property>
+            <Property name="Private.ExportedParams"></Property>
+            <Property name="Private.Selected">0</Property>
+            <Property name="Private.ParamsOrder">kernel::active_status;kernel::active_trigger;kernel::run_level;kernel::sync_in_mode;kernel::log_level;datatype_info;device;color_model;size;fps;vert_mirror;horiz-mirror;type;gain_flag;gain_value;brightness_flag;brightness_value;overridedeviceinitfailed;device_type</Property>
+            <Property name="Private.FullPath">ImageAndVideo.Input.FrameGrabber</Property>
+            <Property name="DisplaySyncInVisible">1</Property>
+            <Property name="DisplaySyncOutVisible">0</Property>
+          </PropertySet>
+        </Properties>
+        <Parameters>
+          <Parameter catalog="kernel" class-id="string_pair" description="Output Datatype info" design-time="1" enabled="1" id="datatype_info" name="Output datatype info" run-time="0">
+            <Value>base;image</Value>
+            <Domain/>
+            <Layout catalog="kernel" class-id="datatype_selector_combo">base;image_conversion;base;image_roi;base;memory_buffer;base;image_mirror</Layout>
+            <InitInfo/>
+          </Parameter>
+          <Parameter catalog="kernel" class-id="string" description="Device" design-time="1" enabled="1" id="device" name="Device" run-time="1">
+            <Value></Value>
+            <Domain/>
+            <Layout/>
+            <InitInfo/>
+          </Parameter>
+          <Parameter catalog="kernel" class-id="int" description="Image Color Model" design-time="1" enabled="1" id="color_model" name="Image Color Model" run-time="0">
+            <Value>1</Value>
+            <Domain/>
+            <Layout catalog="kernel" class-id="combo">RGB (3 channels - 24 bits);BGR (3 channels - 24 bits);YUV (3 channels - 24 bits);BW (1 channels - 8 bits);YUYV (3 channels (Y,U,Y,V) );UYVY (3 channels (U,Y,V,Y) );I420 (3 channels planar (Y,U,V) );YV12 (3 channels planar (Y,V,U) );RGBA (4 channels - 32 bits);BGRA (4 channels - 32 bits);YUVA (4 channels - 32 bits)</Layout>
+            <InitInfo/>
+          </Parameter>
+          <Parameter catalog="base" class-id="size2d_int" description="Output Image Size" design-time="1" enabled="1" id="size" name="Size" run-time="0">
+            <Value>768;576</Value>
+            <Domain/>
+            <Layout/>
+            <InitInfo/>
+          </Parameter>
+          <Parameter catalog="kernel" class-id="double" description="Frames per second." design-time="1" enabled="1" id="fps" name="Frames per second." run-time="1">
+            <Value>25</Value>
+            <Domain catalog="kernel" class-id="double-domain">0.0010000000474974513;1;0;0</Domain>
+            <Layout/>
+            <InitInfo/>
+          </Parameter>
+          <Parameter catalog="kernel" class-id="bool" description="Vertical Mirror" design-time="1" enabled="1" id="vert_mirror" name="Vertical Mirror" run-time="1">
+            <Value>1</Value>
+            <Domain/>
+            <Layout/>
+            <InitInfo/>
+          </Parameter>
+          <Parameter catalog="kernel" class-id="bool" description="Specifies whether the image must be swaped horizontaly" design-time="1" enabled="1" id="horiz-mirror" name="Horizontal Mirror" run-time="1">
+            <Value>0</Value>
+            <Domain/>
+            <Layout/>
+            <InitInfo/>
+          </Parameter>
+          <Parameter catalog="kernel" class-id="int" description="Type" design-time="1" enabled="1" id="type" name="Type" run-time="0">
+            <Value>0</Value>
+            <Domain/>
+            <Layout catalog="kernel" class-id="combo">AUTO;PAL-B;NTSC</Layout>
+            <InitInfo/>
+          </Parameter>
+          <Parameter catalog="kernel" class-id="int" description="Specifies the desired control setting for the Gain property.&#xA;Default - use the current driver setting&#xA;Auto - enables autogain&#xA;Manual - set the user-specified value&#xA;" design-time="1" enabled="1" id="gain_flag" name="Video Quality: Gain Flag" run-time="1">
+            <Value>0</Value>
+            <Domain catalog="kernel" class-id="int-domain">0;1;3;2</Domain>
+            <Layout catalog="kernel" class-id="combo">Default;Auto;Manual</Layout>
+            <InitInfo/>
+          </Parameter>
+          <Parameter catalog="kernel" class-id="double" description="Specifies the value of the Gain property. Is is used only if Gain Flag is set to manual" design-time="1" enabled="1" id="gain_value" name="Video Quality: Gain Value" run-time="1">
+            <Value>0.5</Value>
+            <Domain catalog="kernel" class-id="double-domain">0;1;1;1</Domain>
+            <Layout/>
+            <InitInfo/>
+          </Parameter>
+          <Parameter catalog="kernel" class-id="int" description="Specifies the desired control setting for the Brightness property.&#xA;Default - use the current driver setting&#xA;Auto - enables autobrightness&#xA;Manual - set the user-specified value&#xA;" design-time="1" enabled="1" id="brightness_flag" name="Video Quality: Brightness Flag" run-time="1">
+            <Value>0</Value>
+            <Domain catalog="kernel" class-id="int-domain">0;1;3;2</Domain>
+            <Layout catalog="kernel" class-id="combo">Default;Auto;Manual</Layout>
+            <InitInfo/>
+          </Parameter>
+          <Parameter catalog="kernel" class-id="double" description="Specifies the value of the Brightness property. Is is used only if Brightness Flag is set to manual" design-time="1" enabled="1" id="brightness_value" name="Video Quality: Brightness Value" run-time="1">
+            <Value>0.5</Value>
+            <Domain catalog="kernel" class-id="double-domain">0;1;1;1</Domain>
+            <Layout/>
+            <InitInfo/>
+          </Parameter>
+          <Parameter catalog="kernel" class-id="bool" description="If the system cannot initialize the selected WDM device the patch will be executed anyway." design-time="1" enabled="1" id="overridedeviceinitfailed" name="Override device init failed." run-time="1">
+            <Value>0</Value>
+            <Domain/>
+            <Layout/>
+            <InitInfo/>
+          </Parameter>
+          <Parameter catalog="kernel" class-id="int" description="Custom device properties" design-time="1" enabled="1" id="device_type" name="Custom device properties" run-time="0">
+            <Value>0</Value>
+            <Domain catalog="kernel" class-id="int-domain">0;1;3;2</Domain>
+            <Layout catalog="kernel" class-id="combo">Default - none;Video crossbar compliant device;Decklink frame grabber</Layout>
+            <InitInfo/>
+          </Parameter>
+        </Parameters>
+        <Inputs/>
+        <Outputs>
+          <Output catalog="base" class-id="image" description="Output" id="video_stream" inherited-id="" inplace-id="" name="Output"/>
+        </Outputs>
+        <PrivateData/>
+      </Block>
+      <Block active="1" catalog="system" class-id="dsound_input" id="1832" label="DirectSoundInput_1" log_info="2" run_level="1" sync-in_mode="1">
+        <Properties>
+          <PropertySet name="gui-mdi">
+            <Property name="Appearance.Pos">670;220</Property>
+            <Property name="Private.ZOrder">42</Property>
+            <Property name="Private.ObjID">40</Property>
+            <Property name="Appearance.Size">48;48</Property>
+            <Property name="Appearance.Orientation">1</Property>
+            <Property name="Private.ExportedParams"></Property>
+            <Property name="Private.Selected">0</Property>
+            <Property name="Private.ParamsOrder">kernel::active_status;kernel::active_trigger;kernel::run_level;kernel::sync_in_mode;kernel::log_level;device;samples;samplingrate;num_channels;physical_buffer_duration;max_delay</Property>
+            <Property name="Private.FullPath">Audio.Input.DirectSoundInput</Property>
+            <Property name="DisplaySyncInVisible">0</Property>
+            <Property name="DisplaySyncOutVisible">0</Property>
+          </PropertySet>
+        </Properties>
+        <Parameters>
+          <Parameter catalog="kernel" class-id="string" description="Virtual Device" design-time="1" enabled="1" id="device" name="Device" run-time="0">
+            <Value></Value>
+            <Domain/>
+            <Layout/>
+            <InitInfo/>
+          </Parameter>
+          <Parameter catalog="kernel" class-id="int" description="Samples" design-time="1" enabled="1" id="samples" name="Samples" run-time="0">
+            <Value>1102</Value>
+            <Domain/>
+            <Layout/>
+            <InitInfo/>
+          </Parameter>
+          <Parameter catalog="kernel" class-id="int" description="Sampling rate" design-time="1" enabled="1" id="samplingrate" name="Sampling rate" run-time="0">
+            <Value>44100</Value>
+            <Domain/>
+            <Layout/>
+            <InitInfo/>
+          </Parameter>
+          <Parameter catalog="kernel" class-id="int" description="Number of audio channels" design-time="1" enabled="1" id="num_channels" name="Num. channels" run-time="0">
+            <Value>2</Value>
+            <Domain catalog="kernel" class-id="int-domain">1;1;0;0</Domain>
+            <Layout/>
+            <InitInfo/>
+          </Parameter>
+          <Parameter catalog="kernel" class-id="time" description="Physical buffer duration" design-time="1" enabled="1" id="physical_buffer_duration" name="Physical buffer duration" run-time="0">
+            <Value>10000000</Value>
+            <Domain/>
+            <Layout/>
+            <InitInfo/>
+          </Parameter>
+          <Parameter catalog="kernel" class-id="time" description="Delay" design-time="1" enabled="1" id="max_delay" name="Delay" run-time="0">
+            <Value>10000000</Value>
+            <Domain/>
+            <Layout/>
+            <InitInfo/>
+          </Parameter>
+        </Parameters>
+        <Inputs/>
+        <Outputs>
+          <Output catalog="base" class-id="audio_buffer" description="Output" id="audio_stream" inherited-id="" inplace-id="" name="Output"/>
+        </Outputs>
+        <PrivateData/>
+      </Block>
+      <Block active="1" catalog="system" class-id="audio_display_gdi" id="27273" label="AudioDisplay_1" log_info="2" run_level="1" sync-in_mode="1" window_docked="1" window_fit_mode="0" window_full_screen="0" window_full_screen_monitor_index="0" window_horizontal_scroll_pos="0" window_keep_aspect_ratio="1" window_rect_height="0" window_rect_width="0" window_rect_x="0" window_rect_y="0" window_refresh_rate_max_frequency="25" window_refresh_rate_min_interval="400000" window_refresh_rate_mode="0" window_title="AudioDisplay" window_title_bar_visible="1" window_vertical_scroll_pos="0" window_zoom="1">
+        <Properties>
+          <PropertySet name="gui-mdi">
+            <Property name="Appearance.Pos">670;490</Property>
+            <Property name="Private.ZOrder">1</Property>
+            <Property name="Private.ObjID">65</Property>
+            <Property name="Appearance.Size">450;220</Property>
+            <Property name="Appearance.Orientation">1</Property>
+            <Property name="Private.ExportedParams"></Property>
+            <Property name="Private.Selected">1</Property>
+            <Property name="Private.ParamsOrder">kernel::active_status;kernel::active_trigger;kernel::run_level;kernel::sync_in_mode;kernel::log_level;Label;Merge channels;kernel::window_title;kernel::window_rect_x;kernel::window_rect_y;kernel::window_rect_width;kernel::window_rect_height;kernel::window_docked;kernel::window_full_screen;kernel::window_full_screen_monitor_index;kernel::window_zoom;kernel::window_keep_aspect_ratio;kernel::window_horizontal_scroll_pos;kernel::window_vertical_scroll_pos;kernel::window_title_visible;kernel::window_refresh_rate_mode;kernel::window_refresh_rate_min_interval;kernel::window_refresh_rate_max_frequency;kernel::fit_mode</Property>
+            <Property name="Private.FullPath">Audio.Output.AudioDisplay</Property>
+            <Property name="DisplaySyncInVisible">0</Property>
+            <Property name="DisplaySyncOutVisible">0</Property>
+          </PropertySet>
+        </Properties>
+        <Parameters>
+          <Parameter catalog="kernel" class-id="bool" description="Label" design-time="1" enabled="1" id="Label" name="Label" run-time="1">
+            <Value>1</Value>
+            <Domain/>
+            <Layout/>
+            <InitInfo/>
+          </Parameter>
+          <Parameter catalog="kernel" class-id="bool" description="Merge channels" design-time="1" enabled="1" id="Merge channels" name="Merge channels" run-time="0">
+            <Value>1</Value>
+            <Domain/>
+            <Layout/>
+            <InitInfo/>
+          </Parameter>
+        </Parameters>
+        <Inputs>
+          <Input catalog="kernel" class-id="generic_datatype" description="Audio Buffer" id="input_audio" name="Audio Buffer" read-write="1" required_for_execution="1" required_for_initialization="1">
+            <RequiredInterfaces>
+              <RequiredInterface catalog="kernel" class-id="static_time_series"/>
+            </RequiredInterfaces>
+          </Input>
+        </Inputs>
+        <Outputs/>
+        <PrivateData/>
+      </Block>
+    </Blocks>
+    <PatchPins/>
+    <CustomObjects>
+      <CustomObject>
+        <Properties>
+          <PropertySet name="gui-mdi">
+            <Property name="GuiObjectType">Label</Property>
+            <Property name="Appearance.Pos">10;180</Property>
+            <Property name="Private.Selected">0</Property>
+            <Property name="Private.ZOrder">24</Property>
+            <Property name="Private.ObjID">36</Property>
+            <Property name="Appearance.Orientation">1</Property>
+            <Property name="Appearance.Size">630;260</Property>
+            <Property name="Appearance.FillColor">192; 192; 192</Property>
+            <Property name="Appearance.Transparent">0</Property>
+            <Property name="Appearance.BorderColor">0; 0; 0</Property>
+            <Property name="Appearance.BorderSize">2</Property>
+            <Property name="Appearance.Text">Sensor Data</Property>
+            <Property name="Appearance.Margins">5;5</Property>
+            <Property name="Appearance.Font">MS Shell Dlg; 12; </Property>
+            <Property name="Appearance.FontColor">0; 0; 0</Property>
+            <Property name="Appearance.HorzAlign">2</Property>
+            <Property name="Appearance.VertAlign">0</Property>
+          </PropertySet>
+        </Properties>
+      </CustomObject>
+      <CustomObject>
+        <Properties>
+          <PropertySet name="gui-mdi">
+            <Property name="GuiObjectType">Label</Property>
+            <Property name="Appearance.Pos">10;460</Property>
+            <Property name="Private.Selected">0</Property>
+            <Property name="Private.ZOrder">35</Property>
+            <Property name="Private.ObjID">37</Property>
+            <Property name="Appearance.Orientation">1</Property>
+            <Property name="Appearance.Size">630;260</Property>
+            <Property name="Appearance.FillColor">192; 192; 192</Property>
+            <Property name="Appearance.Transparent">0</Property>
+            <Property name="Appearance.BorderColor">0; 0; 0</Property>
+            <Property name="Appearance.BorderSize">2</Property>
+            <Property name="Appearance.Text">Audio/Video Playback</Property>
+            <Property name="Appearance.Margins">5;5</Property>
+            <Property name="Appearance.Font">MS Shell Dlg; 12; </Property>
+            <Property name="Appearance.FontColor">0; 0; 0</Property>
+            <Property name="Appearance.HorzAlign">2</Property>
+            <Property name="Appearance.VertAlign">0</Property>
+          </PropertySet>
+        </Properties>
+      </CustomObject>
+      <CustomObject>
+        <Properties>
+          <PropertySet name="gui-mdi">
+            <Property name="GuiObjectType">Label</Property>
+            <Property name="Appearance.Pos">660;180</Property>
+            <Property name="Private.Selected">0</Property>
+            <Property name="Private.ZOrder">43</Property>
+            <Property name="Private.ObjID">41</Property>
+            <Property name="Appearance.Orientation">1</Property>
+            <Property name="Appearance.Size">470;540</Property>
+            <Property name="Appearance.FillColor">192; 192; 192</Property>
+            <Property name="Appearance.Transparent">0</Property>
+            <Property name="Appearance.BorderColor">0; 0; 0</Property>
+            <Property name="Appearance.BorderSize">2</Property>
+            <Property name="Appearance.Text">Video Recording</Property>
+            <Property name="Appearance.Margins">5;5</Property>
+            <Property name="Appearance.Font">MS Shell Dlg; 12; </Property>
+            <Property name="Appearance.FontColor">0; 0; 0</Property>
+            <Property name="Appearance.HorzAlign">2</Property>
+            <Property name="Appearance.VertAlign">0</Property>
+          </PropertySet>
+        </Properties>
+      </CustomObject>
+    </CustomObjects>
+    <Links>
+      <Link>
+        <Pin block="901" id="OutputPin" type="source"/>
+        <Pin block="481" id="input" target_type="input" type="target"/>
+        <Properties>
+          <PropertySet name="gui-mdi">
+            <Property name="Private.SrcPinDelta">0;0</Property>
+            <Property name="Private.SrcPinNdx">-1</Property>
+            <Property name="Private.DstPinDelta">0;0</Property>
+            <Property name="Private.DstPinNdx">-1</Property>
+            <Property name="Private.NumPins">0</Property>
+            <Property name="Private.Selected">0</Property>
+            <Property name="Private.ZOrder">12</Property>
+            <Property name="Private.ObjID">19</Property>
+          </PropertySet>
+        </Properties>
+      </Link>
+      <Link>
+        <Pin block="956" id="OutputPin" type="source"/>
+        <Pin block="691" id="input" target_type="input" type="target"/>
+        <Properties>
+          <PropertySet name="gui-mdi">
+            <Property name="Private.SrcPinDelta">0;0</Property>
+            <Property name="Private.SrcPinNdx">-1</Property>
+            <Property name="Private.DstPinDelta">0;0</Property>
+            <Property name="Private.DstPinNdx">-1</Property>
+            <Property name="Private.NumPins">0</Property>
+            <Property name="Private.Selected">0</Property>
+            <Property name="Private.ZOrder">11</Property>
+            <Property name="Private.ObjID">20</Property>
+          </PropertySet>
+        </Properties>
+      </Link>
+      <Link>
+        <Pin block="231" id="OutputItem" type="source"/>
+        <Pin block="901" id="InputPin" target_type="input" type="target"/>
+        <Properties>
+          <PropertySet name="gui-mdi">
+            <Property name="Private.SrcPinDelta">0;0</Property>
+            <Property name="Private.SrcPinNdx">-1</Property>
+            <Property name="Private.DstPinDelta">0;0</Property>
+            <Property name="Private.DstPinNdx">-1</Property>
+            <Property name="Private.NumPins">0</Property>
+            <Property name="Private.Selected">0</Property>
+            <Property name="Private.ZOrder">10</Property>
+            <Property name="Private.ObjID">21</Property>
+          </PropertySet>
+        </Properties>
+      </Link>
+      <Link>
+        <Pin block="286" id="OutputItem" type="source"/>
+        <Pin block="956" id="InputPin" target_type="input" type="target"/>
+        <Properties>
+          <PropertySet name="gui-mdi">
+            <Property name="Private.SrcPinDelta">0;0</Property>
+            <Property name="Private.SrcPinNdx">-1</Property>
+            <Property name="Private.DstPinDelta">0;0</Property>
+            <Property name="Private.DstPinNdx">-1</Property>
+            <Property name="Private.NumPins">0</Property>
+            <Property name="Private.Selected">0</Property>
+            <Property name="Private.ZOrder">9</Property>
+            <Property name="Private.ObjID">22</Property>
+          </PropertySet>
+        </Properties>
+      </Link>
+      <Link>
+        <Pin block="21" id="OUT_PIN1" type="source"/>
+        <Pin block="231" id="InputMatrix" target_type="input" type="target"/>
+        <Properties>
+          <PropertySet name="gui-mdi">
+            <Property name="Private.SrcPinDelta">0;0</Property>
+            <Property name="Private.SrcPinNdx">-1</Property>
+            <Property name="Private.DstPinDelta">0;0</Property>
+            <Property name="Private.DstPinNdx">-1</Property>
+            <Property name="Private.NumPins">0</Property>
+            <Property name="Private.Selected">0</Property>
+            <Property name="Private.ZOrder">8</Property>
+            <Property name="Private.ObjID">23</Property>
+          </PropertySet>
+        </Properties>
+      </Link>
+      <Link>
+        <Pin block="21" id="OUT_PIN2" type="source"/>
+        <Pin block="286" id="InputMatrix" target_type="input" type="target"/>
+        <Properties>
+          <PropertySet name="gui-mdi">
+            <Property name="Private.SrcPinDelta">0;0</Property>
+            <Property name="Private.SrcPinNdx">-1</Property>
+            <Property name="Private.DstPinDelta">0;0</Property>
+            <Property name="Private.DstPinNdx">-1</Property>
+            <Property name="Private.NumPins">0</Property>
+            <Property name="Private.Selected">0</Property>
+            <Property name="Private.ZOrder">7</Property>
+            <Property name="Private.ObjID">24</Property>
+          </PropertySet>
+        </Properties>
+      </Link>
+      <Link>
+        <Pin block="91" id="bang" type="source"/>
+        <Pin block="21" id="PAR_CONNECT" target_type="parameter" type="target"/>
+        <Properties>
+          <PropertySet name="gui-mdi">
+            <Property name="Private.SrcPinDelta">0;0</Property>
+            <Property name="Private.SrcPinNdx">-1</Property>
+            <Property name="Private.DstPinDelta">0;0</Property>
+            <Property name="Private.DstPinNdx">-1</Property>
+            <Property name="Private.NumPins">0</Property>
+            <Property name="Private.Selected">0</Property>
+            <Property name="Private.ZOrder">6</Property>
+            <Property name="Private.ObjID">25</Property>
+          </PropertySet>
+        </Properties>
+      </Link>
+      <Link>
+        <Pin block="411" id="bang" type="source"/>
+        <Pin block="21" id="PAR_DISCONNECT" target_type="parameter" type="target"/>
+        <Properties>
+          <PropertySet name="gui-mdi">
+            <Property name="Private.SrcPinDelta">0;0</Property>
+            <Property name="Private.SrcPinNdx">-1</Property>
+            <Property name="Private.DstPinDelta">0;0</Property>
+            <Property name="Private.DstPinNdx">-1</Property>
+            <Property name="Private.NumPins">0</Property>
+            <Property name="Private.Selected">0</Property>
+            <Property name="Private.ZOrder">5</Property>
+            <Property name="Private.ObjID">26</Property>
+          </PropertySet>
+        </Properties>
+      </Link>
+      <Link>
+        <Pin block="161" id="bang" type="source"/>
+        <Pin block="21" id="PAR_START" target_type="parameter" type="target"/>
+        <Properties>
+          <PropertySet name="gui-mdi">
+            <Property name="Private.SrcPinDelta">0;0</Property>
+            <Property name="Private.SrcPinNdx">-1</Property>
+            <Property name="Private.DstPinDelta">0;0</Property>
+            <Property name="Private.DstPinNdx">-1</Property>
+            <Property name="Private.NumPins">0</Property>
+            <Property name="Private.Selected">0</Property>
+            <Property name="Private.ZOrder">4</Property>
+            <Property name="Private.ObjID">27</Property>
+          </PropertySet>
+        </Properties>
+      </Link>
+      <Link>
+        <Pin block="341" id="bang" type="source"/>
+        <Pin block="21" id="PAR_STOP" target_type="parameter" type="target"/>
+        <Properties>
+          <PropertySet name="gui-mdi">
+            <Property name="Private.SrcPinDelta">0;0</Property>
+            <Property name="Private.SrcPinNdx">-1</Property>
+            <Property name="Private.DstPinDelta">0;0</Property>
+            <Property name="Private.DstPinNdx">-1</Property>
+            <Property name="Private.NumPins">0</Property>
+            <Property name="Private.Selected">0</Property>
+            <Property name="Private.ZOrder">3</Property>
+            <Property name="Private.ObjID">28</Property>
+          </PropertySet>
+        </Properties>
+      </Link>
+      <Link>
+        <Pin block="1011" id="video_stream" type="source"/>
+        <Pin block="1210" id="video_stream" target_type="input" type="target"/>
+        <Properties>
+          <PropertySet name="gui-mdi">
+            <Property name="Private.SrcPinDelta">0;0</Property>
+            <Property name="Private.SrcPinNdx">-1</Property>
+            <Property name="Private.DstPinDelta">0;0</Property>
+            <Property name="Private.DstPinNdx">-1</Property>
+            <Property name="Private.NumPins">0</Property>
+            <Property name="Private.Selected">0</Property>
+            <Property name="Private.ZOrder">26</Property>
+            <Property name="Private.ObjID">29</Property>
+          </PropertySet>
+        </Properties>
+      </Link>
+      <Link>
+        <Pin block="1351" id="audio_stream" type="source"/>
+        <Pin block="1450" id="input_sound_buffer" target_type="input" type="target"/>
+        <Properties>
+          <PropertySet name="gui-mdi">
+            <Property name="Private.SrcPinDelta">0;0</Property>
+            <Property name="Private.SrcPinNdx">-1</Property>
+            <Property name="Private.DstPinDelta">0;0</Property>
+            <Property name="Private.DstPinNdx">-1</Property>
+            <Property name="Private.NumPins">0</Property>
+            <Property name="Private.Selected">0</Property>
+            <Property name="Private.ZOrder">27</Property>
+            <Property name="Private.ObjID">30</Property>
+          </PropertySet>
+        </Properties>
+      </Link>
+      <Link>
+        <Pin block="1450" id="output_pcm_buffer" type="source"/>
+        <Pin block="1299" id="input" target_type="input" type="target"/>
+        <Properties>
+          <PropertySet name="gui-mdi">
+            <Property name="Private.SrcPinDelta">0;0</Property>
+            <Property name="Private.SrcPinNdx">-1</Property>
+            <Property name="Private.DstPinDelta">0;0</Property>
+            <Property name="Private.DstPinNdx">-1</Property>
+            <Property name="Private.NumPins">0</Property>
+            <Property name="Private.Selected">0</Property>
+            <Property name="Private.ZOrder">28</Property>
+            <Property name="Private.ObjID">31</Property>
+          </PropertySet>
+        </Properties>
+      </Link>
+      <Link>
+        <Pin block="1499" id="bang" type="source"/>
+        <Pin block="1011" id="play" target_type="parameter" type="target"/>
+        <Properties>
+          <PropertySet name="gui-mdi">
+            <Property name="Private.SrcPinDelta">0;0</Property>
+            <Property name="Private.SrcPinNdx">-1</Property>
+            <Property name="Private.DstPinDelta">0;0</Property>
+            <Property name="Private.DstPinNdx">-1</Property>
+            <Property name="Private.NumPins">0</Property>
+            <Property name="Private.Selected">0</Property>
+            <Property name="Private.ZOrder">31</Property>
+            <Property name="Private.ObjID">32</Property>
+          </PropertySet>
+        </Properties>
+      </Link>
+      <Link>
+        <Pin block="1499" id="bang" type="source"/>
+        <Pin block="1351" id="play" target_type="parameter" type="target"/>
+        <Properties>
+          <PropertySet name="gui-mdi">
+            <Property name="Private.SrcPinDelta">0;0</Property>
+            <Property name="Private.SrcPinNdx">-1</Property>
+            <Property name="Private.DstPinDelta">0;0</Property>
+            <Property name="Private.DstPinNdx">-1</Property>
+            <Property name="Private.NumPins">0</Property>
+            <Property name="Private.Selected">0</Property>
+            <Property name="Private.ZOrder">32</Property>
+            <Property name="Private.ObjID">33</Property>
+          </PropertySet>
+        </Properties>
+      </Link>
+      <Link>
+        <Pin block="1569" id="bang" type="source"/>
+        <Pin block="1011" id="stop" target_type="parameter" type="target"/>
+        <Properties>
+          <PropertySet name="gui-mdi">
+            <Property name="Private.SrcPinDelta">0;0</Property>
+            <Property name="Private.SrcPinNdx">-1</Property>
+            <Property name="Private.DstPinDelta">0;0</Property>
+            <Property name="Private.DstPinNdx">-1</Property>
+            <Property name="Private.NumPins">0</Property>
+            <Property name="Private.Selected">0</Property>
+            <Property name="Private.ZOrder">33</Property>
+            <Property name="Private.ObjID">34</Property>
+          </PropertySet>
+        </Properties>
+      </Link>
+      <Link>
+        <Pin block="1569" id="bang" type="source"/>
+        <Pin block="1351" id="stop" target_type="parameter" type="target"/>
+        <Properties>
+          <PropertySet name="gui-mdi">
+            <Property name="Private.SrcPinDelta">0;0</Property>
+            <Property name="Private.SrcPinNdx">-1</Property>
+            <Property name="Private.DstPinDelta">0;0</Property>
+            <Property name="Private.DstPinNdx">-1</Property>
+            <Property name="Private.NumPins">0</Property>
+            <Property name="Private.Selected">0</Property>
+            <Property name="Private.ZOrder">34</Property>
+            <Property name="Private.ObjID">35</Property>
+          </PropertySet>
+        </Properties>
+      </Link>
+      <Link>
+        <Pin block="1748" id="video_stream" type="source"/>
+        <Pin block="1659" id="video_stream" target_type="input" type="target"/>
+        <Properties>
+          <PropertySet name="gui-mdi">
+            <Property name="Private.SrcPinDelta">0;0</Property>
+            <Property name="Private.SrcPinNdx">-1</Property>
+            <Property name="Private.DstPinDelta">0;0</Property>
+            <Property name="Private.DstPinNdx">-1</Property>
+            <Property name="Private.NumPins">0</Property>
+            <Property name="Private.Selected">0</Property>
+            <Property name="Private.ZOrder">2</Property>
+            <Property name="Private.ObjID">42</Property>
+          </PropertySet>
+        </Properties>
+      </Link>
+      <Link>
+        <Pin block="1832" id="audio_stream" type="source"/>
+        <Pin block="27273" id="input_audio" target_type="input" type="target"/>
+        <Properties>
+          <PropertySet name="gui-mdi">
+            <Property name="Private.SrcPinDelta">0;0</Property>
+            <Property name="Private.SrcPinNdx">-1</Property>
+            <Property name="Private.DstPinDelta">0;0</Property>
+            <Property name="Private.DstPinNdx">-1</Property>
+            <Property name="Private.NumPins">0</Property>
+            <Property name="Private.Selected">0</Property>
+            <Property name="Private.ZOrder">0</Property>
+            <Property name="Private.ObjID">66</Property>
+          </PropertySet>
+        </Properties>
+      </Link>
+    </Links>
+  </Patch>
+
+</MainPatch>

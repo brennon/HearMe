@@ -6,14 +6,14 @@
       <PropertySet name="gui-mdi">
         <Property name="Private.ZoomFactor">1</Property>
         <Property name="Private.RunLevel">1</Property>
-        <Property name="Private.ScrollPos">0;0</Property>
+        <Property name="Private.ScrollPos">118;0</Property>
       </PropertySet>
       <PropertySet name="subpatch">
         <Property name="owner_drawn_block"></Property>
       </PropertySet>
     </Properties>
     <Blocks>
-      <Block active="1" catalog="SEC" class-id="MicroDig" id="21" label="MicroDig_1" log_info="2" run_level="1" sync-in_mode="1">
+      <Block active="1" catalog="SEC" class-id="MicroDig" id="93" label="MicroDig_1" log_info="2" run_level="1" sync-in_mode="1">
         <Properties>
           <PropertySet name="gui-mdi">
             <Property name="Appearance.Pos">230;60</Property>
@@ -31,7 +31,7 @@
         </Properties>
         <Parameters>
           <Parameter catalog="kernel" class-id="string" description="Enter the Name of the serial port you wish to connect to here.&#xA;The serial ports are usually identified with COM1, COM2, COM3, etc.&#xA;If just a number is entered it is assumed it is to be preceeded with COM.&#xA;" design-time="1" enabled="1" id="PAR_DEVICE_NAME" name="Serial Port" run-time="0">
-            <Value>COM7</Value>
+            <Value>COM9</Value>
             <Domain/>
             <Layout/>
             <InitInfo/>
@@ -99,7 +99,7 @@
         </Outputs>
         <PrivateData/>
       </Block>
-      <Block active="1" catalog="kernel" class-id="bang_generator" id="91" label="BangGenerator_1" log_info="2" run_level="1" sync-in_mode="1">
+      <Block active="1" catalog="kernel" class-id="bang_generator" id="163" label="BangGenerator_1" log_info="2" run_level="1" sync-in_mode="1">
         <Properties>
           <PropertySet name="gui-mdi">
             <Property name="Appearance.Pos">30;60</Property>
@@ -206,7 +206,7 @@
         </Outputs>
         <PrivateData/>
       </Block>
-      <Block active="1" catalog="kernel" class-id="bang_generator" id="161" label="BangGenerator_2" log_info="2" run_level="1" sync-in_mode="1">
+      <Block active="1" catalog="kernel" class-id="bang_generator" id="233" label="BangGenerator_2" log_info="2" run_level="1" sync-in_mode="1">
         <Properties>
           <PropertySet name="gui-mdi">
             <Property name="Appearance.Pos">30;140</Property>
@@ -313,7 +313,7 @@
         </Outputs>
         <PrivateData/>
       </Block>
-      <Block active="1" catalog="system" class-id="video-file-reader_ver_2" id="231" label="VideoFileReader_1" log_info="2" run_level="1" sync-in_mode="0">
+      <Block active="1" catalog="system" class-id="video-file-reader_ver_2" id="303" label="VideoFileReader_1" log_info="2" run_level="1" sync-in_mode="0">
         <Properties>
           <PropertySet name="gui-mdi">
             <Property name="Appearance.Pos">180;830</Property>
@@ -361,7 +361,7 @@
             <InitInfo/>
           </Parameter>
           <Parameter catalog="kernel" class-id="double" description="Frames per second of the output streams. Usually 25 (PAL) or 30 (NTSC)." design-time="0" enabled="1" id="fps" name="Frames per second" run-time="0">
-            <Value>25</Value>
+            <Value>0</Value>
             <Domain catalog="kernel" class-id="double-domain">0;1;0;0</Domain>
             <Layout/>
             <InitInfo/>
@@ -501,7 +501,7 @@
         </Outputs>
         <PrivateData/>
       </Block>
-      <Block active="1" catalog="system" class-id="image_display" id="430" label="DisplayDirectX_1" log_info="2" run_level="1" sync-in_mode="1" window_docked="1" window_fit_mode="1" window_full_screen="0" window_full_screen_monitor_index="0" window_horizontal_scroll_pos="0" window_keep_aspect_ratio="1" window_rect_height="734" window_rect_width="745" window_rect_x="959" window_rect_y="127" window_refresh_rate_max_frequency="25" window_refresh_rate_min_interval="400000" window_refresh_rate_mode="0" window_title="DisplayDirectX" window_title_bar_visible="1" window_vertical_scroll_pos="0" window_zoom="0.052083332091569901">
+      <Block active="1" catalog="system" class-id="image_display" id="502" label="DisplayDirectX_1" log_info="2" run_level="1" sync-in_mode="1" window_docked="1" window_fit_mode="1" window_full_screen="0" window_full_screen_monitor_index="0" window_horizontal_scroll_pos="0" window_keep_aspect_ratio="1" window_rect_height="734" window_rect_width="745" window_rect_x="959" window_rect_y="127" window_refresh_rate_max_frequency="25" window_refresh_rate_min_interval="400000" window_refresh_rate_mode="0" window_title="DisplayDirectX" window_title_bar_visible="1" window_vertical_scroll_pos="0" window_zoom="0.052083332091569901">
         <Properties>
           <PropertySet name="gui-mdi">
             <Property name="Appearance.Pos">270;820</Property>
@@ -548,7 +548,7 @@
         <Outputs/>
         <PrivateData/>
       </Block>
-      <Block active="1" catalog="system" class-id="wave_output" id="519" label="WaveOutput_1" log_info="2" run_level="1" sync-in_mode="1">
+      <Block active="1" catalog="system" class-id="wave_output" id="591" label="WaveOutput_1" log_info="2" run_level="1" sync-in_mode="1">
         <Properties>
           <PropertySet name="gui-mdi">
             <Property name="Appearance.Pos">350;970</Property>
@@ -592,7 +592,7 @@
         <Outputs/>
         <PrivateData/>
       </Block>
-      <Block active="1" catalog="system" class-id="audio_file_reader_mmstream" id="571" label="AudioFileReader_1" log_info="2" run_level="1" sync-in_mode="0">
+      <Block active="1" catalog="system" class-id="audio_file_reader_mmstream" id="643" label="AudioFileReader_1" log_info="2" run_level="1" sync-in_mode="0">
         <Properties>
           <PropertySet name="gui-mdi">
             <Property name="Appearance.Pos">190;980</Property>
@@ -738,7 +738,7 @@
         </Outputs>
         <PrivateData/>
       </Block>
-      <Block active="1" catalog="base" class-id="convert_to_pcm" id="670" label="ConvertAudioToPCM_1" log_info="2" run_level="1" sync-in_mode="1">
+      <Block active="1" catalog="base" class-id="convert_to_pcm" id="742" label="ConvertAudioToPCM_1" log_info="2" run_level="1" sync-in_mode="1">
         <Properties>
           <PropertySet name="gui-mdi">
             <Property name="Appearance.Pos">270;960</Property>
@@ -772,10 +772,10 @@
         </Outputs>
         <PrivateData/>
       </Block>
-      <Block active="1" catalog="base" class-id="WriteToFile" id="719" label="WriteToFile_1" log_info="2" run_level="1" sync-in_mode="0">
+      <Block active="1" catalog="base" class-id="WriteToFile" id="791" label="WriteToFile_1" log_info="2" run_level="1" sync-in_mode="0">
         <Properties>
           <PropertySet name="gui-mdi">
-            <Property name="Appearance.Pos">600;150</Property>
+            <Property name="Appearance.Pos">720;310</Property>
             <Property name="Private.ZOrder">232</Property>
             <Property name="Private.ObjID">9</Property>
             <Property name="Appearance.Size">66;65</Property>
@@ -790,7 +790,7 @@
         </Properties>
         <Parameters>
           <Parameter catalog="kernel" class-id="string" description="File Name" design-time="1" enabled="1" id="file_name" name="FileName" run-time="1">
-            <Value>..\..\..\hearme_data\physio_-_subject_14_phase_3.txt</Value>
+            <Value>..\..\..\..\hearme_data\physio_-_subject_14_phase_3.txt</Value>
             <Domain/>
             <Layout catalog="kernel" class-id="filename">Text files (*.txt)|*.txt|All files (*.*)|*.*||saveMode</Layout>
             <InitInfo/>
@@ -852,7 +852,7 @@
         <Outputs/>
         <PrivateData/>
       </Block>
-      <Block active="1" catalog="kernel" class-id="subpatch" id="788" label="Master Clock" log_info="2" run_level="1" sync-in_mode="1">
+      <Block active="1" catalog="kernel" class-id="subpatch" id="860" label="Master Clock" log_info="2" run_level="1" sync-in_mode="1">
         <Properties>
           <PropertySet name="gui-mdi">
             <Property name="Appearance.Pos">910;120</Property>
@@ -880,7 +880,7 @@
             </PropertySet>
           </Properties>
           <Blocks>
-            <Block active="1" catalog="kernel" class-id="subpatch_output_pin" id="805" label="SubpatchOuputPin_1" log_info="2" run_level="1" sync-in_mode="1">
+            <Block active="1" catalog="kernel" class-id="subpatch_output_pin" id="877" label="SubpatchOuputPin_1" log_info="2" run_level="1" sync-in_mode="1">
               <Properties>
                 <PropertySet name="gui-mdi">
                   <Property name="Appearance.Pos">500;140</Property>
@@ -966,7 +966,7 @@
               <Outputs/>
               <PrivateData/>
             </Block>
-            <Block active="1" catalog="kernel" class-id="subpatch_output_pin" id="869" label="SubpatchOuputPin_2" log_info="2" run_level="1" sync-in_mode="1">
+            <Block active="1" catalog="kernel" class-id="subpatch_output_pin" id="941" label="SubpatchOuputPin_2" log_info="2" run_level="1" sync-in_mode="1">
               <Properties>
                 <PropertySet name="gui-mdi">
                   <Property name="Appearance.Pos">500;220</Property>
@@ -1052,7 +1052,7 @@
               <Outputs/>
               <PrivateData/>
             </Block>
-            <Block active="1" catalog="base" class-id="ClockGenerator" id="933" label="ClockGenerator_1" log_info="2" run_level="1" sync-in_mode="1">
+            <Block active="1" catalog="base" class-id="ClockGenerator" id="1005" label="ClockGenerator_1" log_info="2" run_level="1" sync-in_mode="1">
               <Properties>
                 <PropertySet name="gui-mdi">
                   <Property name="Appearance.Pos">200;140</Property>
@@ -1118,7 +1118,7 @@
               </Outputs>
               <PrivateData/>
             </Block>
-            <Block active="1" catalog="kernel" class-id="get_current_time" id="991" label="GetCurrentTime_1" log_info="2" run_level="1" sync-in_mode="0">
+            <Block active="1" catalog="kernel" class-id="get_current_time" id="1063" label="GetCurrentTime_1" log_info="2" run_level="1" sync-in_mode="0">
               <Properties>
                 <PropertySet name="gui-mdi">
                   <Property name="Appearance.Pos">310;230</Property>
@@ -1153,8 +1153,8 @@
           <CustomObjects/>
           <Links>
             <Link>
-              <Pin block="933" id="BangOut" type="source"/>
-              <Pin block="991" id="kernel::sync_in" target_type="sync-in" type="target"/>
+              <Pin block="1005" id="BangOut" type="source"/>
+              <Pin block="1063" id="kernel::sync_in" target_type="sync-in" type="target"/>
               <Properties>
                 <PropertySet name="gui-mdi">
                   <Property name="Private.SrcPinDelta">0;0</Property>
@@ -1169,8 +1169,8 @@
               </Properties>
             </Link>
             <Link>
-              <Pin block="933" id="BangOut" type="source"/>
-              <Pin block="805" id="input" target_type="input" type="target"/>
+              <Pin block="1005" id="BangOut" type="source"/>
+              <Pin block="877" id="input" target_type="input" type="target"/>
               <Properties>
                 <PropertySet name="gui-mdi">
                   <Property name="Private.SrcPinDelta">0;0</Property>
@@ -1185,8 +1185,8 @@
               </Properties>
             </Link>
             <Link>
-              <Pin block="991" id="time" type="source"/>
-              <Pin block="869" id="input" target_type="input" type="target"/>
+              <Pin block="1063" id="time" type="source"/>
+              <Pin block="941" id="input" target_type="input" type="target"/>
               <Properties>
                 <PropertySet name="gui-mdi">
                   <Property name="Private.SrcPinDelta">0;0</Property>
@@ -1203,7 +1203,7 @@
           </Links>
         </Patch>
       </Block>
-      <Block active="1" catalog="kernel" class-id="bang_generator" id="1060" label="BangGenerator_3" log_info="2" run_level="1" sync-in_mode="1">
+      <Block active="1" catalog="kernel" class-id="bang_generator" id="1132" label="BangGenerator_3" log_info="2" run_level="1" sync-in_mode="1">
         <Properties>
           <PropertySet name="gui-mdi">
             <Property name="Appearance.Pos">60;840</Property>
@@ -1310,7 +1310,7 @@
         </Outputs>
         <PrivateData/>
       </Block>
-      <Block active="1" catalog="kernel" class-id="bang_generator" id="1130" label="BangGenerator_4" log_info="2" run_level="1" sync-in_mode="1">
+      <Block active="1" catalog="kernel" class-id="bang_generator" id="1202" label="BangGenerator_4" log_info="2" run_level="1" sync-in_mode="1">
         <Properties>
           <PropertySet name="gui-mdi">
             <Property name="Appearance.Pos">60;910</Property>
@@ -1417,7 +1417,7 @@
         </Outputs>
         <PrivateData/>
       </Block>
-      <Block active="1" catalog="kernel" class-id="bang_generator" id="1200" label="BangGenerator_5" log_info="2" run_level="1" sync-in_mode="1">
+      <Block active="1" catalog="kernel" class-id="bang_generator" id="1272" label="BangGenerator_5" log_info="2" run_level="1" sync-in_mode="1">
         <Properties>
           <PropertySet name="gui-mdi">
             <Property name="Appearance.Pos">60;980</Property>
@@ -1524,7 +1524,7 @@
         </Outputs>
         <PrivateData/>
       </Block>
-      <Block active="1" catalog="base" class-id="GetItem" id="1270" label="MatrixGetItem_1" log_info="2" run_level="1" sync-in_mode="1">
+      <Block active="1" catalog="base" class-id="GetItem" id="1342" label="MatrixGetItem_1" log_info="2" run_level="1" sync-in_mode="1">
         <Properties>
           <PropertySet name="gui-mdi">
             <Property name="Appearance.Pos">310;60</Property>
@@ -1570,7 +1570,7 @@
         </Outputs>
         <PrivateData/>
       </Block>
-      <Block active="1" catalog="base" class-id="GetItem" id="1325" label="MatrixGetItem_2" log_info="2" run_level="1" sync-in_mode="1">
+      <Block active="1" catalog="base" class-id="GetItem" id="1397" label="MatrixGetItem_2" log_info="2" run_level="1" sync-in_mode="1">
         <Properties>
           <PropertySet name="gui-mdi">
             <Property name="Appearance.Pos">310;130</Property>
@@ -1616,7 +1616,7 @@
         </Outputs>
         <PrivateData/>
       </Block>
-      <Block active="1" catalog="system" class-id="image_display" id="1380" label="DisplayDirectX_2" log_info="2" run_level="1" sync-in_mode="1" window_docked="1" window_fit_mode="1" window_full_screen="0" window_full_screen_monitor_index="0" window_horizontal_scroll_pos="0" window_keep_aspect_ratio="1" window_rect_height="638" window_rect_width="745" window_rect_x="61" window_rect_y="68" window_refresh_rate_max_frequency="25" window_refresh_rate_min_interval="400000" window_refresh_rate_mode="0" window_title="Recording Preview" window_title_bar_visible="1" window_vertical_scroll_pos="0" window_zoom="0.1302083283662796">
+      <Block active="1" catalog="system" class-id="image_display" id="1452" label="DisplayDirectX_2" log_info="2" run_level="1" sync-in_mode="1" window_docked="0" window_fit_mode="1" window_full_screen="0" window_full_screen_monitor_index="0" window_horizontal_scroll_pos="0" window_keep_aspect_ratio="1" window_rect_height="638" window_rect_width="745" window_rect_x="61" window_rect_y="68" window_refresh_rate_max_frequency="25" window_refresh_rate_min_interval="400000" window_refresh_rate_mode="0" window_title="Recording Preview" window_title_bar_visible="1" window_vertical_scroll_pos="0" window_zoom="0.94921875">
         <Properties>
           <PropertySet name="gui-mdi">
             <Property name="Appearance.Pos">1000;900</Property>
@@ -1663,7 +1663,7 @@
         <Outputs/>
         <PrivateData/>
       </Block>
-      <Block active="1" catalog="system" class-id="wdmvideo_input" id="1469" label="FrameGrabber_1" log_info="2" run_level="1" sync-in_mode="0">
+      <Block active="1" catalog="system" class-id="wdmvideo_input" id="1541" label="FrameGrabber_1" log_info="2" run_level="1" sync-in_mode="0">
         <Properties>
           <PropertySet name="gui-mdi">
             <Property name="Appearance.Pos">820;840</Property>
@@ -1771,7 +1771,7 @@
         </Outputs>
         <PrivateData/>
       </Block>
-      <Block active="1" catalog="base" class-id="WMVWriter" id="1553" label="WMVFileWriter_1" log_info="2" run_level="1" sync-in_mode="0">
+      <Block active="1" catalog="base" class-id="WMVWriter" id="1625" label="WMVFileWriter_1" log_info="2" run_level="1" sync-in_mode="0">
         <Properties>
           <PropertySet name="gui-mdi">
             <Property name="Appearance.Pos">1020;820</Property>
@@ -1779,7 +1779,7 @@
             <Property name="Private.ObjID">18</Property>
             <Property name="Appearance.Size">64;64</Property>
             <Property name="Appearance.Orientation">1</Property>
-            <Property name="Private.ExportedParams">rec;</Property>
+            <Property name="Private.ExportedParams">filename;rec;</Property>
             <Property name="Private.Selected">0</Property>
             <Property name="Private.ParamsOrder">kernel::active_status;kernel::active_trigger;kernel::run_level;kernel::sync_in_mode;kernel::log_level;filename;prof_mode;filename_settings;compression_rate;video_input_fps;text_stream_count;vert_mirror;rec;pause;stop</Property>
             <Property name="Private.FullPath">ImageAndVideo.Output.WMVFileWriter</Property>
@@ -1860,7 +1860,7 @@
         <Outputs/>
         <PrivateData/>
       </Block>
-      <Block active="1" catalog="system" class-id="title_machine" id="1622" label="TitleMachine_1" log_info="2" run_level="1" sync-in_mode="1">
+      <Block active="1" catalog="system" class-id="title_machine" id="1694" label="TitleMachine_1" log_info="2" run_level="1" sync-in_mode="1">
         <Properties>
           <PropertySet name="gui-mdi">
             <Property name="Appearance.Pos">880;840</Property>
@@ -1878,7 +1878,7 @@
         </Properties>
         <Parameters>
           <Parameter catalog="kernel" class-id="string" description="This is the text which is superimposed to the image." design-time="1" enabled="1" id="title" name="Title" run-time="1">
-            <Value>0000:00:28.964</Value>
+            <Value>0000:00:10.286</Value>
             <Domain/>
             <Layout/>
             <InitInfo/>
@@ -1959,7 +1959,7 @@
         </Outputs>
         <PrivateData/>
       </Block>
-      <Block active="1" catalog="base" class-id="format_time_as_string" id="1694" label="FormatTimeAsString_1" log_info="2" run_level="1" sync-in_mode="1">
+      <Block active="1" catalog="base" class-id="format_time_as_string" id="1766" label="FormatTimeAsString_1" log_info="2" run_level="1" sync-in_mode="1">
         <Properties>
           <PropertySet name="gui-mdi">
             <Property name="Appearance.Pos">880;780</Property>
@@ -1999,7 +1999,7 @@
         </Outputs>
         <PrivateData/>
       </Block>
-      <Block active="1" catalog="kernel" class-id="bang_generator" id="1745" label="BangGenerator_6" log_info="2" run_level="1" sync-in_mode="1">
+      <Block active="1" catalog="kernel" class-id="bang_generator" id="1817" label="BangGenerator_6" log_info="2" run_level="1" sync-in_mode="1">
         <Properties>
           <PropertySet name="gui-mdi">
             <Property name="Appearance.Pos">1010;760</Property>
@@ -2106,7 +2106,7 @@
         </Outputs>
         <PrivateData/>
       </Block>
-      <Block active="1" catalog="kernel" class-id="int_const_generator" id="1815" label="ConstantGenerator - int_1" log_info="2" run_level="1" sync-in_mode="1">
+      <Block active="1" catalog="kernel" class-id="int_const_generator" id="1887" label="ConstantGenerator - int_1" log_info="2" run_level="1" sync-in_mode="1">
         <Properties>
           <PropertySet name="gui-mdi">
             <Property name="Appearance.Pos">1050;550</Property>
@@ -2129,7 +2129,7 @@
         </Properties>
         <Parameters>
           <Parameter catalog="kernel" class-id="int" description="Input value of the constant." design-time="1" enabled="1" id="value" name="Input Value" run-time="1">
-            <Value>14</Value>
+            <Value>0</Value>
             <Domain/>
             <Layout/>
             <InitInfo/>
@@ -2147,7 +2147,7 @@
         </Outputs>
         <PrivateData/>
       </Block>
-      <Block active="1" catalog="kernel" class-id="int_const_generator" id="1863" label="ConstantGenerator - int_2" log_info="2" run_level="1" sync-in_mode="1">
+      <Block active="1" catalog="kernel" class-id="int_const_generator" id="1935" label="ConstantGenerator - int_2" log_info="2" run_level="1" sync-in_mode="1">
         <Properties>
           <PropertySet name="gui-mdi">
             <Property name="Appearance.Pos">1050;620</Property>
@@ -2170,7 +2170,7 @@
         </Properties>
         <Parameters>
           <Parameter catalog="kernel" class-id="int" description="Input value of the constant." design-time="1" enabled="1" id="value" name="Input Value" run-time="1">
-            <Value>3</Value>
+            <Value>0</Value>
             <Domain/>
             <Layout/>
             <InitInfo/>
@@ -2188,7 +2188,7 @@
         </Outputs>
         <PrivateData/>
       </Block>
-      <Block active="1" catalog="base" class-id="concatenate_strings" id="1911" label="ConcatenateStrings_1" log_info="2" run_level="1" sync-in_mode="1">
+      <Block active="1" catalog="base" class-id="concatenate_strings" id="1983" label="ConcatenateStrings_1" log_info="2" run_level="1" sync-in_mode="1">
         <Properties>
           <PropertySet name="gui-mdi">
             <Property name="Appearance.Pos">830;610</Property>
@@ -2234,7 +2234,7 @@
         </Outputs>
         <PrivateData/>
       </Block>
-      <Block active="1" catalog="kernel" class-id="string_generator" id="1963" label="StringGenerator_1" log_info="2" run_level="1" sync-in_mode="1">
+      <Block active="1" catalog="kernel" class-id="string_generator" id="2035" label="StringGenerator_1" log_info="2" run_level="1" sync-in_mode="1">
         <Properties>
           <PropertySet name="gui-mdi">
             <Property name="Appearance.Pos">690;550</Property>
@@ -2270,7 +2270,7 @@
         </Outputs>
         <PrivateData/>
       </Block>
-      <Block active="1" catalog="kernel" class-id="string_generator" id="2011" label="StringGenerator_2" log_info="2" run_level="1" sync-in_mode="1">
+      <Block active="1" catalog="kernel" class-id="string_generator" id="2083" label="StringGenerator_2" log_info="2" run_level="1" sync-in_mode="1">
         <Properties>
           <PropertySet name="gui-mdi">
             <Property name="Appearance.Pos">690;700</Property>
@@ -2306,7 +2306,7 @@
         </Outputs>
         <PrivateData/>
       </Block>
-      <Block active="1" catalog="base" class-id="Special Char" id="2059" label="SpecialCharacterGenerator_1" log_info="2" run_level="1" sync-in_mode="1">
+      <Block active="1" catalog="base" class-id="Special Char" id="2131" label="SpecialCharacterGenerator_1" log_info="2" run_level="1" sync-in_mode="1">
         <Properties>
           <PropertySet name="gui-mdi">
             <Property name="Appearance.Pos">690;630</Property>
@@ -2336,7 +2336,7 @@
         </Outputs>
         <PrivateData/>
       </Block>
-      <Block active="1" catalog="system" class-id="title_machine" id="2107" label="TitleMachine_2" log_info="2" run_level="1" sync-in_mode="1">
+      <Block active="1" catalog="system" class-id="title_machine" id="2179" label="TitleMachine_2" log_info="2" run_level="1" sync-in_mode="1">
         <Properties>
           <PropertySet name="gui-mdi">
             <Property name="Appearance.Pos">940;840</Property>
@@ -2436,7 +2436,7 @@ Phase Number: 3</Value>
         </Outputs>
         <PrivateData/>
       </Block>
-      <Block active="1" catalog="system" class-id="dsound_input" id="2179" label="DirectSoundInput_1" log_info="2" run_level="1" sync-in_mode="1">
+      <Block active="1" catalog="system" class-id="dsound_input" id="2251" label="DirectSoundInput_1" log_info="2" run_level="1" sync-in_mode="1">
         <Properties>
           <PropertySet name="gui-mdi">
             <Property name="Appearance.Pos">820;780</Property>
@@ -2496,7 +2496,7 @@ Phase Number: 3</Value>
         </Outputs>
         <PrivateData/>
       </Block>
-      <Block active="1" catalog="base" class-id="WriteToFile" id="2237" label="WriteToFile_2" log_info="2" run_level="1" sync-in_mode="0">
+      <Block active="1" catalog="base" class-id="WriteToFile" id="2309" label="WriteToFile_2" log_info="2" run_level="1" sync-in_mode="0">
         <Properties>
           <PropertySet name="gui-mdi">
             <Property name="Appearance.Pos">2160;200</Property>
@@ -2504,7 +2504,7 @@ Phase Number: 3</Value>
             <Property name="Private.ObjID">30</Property>
             <Property name="Appearance.Size">66;64</Property>
             <Property name="Appearance.Orientation">1</Property>
-            <Property name="Private.ExportedParams"></Property>
+            <Property name="Private.ExportedParams">file_name;</Property>
             <Property name="Private.Selected">0</Property>
             <Property name="Private.ParamsOrder">kernel::active_status;kernel::active_trigger;kernel::run_level;kernel::sync_in_mode;kernel::log_level;file_name;file_mode;n_input;write_header;insert_time;time_mode;frame;sub_frame</Property>
             <Property name="Private.FullPath">DataStructures.Output.WriteToFile</Property>
@@ -2573,7 +2573,7 @@ Phase Number: 3</Value>
         <Outputs/>
         <PrivateData/>
       </Block>
-      <Block active="1" catalog="SEC" class-id="StringSelector" id="2305" label="String Selector_1" log_info="2" run_level="1" sync-in_mode="1">
+      <Block active="1" catalog="SEC" class-id="StringSelector" id="2377" label="String Selector_1" log_info="2" run_level="1" sync-in_mode="1">
         <Properties>
           <PropertySet name="gui-mdi">
             <Property name="Appearance.Pos">2070;60</Property>
@@ -2829,7 +2829,7 @@ Phase Number: 3</Value>
         </Outputs>
         <PrivateData/>
       </Block>
-      <Block active="1" catalog="kernel" class-id="bang_generator" id="2426" label="BangGenerator_7" log_info="2" run_level="1" sync-in_mode="1">
+      <Block active="1" catalog="kernel" class-id="bang_generator" id="2498" label="BangGenerator_7" log_info="2" run_level="1" sync-in_mode="1">
         <Properties>
           <PropertySet name="gui-mdi">
             <Property name="Appearance.Pos">1610;60</Property>
@@ -2936,7 +2936,7 @@ Phase Number: 3</Value>
         </Outputs>
         <PrivateData/>
       </Block>
-      <Block active="1" catalog="kernel" class-id="bang_generator" id="2496" label="BangGenerator_8" log_info="2" run_level="1" sync-in_mode="1">
+      <Block active="1" catalog="kernel" class-id="bang_generator" id="2568" label="BangGenerator_8" log_info="2" run_level="1" sync-in_mode="1">
         <Properties>
           <PropertySet name="gui-mdi">
             <Property name="Appearance.Pos">1610;120</Property>
@@ -3043,7 +3043,7 @@ Phase Number: 3</Value>
         </Outputs>
         <PrivateData/>
       </Block>
-      <Block active="1" catalog="kernel" class-id="bang_generator" id="2566" label="BangGenerator_9" log_info="2" run_level="1" sync-in_mode="1">
+      <Block active="1" catalog="kernel" class-id="bang_generator" id="2638" label="BangGenerator_9" log_info="2" run_level="1" sync-in_mode="1">
         <Properties>
           <PropertySet name="gui-mdi">
             <Property name="Appearance.Pos">1610;180</Property>
@@ -3150,7 +3150,7 @@ Phase Number: 3</Value>
         </Outputs>
         <PrivateData/>
       </Block>
-      <Block active="1" catalog="kernel" class-id="bang_generator" id="2636" label="BangGenerator_10" log_info="2" run_level="1" sync-in_mode="1">
+      <Block active="1" catalog="kernel" class-id="bang_generator" id="2708" label="BangGenerator_10" log_info="2" run_level="1" sync-in_mode="1">
         <Properties>
           <PropertySet name="gui-mdi">
             <Property name="Appearance.Pos">1610;240</Property>
@@ -3257,7 +3257,7 @@ Phase Number: 3</Value>
         </Outputs>
         <PrivateData/>
       </Block>
-      <Block active="1" catalog="kernel" class-id="bang_generator" id="2706" label="BangGenerator_11" log_info="2" run_level="1" sync-in_mode="1">
+      <Block active="1" catalog="kernel" class-id="bang_generator" id="2778" label="BangGenerator_11" log_info="2" run_level="1" sync-in_mode="1">
         <Properties>
           <PropertySet name="gui-mdi">
             <Property name="Appearance.Pos">1610;300</Property>
@@ -3364,7 +3364,7 @@ Phase Number: 3</Value>
         </Outputs>
         <PrivateData/>
       </Block>
-      <Block active="1" catalog="kernel" class-id="bang_generator" id="2776" label="BangGenerator_12" log_info="2" run_level="1" sync-in_mode="1">
+      <Block active="1" catalog="kernel" class-id="bang_generator" id="2848" label="BangGenerator_12" log_info="2" run_level="1" sync-in_mode="1">
         <Properties>
           <PropertySet name="gui-mdi">
             <Property name="Appearance.Pos">1610;360</Property>
@@ -3471,7 +3471,7 @@ Phase Number: 3</Value>
         </Outputs>
         <PrivateData/>
       </Block>
-      <Block active="1" catalog="kernel" class-id="bang_generator" id="2846" label="BangGenerator_13" log_info="2" run_level="1" sync-in_mode="1">
+      <Block active="1" catalog="kernel" class-id="bang_generator" id="2918" label="BangGenerator_13" log_info="2" run_level="1" sync-in_mode="1">
         <Properties>
           <PropertySet name="gui-mdi">
             <Property name="Appearance.Pos">1610;420</Property>
@@ -3578,7 +3578,7 @@ Phase Number: 3</Value>
         </Outputs>
         <PrivateData/>
       </Block>
-      <Block active="1" catalog="kernel" class-id="bang_generator" id="2916" label="BangGenerator_14" log_info="2" run_level="1" sync-in_mode="1">
+      <Block active="1" catalog="kernel" class-id="bang_generator" id="2988" label="BangGenerator_14" log_info="2" run_level="1" sync-in_mode="1">
         <Properties>
           <PropertySet name="gui-mdi">
             <Property name="Appearance.Pos">1380;120</Property>
@@ -3685,7 +3685,7 @@ Phase Number: 3</Value>
         </Outputs>
         <PrivateData/>
       </Block>
-      <Block active="1" catalog="kernel" class-id="bang_generator" id="2986" label="BangGenerator_15" log_info="2" run_level="1" sync-in_mode="1">
+      <Block active="1" catalog="kernel" class-id="bang_generator" id="3058" label="BangGenerator_15" log_info="2" run_level="1" sync-in_mode="1">
         <Properties>
           <PropertySet name="gui-mdi">
             <Property name="Appearance.Pos">1380;180</Property>
@@ -3792,7 +3792,7 @@ Phase Number: 3</Value>
         </Outputs>
         <PrivateData/>
       </Block>
-      <Block active="1" catalog="kernel" class-id="bang_generator" id="3056" label="BangGenerator_16" log_info="2" run_level="1" sync-in_mode="1">
+      <Block active="1" catalog="kernel" class-id="bang_generator" id="3128" label="BangGenerator_16" log_info="2" run_level="1" sync-in_mode="1">
         <Properties>
           <PropertySet name="gui-mdi">
             <Property name="Appearance.Pos">1380;240</Property>
@@ -3899,7 +3899,7 @@ Phase Number: 3</Value>
         </Outputs>
         <PrivateData/>
       </Block>
-      <Block active="1" catalog="kernel" class-id="bang_generator" id="3126" label="BangGenerator_17" log_info="2" run_level="1" sync-in_mode="1">
+      <Block active="1" catalog="kernel" class-id="bang_generator" id="3198" label="BangGenerator_17" log_info="2" run_level="1" sync-in_mode="1">
         <Properties>
           <PropertySet name="gui-mdi">
             <Property name="Appearance.Pos">1380;300</Property>
@@ -4006,7 +4006,7 @@ Phase Number: 3</Value>
         </Outputs>
         <PrivateData/>
       </Block>
-      <Block active="1" catalog="kernel" class-id="bang_generator" id="3196" label="BangGenerator_18" log_info="2" run_level="1" sync-in_mode="1">
+      <Block active="1" catalog="kernel" class-id="bang_generator" id="3268" label="BangGenerator_18" log_info="2" run_level="1" sync-in_mode="1">
         <Properties>
           <PropertySet name="gui-mdi">
             <Property name="Appearance.Pos">1380;360</Property>
@@ -4113,7 +4113,7 @@ Phase Number: 3</Value>
         </Outputs>
         <PrivateData/>
       </Block>
-      <Block active="1" catalog="kernel" class-id="bang_generator" id="3266" label="BangGenerator_19" log_info="2" run_level="1" sync-in_mode="1">
+      <Block active="1" catalog="kernel" class-id="bang_generator" id="3338" label="BangGenerator_19" log_info="2" run_level="1" sync-in_mode="1">
         <Properties>
           <PropertySet name="gui-mdi">
             <Property name="Appearance.Pos">1380;420</Property>
@@ -4220,7 +4220,7 @@ Phase Number: 3</Value>
         </Outputs>
         <PrivateData/>
       </Block>
-      <Block active="1" catalog="kernel" class-id="bang_generator" id="3336" label="BangGenerator_20" log_info="2" run_level="1" sync-in_mode="1">
+      <Block active="1" catalog="kernel" class-id="bang_generator" id="3408" label="BangGenerator_20" log_info="2" run_level="1" sync-in_mode="1">
         <Properties>
           <PropertySet name="gui-mdi">
             <Property name="Appearance.Pos">1380;480</Property>
@@ -4327,7 +4327,7 @@ Phase Number: 3</Value>
         </Outputs>
         <PrivateData/>
       </Block>
-      <Block active="1" catalog="kernel" class-id="bang_generator" id="3406" label="BangGenerator_21" log_info="2" run_level="1" sync-in_mode="1">
+      <Block active="1" catalog="kernel" class-id="bang_generator" id="3478" label="BangGenerator_21" log_info="2" run_level="1" sync-in_mode="1">
         <Properties>
           <PropertySet name="gui-mdi">
             <Property name="Appearance.Pos">1380;540</Property>
@@ -4434,7 +4434,7 @@ Phase Number: 3</Value>
         </Outputs>
         <PrivateData/>
       </Block>
-      <Block active="1" catalog="kernel" class-id="bang_generator" id="3476" label="BangGenerator_22" log_info="2" run_level="1" sync-in_mode="1">
+      <Block active="1" catalog="kernel" class-id="bang_generator" id="3548" label="BangGenerator_22" log_info="2" run_level="1" sync-in_mode="1">
         <Properties>
           <PropertySet name="gui-mdi">
             <Property name="Appearance.Pos">1840;60</Property>
@@ -4541,7 +4541,7 @@ Phase Number: 3</Value>
         </Outputs>
         <PrivateData/>
       </Block>
-      <Block active="1" catalog="kernel" class-id="bang_generator" id="3546" label="BangGenerator_23" log_info="2" run_level="1" sync-in_mode="1">
+      <Block active="1" catalog="kernel" class-id="bang_generator" id="3618" label="BangGenerator_23" log_info="2" run_level="1" sync-in_mode="1">
         <Properties>
           <PropertySet name="gui-mdi">
             <Property name="Appearance.Pos">1840;120</Property>
@@ -4648,7 +4648,7 @@ Phase Number: 3</Value>
         </Outputs>
         <PrivateData/>
       </Block>
-      <Block active="1" catalog="kernel" class-id="bang_generator" id="3616" label="BangGenerator_24" log_info="2" run_level="1" sync-in_mode="1">
+      <Block active="1" catalog="kernel" class-id="bang_generator" id="3688" label="BangGenerator_24" log_info="2" run_level="1" sync-in_mode="1">
         <Properties>
           <PropertySet name="gui-mdi">
             <Property name="Appearance.Pos">1840;180</Property>
@@ -4755,7 +4755,7 @@ Phase Number: 3</Value>
         </Outputs>
         <PrivateData/>
       </Block>
-      <Block active="1" catalog="kernel" class-id="bang_generator" id="3686" label="BangGenerator_25" log_info="2" run_level="1" sync-in_mode="1">
+      <Block active="1" catalog="kernel" class-id="bang_generator" id="3758" label="BangGenerator_25" log_info="2" run_level="1" sync-in_mode="1">
         <Properties>
           <PropertySet name="gui-mdi">
             <Property name="Appearance.Pos">1840;240</Property>
@@ -4862,7 +4862,7 @@ Phase Number: 3</Value>
         </Outputs>
         <PrivateData/>
       </Block>
-      <Block active="1" catalog="kernel" class-id="bang_generator" id="3756" label="BangGenerator_26" log_info="2" run_level="1" sync-in_mode="1">
+      <Block active="1" catalog="kernel" class-id="bang_generator" id="3828" label="BangGenerator_26" log_info="2" run_level="1" sync-in_mode="1">
         <Properties>
           <PropertySet name="gui-mdi">
             <Property name="Appearance.Pos">1840;300</Property>
@@ -4969,7 +4969,7 @@ Phase Number: 3</Value>
         </Outputs>
         <PrivateData/>
       </Block>
-      <Block active="1" catalog="kernel" class-id="bang_generator" id="3826" label="BangGenerator_27" log_info="2" run_level="1" sync-in_mode="1">
+      <Block active="1" catalog="kernel" class-id="bang_generator" id="3898" label="BangGenerator_27" log_info="2" run_level="1" sync-in_mode="1">
         <Properties>
           <PropertySet name="gui-mdi">
             <Property name="Appearance.Pos">1840;360</Property>
@@ -5076,7 +5076,7 @@ Phase Number: 3</Value>
         </Outputs>
         <PrivateData/>
       </Block>
-      <Block active="1" catalog="kernel" class-id="bang_generator" id="3896" label="BangGenerator_28" log_info="2" run_level="1" sync-in_mode="1">
+      <Block active="1" catalog="kernel" class-id="bang_generator" id="3968" label="BangGenerator_28" log_info="2" run_level="1" sync-in_mode="1">
         <Properties>
           <PropertySet name="gui-mdi">
             <Property name="Appearance.Pos">1840;420</Property>
@@ -5183,7 +5183,7 @@ Phase Number: 3</Value>
         </Outputs>
         <PrivateData/>
       </Block>
-      <Block active="1" catalog="kernel" class-id="bang_generator" id="3966" label="BangGenerator_29" log_info="2" run_level="1" sync-in_mode="1">
+      <Block active="1" catalog="kernel" class-id="bang_generator" id="4038" label="BangGenerator_29" log_info="2" run_level="1" sync-in_mode="1">
         <Properties>
           <PropertySet name="gui-mdi">
             <Property name="Appearance.Pos">1840;480</Property>
@@ -5290,7 +5290,7 @@ Phase Number: 3</Value>
         </Outputs>
         <PrivateData/>
       </Block>
-      <Block active="1" catalog="kernel" class-id="bang_generator" id="4036" label="BangGenerator_30" log_info="2" run_level="1" sync-in_mode="1">
+      <Block active="1" catalog="kernel" class-id="bang_generator" id="4108" label="BangGenerator_30" log_info="2" run_level="1" sync-in_mode="1">
         <Properties>
           <PropertySet name="gui-mdi">
             <Property name="Appearance.Pos">1840;540</Property>
@@ -5397,7 +5397,7 @@ Phase Number: 3</Value>
         </Outputs>
         <PrivateData/>
       </Block>
-      <Block active="1" catalog="kernel" class-id="bang_generator" id="4106" label="BangGenerator_31" log_info="2" run_level="1" sync-in_mode="1">
+      <Block active="1" catalog="kernel" class-id="bang_generator" id="4178" label="BangGenerator_31" log_info="2" run_level="1" sync-in_mode="1">
         <Properties>
           <PropertySet name="gui-mdi">
             <Property name="Appearance.Pos">1380;60</Property>
@@ -5504,7 +5504,7 @@ Phase Number: 3</Value>
         </Outputs>
         <PrivateData/>
       </Block>
-      <Block active="1" catalog="system" class-id="wave_output" id="4176" label="WaveOutput_2" log_info="2" run_level="1" sync-in_mode="1">
+      <Block active="1" catalog="system" class-id="wave_output" id="4248" label="WaveOutput_2" log_info="2" run_level="1" sync-in_mode="1">
         <Properties>
           <PropertySet name="gui-mdi">
             <Property name="Appearance.Pos">740;1080</Property>
@@ -5548,7 +5548,7 @@ Phase Number: 3</Value>
         <Outputs/>
         <PrivateData/>
       </Block>
-      <Block active="1" catalog="system" class-id="audio_file_reader_mmstream" id="4228" label="AudioFileReader_2" log_info="2" run_level="1" sync-in_mode="0">
+      <Block active="1" catalog="system" class-id="audio_file_reader_mmstream" id="4300" label="AudioFileReader_2" log_info="2" run_level="1" sync-in_mode="0">
         <Properties>
           <PropertySet name="gui-mdi">
             <Property name="Appearance.Pos">600;1080</Property>
@@ -5694,7 +5694,7 @@ Phase Number: 3</Value>
         </Outputs>
         <PrivateData/>
       </Block>
-      <Block active="1" catalog="base" class-id="convert_to_pcm" id="4327" label="ConvertAudioToPCM_2" log_info="2" run_level="1" sync-in_mode="1">
+      <Block active="1" catalog="base" class-id="convert_to_pcm" id="4399" label="ConvertAudioToPCM_2" log_info="2" run_level="1" sync-in_mode="1">
         <Properties>
           <PropertySet name="gui-mdi">
             <Property name="Appearance.Pos">660;1080</Property>
@@ -5728,7 +5728,7 @@ Phase Number: 3</Value>
         </Outputs>
         <PrivateData/>
       </Block>
-      <Block active="1" catalog="system" class-id="wave_output" id="4376" label="WaveOutput_3" log_info="2" run_level="1" sync-in_mode="1">
+      <Block active="1" catalog="system" class-id="wave_output" id="4448" label="WaveOutput_3" log_info="2" run_level="1" sync-in_mode="1">
         <Properties>
           <PropertySet name="gui-mdi">
             <Property name="Appearance.Pos">740;1150</Property>
@@ -5772,7 +5772,7 @@ Phase Number: 3</Value>
         <Outputs/>
         <PrivateData/>
       </Block>
-      <Block active="1" catalog="system" class-id="audio_file_reader_mmstream" id="4428" label="AudioFileReader_3" log_info="2" run_level="1" sync-in_mode="0">
+      <Block active="1" catalog="system" class-id="audio_file_reader_mmstream" id="4500" label="AudioFileReader_3" log_info="2" run_level="1" sync-in_mode="0">
         <Properties>
           <PropertySet name="gui-mdi">
             <Property name="Appearance.Pos">600;1150</Property>
@@ -5918,7 +5918,7 @@ Phase Number: 3</Value>
         </Outputs>
         <PrivateData/>
       </Block>
-      <Block active="1" catalog="base" class-id="convert_to_pcm" id="4527" label="ConvertAudioToPCM_3" log_info="2" run_level="1" sync-in_mode="1">
+      <Block active="1" catalog="base" class-id="convert_to_pcm" id="4599" label="ConvertAudioToPCM_3" log_info="2" run_level="1" sync-in_mode="1">
         <Properties>
           <PropertySet name="gui-mdi">
             <Property name="Appearance.Pos">660;1150</Property>
@@ -5952,7 +5952,7 @@ Phase Number: 3</Value>
         </Outputs>
         <PrivateData/>
       </Block>
-      <Block active="1" catalog="system" class-id="wave_output" id="4576" label="WaveOutput_4" log_info="2" run_level="1" sync-in_mode="1">
+      <Block active="1" catalog="system" class-id="wave_output" id="4648" label="WaveOutput_4" log_info="2" run_level="1" sync-in_mode="1">
         <Properties>
           <PropertySet name="gui-mdi">
             <Property name="Appearance.Pos">740;1220</Property>
@@ -5996,7 +5996,7 @@ Phase Number: 3</Value>
         <Outputs/>
         <PrivateData/>
       </Block>
-      <Block active="1" catalog="system" class-id="audio_file_reader_mmstream" id="4628" label="AudioFileReader_4" log_info="2" run_level="1" sync-in_mode="0">
+      <Block active="1" catalog="system" class-id="audio_file_reader_mmstream" id="4700" label="AudioFileReader_4" log_info="2" run_level="1" sync-in_mode="0">
         <Properties>
           <PropertySet name="gui-mdi">
             <Property name="Appearance.Pos">600;1220</Property>
@@ -6142,7 +6142,7 @@ Phase Number: 3</Value>
         </Outputs>
         <PrivateData/>
       </Block>
-      <Block active="1" catalog="base" class-id="convert_to_pcm" id="4727" label="ConvertAudioToPCM_4" log_info="2" run_level="1" sync-in_mode="1">
+      <Block active="1" catalog="base" class-id="convert_to_pcm" id="4799" label="ConvertAudioToPCM_4" log_info="2" run_level="1" sync-in_mode="1">
         <Properties>
           <PropertySet name="gui-mdi">
             <Property name="Appearance.Pos">660;1220</Property>
@@ -6176,7 +6176,7 @@ Phase Number: 3</Value>
         </Outputs>
         <PrivateData/>
       </Block>
-      <Block active="1" catalog="system" class-id="wave_output" id="4776" label="WaveOutput_5" log_info="2" run_level="1" sync-in_mode="1">
+      <Block active="1" catalog="system" class-id="wave_output" id="4848" label="WaveOutput_5" log_info="2" run_level="1" sync-in_mode="1">
         <Properties>
           <PropertySet name="gui-mdi">
             <Property name="Appearance.Pos">740;1290</Property>
@@ -6220,7 +6220,7 @@ Phase Number: 3</Value>
         <Outputs/>
         <PrivateData/>
       </Block>
-      <Block active="1" catalog="system" class-id="audio_file_reader_mmstream" id="4828" label="AudioFileReader_5" log_info="2" run_level="1" sync-in_mode="0">
+      <Block active="1" catalog="system" class-id="audio_file_reader_mmstream" id="4900" label="AudioFileReader_5" log_info="2" run_level="1" sync-in_mode="0">
         <Properties>
           <PropertySet name="gui-mdi">
             <Property name="Appearance.Pos">600;1290</Property>
@@ -6366,7 +6366,7 @@ Phase Number: 3</Value>
         </Outputs>
         <PrivateData/>
       </Block>
-      <Block active="1" catalog="base" class-id="convert_to_pcm" id="4927" label="ConvertAudioToPCM_5" log_info="2" run_level="1" sync-in_mode="1">
+      <Block active="1" catalog="base" class-id="convert_to_pcm" id="4999" label="ConvertAudioToPCM_5" log_info="2" run_level="1" sync-in_mode="1">
         <Properties>
           <PropertySet name="gui-mdi">
             <Property name="Appearance.Pos">660;1290</Property>
@@ -6400,7 +6400,7 @@ Phase Number: 3</Value>
         </Outputs>
         <PrivateData/>
       </Block>
-      <Block active="1" catalog="system" class-id="wave_output" id="4976" label="WaveOutput_6" log_info="2" run_level="1" sync-in_mode="1">
+      <Block active="1" catalog="system" class-id="wave_output" id="5048" label="WaveOutput_6" log_info="2" run_level="1" sync-in_mode="1">
         <Properties>
           <PropertySet name="gui-mdi">
             <Property name="Appearance.Pos">740;1360</Property>
@@ -6444,7 +6444,7 @@ Phase Number: 3</Value>
         <Outputs/>
         <PrivateData/>
       </Block>
-      <Block active="1" catalog="system" class-id="audio_file_reader_mmstream" id="5028" label="AudioFileReader_6" log_info="2" run_level="1" sync-in_mode="0">
+      <Block active="1" catalog="system" class-id="audio_file_reader_mmstream" id="5100" label="AudioFileReader_6" log_info="2" run_level="1" sync-in_mode="0">
         <Properties>
           <PropertySet name="gui-mdi">
             <Property name="Appearance.Pos">600;1360</Property>
@@ -6590,7 +6590,7 @@ Phase Number: 3</Value>
         </Outputs>
         <PrivateData/>
       </Block>
-      <Block active="1" catalog="base" class-id="convert_to_pcm" id="5127" label="ConvertAudioToPCM_6" log_info="2" run_level="1" sync-in_mode="1">
+      <Block active="1" catalog="base" class-id="convert_to_pcm" id="5199" label="ConvertAudioToPCM_6" log_info="2" run_level="1" sync-in_mode="1">
         <Properties>
           <PropertySet name="gui-mdi">
             <Property name="Appearance.Pos">660;1360</Property>
@@ -6624,7 +6624,7 @@ Phase Number: 3</Value>
         </Outputs>
         <PrivateData/>
       </Block>
-      <Block active="1" catalog="system" class-id="wave_output" id="5176" label="WaveOutput_7" log_info="2" run_level="1" sync-in_mode="1">
+      <Block active="1" catalog="system" class-id="wave_output" id="5248" label="WaveOutput_7" log_info="2" run_level="1" sync-in_mode="1">
         <Properties>
           <PropertySet name="gui-mdi">
             <Property name="Appearance.Pos">740;1430</Property>
@@ -6668,7 +6668,7 @@ Phase Number: 3</Value>
         <Outputs/>
         <PrivateData/>
       </Block>
-      <Block active="1" catalog="system" class-id="audio_file_reader_mmstream" id="5228" label="AudioFileReader_7" log_info="2" run_level="1" sync-in_mode="0">
+      <Block active="1" catalog="system" class-id="audio_file_reader_mmstream" id="5300" label="AudioFileReader_7" log_info="2" run_level="1" sync-in_mode="0">
         <Properties>
           <PropertySet name="gui-mdi">
             <Property name="Appearance.Pos">600;1430</Property>
@@ -6814,7 +6814,7 @@ Phase Number: 3</Value>
         </Outputs>
         <PrivateData/>
       </Block>
-      <Block active="1" catalog="base" class-id="convert_to_pcm" id="5327" label="ConvertAudioToPCM_7" log_info="2" run_level="1" sync-in_mode="1">
+      <Block active="1" catalog="base" class-id="convert_to_pcm" id="5399" label="ConvertAudioToPCM_7" log_info="2" run_level="1" sync-in_mode="1">
         <Properties>
           <PropertySet name="gui-mdi">
             <Property name="Appearance.Pos">660;1430</Property>
@@ -6848,7 +6848,7 @@ Phase Number: 3</Value>
         </Outputs>
         <PrivateData/>
       </Block>
-      <Block active="1" catalog="system" class-id="wave_output" id="5376" label="WaveOutput_8" log_info="2" run_level="1" sync-in_mode="1">
+      <Block active="1" catalog="system" class-id="wave_output" id="5448" label="WaveOutput_8" log_info="2" run_level="1" sync-in_mode="1">
         <Properties>
           <PropertySet name="gui-mdi">
             <Property name="Appearance.Pos">740;1500</Property>
@@ -6892,7 +6892,7 @@ Phase Number: 3</Value>
         <Outputs/>
         <PrivateData/>
       </Block>
-      <Block active="1" catalog="system" class-id="audio_file_reader_mmstream" id="5428" label="AudioFileReader_8" log_info="2" run_level="1" sync-in_mode="0">
+      <Block active="1" catalog="system" class-id="audio_file_reader_mmstream" id="5500" label="AudioFileReader_8" log_info="2" run_level="1" sync-in_mode="0">
         <Properties>
           <PropertySet name="gui-mdi">
             <Property name="Appearance.Pos">600;1500</Property>
@@ -7038,7 +7038,7 @@ Phase Number: 3</Value>
         </Outputs>
         <PrivateData/>
       </Block>
-      <Block active="1" catalog="base" class-id="convert_to_pcm" id="5527" label="ConvertAudioToPCM_8" log_info="2" run_level="1" sync-in_mode="1">
+      <Block active="1" catalog="base" class-id="convert_to_pcm" id="5599" label="ConvertAudioToPCM_8" log_info="2" run_level="1" sync-in_mode="1">
         <Properties>
           <PropertySet name="gui-mdi">
             <Property name="Appearance.Pos">660;1500</Property>
@@ -7072,7 +7072,7 @@ Phase Number: 3</Value>
         </Outputs>
         <PrivateData/>
       </Block>
-      <Block active="1" catalog="system" class-id="wave_output" id="5576" label="WaveOutput_9" log_info="2" run_level="1" sync-in_mode="1">
+      <Block active="1" catalog="system" class-id="wave_output" id="5648" label="WaveOutput_9" log_info="2" run_level="1" sync-in_mode="1">
         <Properties>
           <PropertySet name="gui-mdi">
             <Property name="Appearance.Pos">740;1570</Property>
@@ -7116,7 +7116,7 @@ Phase Number: 3</Value>
         <Outputs/>
         <PrivateData/>
       </Block>
-      <Block active="1" catalog="system" class-id="audio_file_reader_mmstream" id="5628" label="AudioFileReader_9" log_info="2" run_level="1" sync-in_mode="0">
+      <Block active="1" catalog="system" class-id="audio_file_reader_mmstream" id="5700" label="AudioFileReader_9" log_info="2" run_level="1" sync-in_mode="0">
         <Properties>
           <PropertySet name="gui-mdi">
             <Property name="Appearance.Pos">600;1570</Property>
@@ -7262,7 +7262,7 @@ Phase Number: 3</Value>
         </Outputs>
         <PrivateData/>
       </Block>
-      <Block active="1" catalog="base" class-id="convert_to_pcm" id="5727" label="ConvertAudioToPCM_9" log_info="2" run_level="1" sync-in_mode="1">
+      <Block active="1" catalog="base" class-id="convert_to_pcm" id="5799" label="ConvertAudioToPCM_9" log_info="2" run_level="1" sync-in_mode="1">
         <Properties>
           <PropertySet name="gui-mdi">
             <Property name="Appearance.Pos">660;1570</Property>
@@ -7296,7 +7296,7 @@ Phase Number: 3</Value>
         </Outputs>
         <PrivateData/>
       </Block>
-      <Block active="1" catalog="system" class-id="wave_output" id="5776" label="WaveOutput_10" log_info="2" run_level="1" sync-in_mode="1">
+      <Block active="1" catalog="system" class-id="wave_output" id="5848" label="WaveOutput_10" log_info="2" run_level="1" sync-in_mode="1">
         <Properties>
           <PropertySet name="gui-mdi">
             <Property name="Appearance.Pos">740;1640</Property>
@@ -7340,7 +7340,7 @@ Phase Number: 3</Value>
         <Outputs/>
         <PrivateData/>
       </Block>
-      <Block active="1" catalog="system" class-id="audio_file_reader_mmstream" id="5828" label="AudioFileReader_10" log_info="2" run_level="1" sync-in_mode="0">
+      <Block active="1" catalog="system" class-id="audio_file_reader_mmstream" id="5900" label="AudioFileReader_10" log_info="2" run_level="1" sync-in_mode="0">
         <Properties>
           <PropertySet name="gui-mdi">
             <Property name="Appearance.Pos">600;1640</Property>
@@ -7486,7 +7486,7 @@ Phase Number: 3</Value>
         </Outputs>
         <PrivateData/>
       </Block>
-      <Block active="1" catalog="base" class-id="convert_to_pcm" id="5927" label="ConvertAudioToPCM_10" log_info="2" run_level="1" sync-in_mode="1">
+      <Block active="1" catalog="base" class-id="convert_to_pcm" id="5999" label="ConvertAudioToPCM_10" log_info="2" run_level="1" sync-in_mode="1">
         <Properties>
           <PropertySet name="gui-mdi">
             <Property name="Appearance.Pos">660;1640</Property>
@@ -7520,10 +7520,10 @@ Phase Number: 3</Value>
         </Outputs>
         <PrivateData/>
       </Block>
-      <Block active="1" catalog="kernel" class-id="subpatch" id="5976" label="Subpatch_1" log_info="2" run_level="1" sync-in_mode="1">
+      <Block active="1" catalog="kernel" class-id="subpatch" id="6048" label="Subpatch_1" log_info="2" run_level="1" sync-in_mode="1">
         <Properties>
           <PropertySet name="gui-mdi">
-            <Property name="Appearance.Pos">190;340</Property>
+            <Property name="Appearance.Pos">180;270</Property>
             <Property name="Private.ZOrder">18</Property>
             <Property name="Private.ObjID">84</Property>
             <Property name="Appearance.Size">47;47</Property>
@@ -7548,7 +7548,7 @@ Phase Number: 3</Value>
             </PropertySet>
           </Properties>
           <Blocks>
-            <Block active="1" catalog="kernel" class-id="subpatch_input_pin" id="5993" label="SubpatchInputPin_1" log_info="2" run_level="1" sync-in_mode="1">
+            <Block active="1" catalog="kernel" class-id="subpatch_input_pin" id="6065" label="SubpatchInputPin_1" log_info="2" run_level="1" sync-in_mode="1">
               <Properties>
                 <PropertySet name="gui-mdi">
                   <Property name="Appearance.Pos">80;90</Property>
@@ -7686,7 +7686,7 @@ Phase Number: 3</Value>
               </Outputs>
               <PrivateData/>
             </Block>
-            <Block active="1" catalog="kernel" class-id="subpatch_input_pin" id="6077" label="SubpatchInputPin_2" log_info="2" run_level="1" sync-in_mode="1">
+            <Block active="1" catalog="kernel" class-id="subpatch_input_pin" id="6149" label="SubpatchInputPin_2" log_info="2" run_level="1" sync-in_mode="1">
               <Properties>
                 <PropertySet name="gui-mdi">
                   <Property name="Appearance.Pos">80;210</Property>
@@ -7824,7 +7824,7 @@ Phase Number: 3</Value>
               </Outputs>
               <PrivateData/>
             </Block>
-            <Block active="1" catalog="system" class-id="matrix_value_vs_index_graph_display" id="6161" label="MatrixValueVsIndexDisplay_1" log_info="2" run_level="1" sync-in_mode="1" window_docked="0" window_fit_mode="1" window_full_screen="0" window_full_screen_monitor_index="0" window_horizontal_scroll_pos="0" window_keep_aspect_ratio="0" window_rect_height="38" window_rect_width="160" window_rect_x="160" window_rect_y="1013" window_refresh_rate_max_frequency="25" window_refresh_rate_min_interval="400000" window_refresh_rate_mode="0" window_title="EDA" window_title_bar_visible="1" window_vertical_scroll_pos="0" window_zoom="0.20628155767917633">
+            <Block active="1" catalog="system" class-id="matrix_value_vs_index_graph_display" id="6233" label="MatrixValueVsIndexDisplay_1" log_info="2" run_level="1" sync-in_mode="1" window_docked="1" window_fit_mode="1" window_full_screen="0" window_full_screen_monitor_index="0" window_horizontal_scroll_pos="0" window_keep_aspect_ratio="0" window_rect_height="38" window_rect_width="160" window_rect_x="160" window_rect_y="1013" window_refresh_rate_max_frequency="25" window_refresh_rate_min_interval="400000" window_refresh_rate_mode="0" window_title="EDA" window_title_bar_visible="1" window_vertical_scroll_pos="0" window_zoom="0.35037878155708313">
               <Properties>
                 <PropertySet name="gui-mdi">
                   <Property name="Appearance.Pos">300;90</Property>
@@ -8138,7 +8138,7 @@ Phase Number: 3</Value>
               <Outputs/>
               <PrivateData/>
             </Block>
-            <Block active="1" catalog="system" class-id="matrix_value_vs_index_graph_display" id="6371" label="MatrixValueVsIndexDisplay_2" log_info="2" run_level="1" sync-in_mode="1" window_docked="0" window_fit_mode="1" window_full_screen="0" window_full_screen_monitor_index="0" window_horizontal_scroll_pos="0" window_keep_aspect_ratio="0" window_rect_height="38" window_rect_width="160" window_rect_x="0" window_rect_y="1013" window_refresh_rate_max_frequency="25" window_refresh_rate_min_interval="400000" window_refresh_rate_mode="0" window_title="ECG" window_title_bar_visible="1" window_vertical_scroll_pos="0" window_zoom="0.20628155767917633">
+            <Block active="1" catalog="system" class-id="matrix_value_vs_index_graph_display" id="6443" label="MatrixValueVsIndexDisplay_2" log_info="2" run_level="1" sync-in_mode="1" window_docked="1" window_fit_mode="1" window_full_screen="0" window_full_screen_monitor_index="0" window_horizontal_scroll_pos="0" window_keep_aspect_ratio="0" window_rect_height="38" window_rect_width="160" window_rect_x="0" window_rect_y="1013" window_refresh_rate_max_frequency="25" window_refresh_rate_min_interval="400000" window_refresh_rate_mode="0" window_title="ECG" window_title_bar_visible="1" window_vertical_scroll_pos="0" window_zoom="0.35037878155708313">
               <Properties>
                 <PropertySet name="gui-mdi">
                   <Property name="Appearance.Pos">300;210</Property>
@@ -8452,7 +8452,7 @@ Phase Number: 3</Value>
               <Outputs/>
               <PrivateData/>
             </Block>
-            <Block active="1" catalog="SEC" class-id="CyclicalBuffer" id="6581" label="CyclicalBuffer_1" log_info="2" run_level="1" sync-in_mode="1">
+            <Block active="1" catalog="SEC" class-id="CyclicalBuffer" id="6653" label="CyclicalBuffer_1" log_info="2" run_level="1" sync-in_mode="1">
               <Properties>
                 <PropertySet name="gui-mdi">
                   <Property name="Appearance.Pos">200;80</Property>
@@ -8504,7 +8504,7 @@ Phase Number: 3</Value>
               </Outputs>
               <PrivateData/>
             </Block>
-            <Block active="1" catalog="SEC" class-id="CyclicalBuffer" id="6636" label="CyclicalBuffer_2" log_info="2" run_level="1" sync-in_mode="1">
+            <Block active="1" catalog="SEC" class-id="CyclicalBuffer" id="6708" label="CyclicalBuffer_2" log_info="2" run_level="1" sync-in_mode="1">
               <Properties>
                 <PropertySet name="gui-mdi">
                   <Property name="Appearance.Pos">200;200</Property>
@@ -8561,8 +8561,8 @@ Phase Number: 3</Value>
           <CustomObjects/>
           <Links>
             <Link>
-              <Pin block="5993" id="output" type="source"/>
-              <Pin block="6581" id="InputPin" target_type="input" type="target"/>
+              <Pin block="6065" id="output" type="source"/>
+              <Pin block="6653" id="InputPin" target_type="input" type="target"/>
               <Properties>
                 <PropertySet name="gui-mdi">
                   <Property name="Private.SrcPinDelta">0;0</Property>
@@ -8577,8 +8577,8 @@ Phase Number: 3</Value>
               </Properties>
             </Link>
             <Link>
-              <Pin block="6077" id="output" type="source"/>
-              <Pin block="6636" id="InputPin" target_type="input" type="target"/>
+              <Pin block="6149" id="output" type="source"/>
+              <Pin block="6708" id="InputPin" target_type="input" type="target"/>
               <Properties>
                 <PropertySet name="gui-mdi">
                   <Property name="Private.SrcPinDelta">0;0</Property>
@@ -8593,8 +8593,8 @@ Phase Number: 3</Value>
               </Properties>
             </Link>
             <Link>
-              <Pin block="6636" id="OutputPin" type="source"/>
-              <Pin block="6371" id="input" target_type="input" type="target"/>
+              <Pin block="6708" id="OutputPin" type="source"/>
+              <Pin block="6443" id="input" target_type="input" type="target"/>
               <Properties>
                 <PropertySet name="gui-mdi">
                   <Property name="Private.SrcPinDelta">0;0</Property>
@@ -8609,8 +8609,8 @@ Phase Number: 3</Value>
               </Properties>
             </Link>
             <Link>
-              <Pin block="6581" id="OutputPin" type="source"/>
-              <Pin block="6161" id="input" target_type="input" type="target"/>
+              <Pin block="6653" id="OutputPin" type="source"/>
+              <Pin block="6233" id="input" target_type="input" type="target"/>
               <Properties>
                 <PropertySet name="gui-mdi">
                   <Property name="Private.SrcPinDelta">0;0</Property>
@@ -8627,10 +8627,10 @@ Phase Number: 3</Value>
           </Links>
         </Patch>
       </Block>
-      <Block active="1" catalog="base" class-id="concatenate_strings" id="6715" label="ConcatenateStrings_2" log_info="2" run_level="1" sync-in_mode="1">
+      <Block active="1" catalog="base" class-id="concatenate_strings" id="6787" label="ConcatenateStrings_2" log_info="2" run_level="1" sync-in_mode="1">
         <Properties>
           <PropertySet name="gui-mdi">
-            <Property name="Appearance.Pos">840;310</Property>
+            <Property name="Appearance.Pos">630;120</Property>
             <Property name="Private.ZOrder">15</Property>
             <Property name="Private.ObjID">85</Property>
             <Property name="Appearance.Size">79;80</Property>
@@ -8673,10 +8673,10 @@ Phase Number: 3</Value>
         </Outputs>
         <PrivateData/>
       </Block>
-      <Block active="1" catalog="kernel" class-id="string_generator" id="6767" label="StringGenerator_3" log_info="2" run_level="1" sync-in_mode="1">
+      <Block active="1" catalog="kernel" class-id="string_generator" id="6839" label="StringGenerator_3" log_info="2" run_level="1" sync-in_mode="1">
         <Properties>
           <PropertySet name="gui-mdi">
-            <Property name="Appearance.Pos">700;250</Property>
+            <Property name="Appearance.Pos">490;60</Property>
             <Property name="Private.ZOrder">12</Property>
             <Property name="Private.ObjID">86</Property>
             <Property name="Appearance.Size">32;32</Property>
@@ -8691,7 +8691,7 @@ Phase Number: 3</Value>
         </Properties>
         <Parameters>
           <Parameter catalog="kernel" class-id="string" description="A block which enables communication between the container patch and the contained subpatch" design-time="1" enabled="1" id="value" name="Value" run-time="1">
-            <Value>C:\hearme_data\physio_-_subject_</Value>
+            <Value>data\physio_-_subject_</Value>
             <Domain/>
             <Layout/>
             <InitInfo/>
@@ -8709,10 +8709,10 @@ Phase Number: 3</Value>
         </Outputs>
         <PrivateData/>
       </Block>
-      <Block active="1" catalog="kernel" class-id="string_generator" id="6815" label="StringGenerator_4" log_info="2" run_level="1" sync-in_mode="1">
+      <Block active="1" catalog="kernel" class-id="string_generator" id="6887" label="StringGenerator_4" log_info="2" run_level="1" sync-in_mode="1">
         <Properties>
           <PropertySet name="gui-mdi">
-            <Property name="Appearance.Pos">700;400</Property>
+            <Property name="Appearance.Pos">490;140</Property>
             <Property name="Private.ZOrder">9</Property>
             <Property name="Private.ObjID">87</Property>
             <Property name="Appearance.Size">32;32</Property>
@@ -8745,10 +8745,10 @@ Phase Number: 3</Value>
         </Outputs>
         <PrivateData/>
       </Block>
-      <Block active="1" catalog="kernel" class-id="string_generator" id="6863" label="StringGenerator_5" log_info="2" run_level="1" sync-in_mode="1">
+      <Block active="1" catalog="kernel" class-id="string_generator" id="6935" label="StringGenerator_5" log_info="2" run_level="1" sync-in_mode="1">
         <Properties>
           <PropertySet name="gui-mdi">
-            <Property name="Appearance.Pos">720;420</Property>
+            <Property name="Appearance.Pos">490;180</Property>
             <Property name="Private.ZOrder">6</Property>
             <Property name="Private.ObjID">88</Property>
             <Property name="Appearance.Size">32;32</Property>
@@ -8781,7 +8781,7 @@ Phase Number: 3</Value>
         </Outputs>
         <PrivateData/>
       </Block>
-      <Block active="1" catalog="kernel" class-id="bang_generator" id="6911" label="BangGenerator_32" log_info="2" run_level="1" sync-in_mode="1">
+      <Block active="1" catalog="kernel" class-id="bang_generator" id="6983" label="BangGenerator_32" log_info="2" run_level="1" sync-in_mode="1">
         <Properties>
           <PropertySet name="gui-mdi">
             <Property name="Appearance.Pos">30;180</Property>
@@ -8888,7 +8888,7 @@ Phase Number: 3</Value>
         </Outputs>
         <PrivateData/>
       </Block>
-      <Block active="1" catalog="kernel" class-id="bang_generator" id="6981" label="BangGenerator_33" log_info="2" run_level="1" sync-in_mode="1">
+      <Block active="1" catalog="kernel" class-id="bang_generator" id="7053" label="BangGenerator_33" log_info="2" run_level="1" sync-in_mode="1">
         <Properties>
           <PropertySet name="gui-mdi">
             <Property name="Appearance.Pos">30;100</Property>
@@ -8997,7 +8997,7 @@ Phase Number: 3</Value>
       </Block>
     </Blocks>
     <PatchPins>
-      <PatchPin id="7051" name="Current Time">
+      <PatchPin id="7123" name="Current Time">
         <Properties>
           <PropertySet name="gui-mdi">
             <Property name="GuiObjectType">PatchPin</Property>
@@ -9011,7 +9011,7 @@ Phase Number: 3</Value>
           </PropertySet>
         </Properties>
       </PatchPin>
-      <PatchPin id="7052" name="Master Sync">
+      <PatchPin id="7124" name="Master Sync">
         <Properties>
           <PropertySet name="gui-mdi">
             <Property name="GuiObjectType">PatchPin</Property>
@@ -9025,11 +9025,11 @@ Phase Number: 3</Value>
           </PropertySet>
         </Properties>
       </PatchPin>
-      <PatchPin id="7053" name="Current Time">
+      <PatchPin id="7125" name="Current Time">
         <Properties>
           <PropertySet name="gui-mdi">
             <Property name="GuiObjectType">PatchPin</Property>
-            <Property name="Appearance.Pos">510;130</Property>
+            <Property name="Appearance.Pos">630;290</Property>
             <Property name="Private.Selected">0</Property>
             <Property name="Private.ZOrder">226</Property>
             <Property name="Private.ObjID">93</Property>
@@ -9039,11 +9039,11 @@ Phase Number: 3</Value>
           </PropertySet>
         </Properties>
       </PatchPin>
-      <PatchPin id="7054" name="Master Sync">
+      <PatchPin id="7126" name="Master Sync">
         <Properties>
           <PropertySet name="gui-mdi">
             <Property name="GuiObjectType">PatchPin</Property>
-            <Property name="Appearance.Pos">510;60</Property>
+            <Property name="Appearance.Pos">630;220</Property>
             <Property name="Private.Selected">0</Property>
             <Property name="Private.ZOrder">225</Property>
             <Property name="Private.ObjID">94</Property>
@@ -9053,7 +9053,7 @@ Phase Number: 3</Value>
           </PropertySet>
         </Properties>
       </PatchPin>
-      <PatchPin id="7055" name="Sensor Output 0">
+      <PatchPin id="7127" name="Sensor Output 0">
         <Properties>
           <PropertySet name="gui-mdi">
             <Property name="GuiObjectType">PatchPin</Property>
@@ -9067,7 +9067,7 @@ Phase Number: 3</Value>
           </PropertySet>
         </Properties>
       </PatchPin>
-      <PatchPin id="7056" name="Sensor Output 1">
+      <PatchPin id="7128" name="Sensor Output 1">
         <Properties>
           <PropertySet name="gui-mdi">
             <Property name="GuiObjectType">PatchPin</Property>
@@ -9081,7 +9081,7 @@ Phase Number: 3</Value>
           </PropertySet>
         </Properties>
       </PatchPin>
-      <PatchPin id="7057" name="Sensor Output 0">
+      <PatchPin id="7129" name="Sensor Output 0">
         <Properties>
           <PropertySet name="gui-mdi">
             <Property name="GuiObjectType">PatchPin</Property>
@@ -9095,11 +9095,11 @@ Phase Number: 3</Value>
           </PropertySet>
         </Properties>
       </PatchPin>
-      <PatchPin id="7058" name="Sensor Output 1">
+      <PatchPin id="7130" name="Sensor Output 1">
         <Properties>
           <PropertySet name="gui-mdi">
             <Property name="GuiObjectType">PatchPin</Property>
-            <Property name="Appearance.Pos">30;390</Property>
+            <Property name="Appearance.Pos">30;340</Property>
             <Property name="Private.Selected">0</Property>
             <Property name="Private.ZOrder">208</Property>
             <Property name="Private.ObjID">98</Property>
@@ -9109,11 +9109,11 @@ Phase Number: 3</Value>
           </PropertySet>
         </Properties>
       </PatchPin>
-      <PatchPin id="7059" name="Sensor Output 0">
+      <PatchPin id="7131" name="Sensor Output 0">
         <Properties>
           <PropertySet name="gui-mdi">
             <Property name="GuiObjectType">PatchPin</Property>
-            <Property name="Appearance.Pos">510;200</Property>
+            <Property name="Appearance.Pos">630;360</Property>
             <Property name="Private.Selected">0</Property>
             <Property name="Private.ZOrder">207</Property>
             <Property name="Private.ObjID">99</Property>
@@ -9123,11 +9123,11 @@ Phase Number: 3</Value>
           </PropertySet>
         </Properties>
       </PatchPin>
-      <PatchPin id="7060" name="Sensor Output 1">
+      <PatchPin id="7132" name="Sensor Output 1">
         <Properties>
           <PropertySet name="gui-mdi">
             <Property name="GuiObjectType">PatchPin</Property>
-            <Property name="Appearance.Pos">510;270</Property>
+            <Property name="Appearance.Pos">630;430</Property>
             <Property name="Private.Selected">0</Property>
             <Property name="Private.ZOrder">206</Property>
             <Property name="Private.ObjID">100</Property>
@@ -9137,7 +9137,7 @@ Phase Number: 3</Value>
           </PropertySet>
         </Properties>
       </PatchPin>
-      <PatchPin id="7061" name="Current Time">
+      <PatchPin id="7133" name="Current Time">
         <Properties>
           <PropertySet name="gui-mdi">
             <Property name="GuiObjectType">PatchPin</Property>
@@ -9151,7 +9151,7 @@ Phase Number: 3</Value>
           </PropertySet>
         </Properties>
       </PatchPin>
-      <PatchPin id="7062" name="Subject Number">
+      <PatchPin id="7134" name="Subject Number">
         <Properties>
           <PropertySet name="gui-mdi">
             <Property name="GuiObjectType">PatchPin</Property>
@@ -9165,7 +9165,7 @@ Phase Number: 3</Value>
           </PropertySet>
         </Properties>
       </PatchPin>
-      <PatchPin id="7063" name="Phase Number">
+      <PatchPin id="7135" name="Phase Number">
         <Properties>
           <PropertySet name="gui-mdi">
             <Property name="GuiObjectType">PatchPin</Property>
@@ -9179,7 +9179,7 @@ Phase Number: 3</Value>
           </PropertySet>
         </Properties>
       </PatchPin>
-      <PatchPin id="7064" name="Subject Number">
+      <PatchPin id="7136" name="Subject Number">
         <Properties>
           <PropertySet name="gui-mdi">
             <Property name="GuiObjectType">PatchPin</Property>
@@ -9193,7 +9193,7 @@ Phase Number: 3</Value>
           </PropertySet>
         </Properties>
       </PatchPin>
-      <PatchPin id="7065" name="Phase Number">
+      <PatchPin id="7137" name="Phase Number">
         <Properties>
           <PropertySet name="gui-mdi">
             <Property name="GuiObjectType">PatchPin</Property>
@@ -9207,7 +9207,7 @@ Phase Number: 3</Value>
           </PropertySet>
         </Properties>
       </PatchPin>
-      <PatchPin id="7066" name="Current Time">
+      <PatchPin id="7138" name="Current Time">
         <Properties>
           <PropertySet name="gui-mdi">
             <Property name="GuiObjectType">PatchPin</Property>
@@ -9221,7 +9221,7 @@ Phase Number: 3</Value>
           </PropertySet>
         </Properties>
       </PatchPin>
-      <PatchPin id="7067" name="Play cat - low">
+      <PatchPin id="7139" name="Play cat - low">
         <Properties>
           <PropertySet name="gui-mdi">
             <Property name="GuiObjectType">PatchPin</Property>
@@ -9235,7 +9235,7 @@ Phase Number: 3</Value>
           </PropertySet>
         </Properties>
       </PatchPin>
-      <PatchPin id="7068" name="Play cat - medium">
+      <PatchPin id="7140" name="Play cat - medium">
         <Properties>
           <PropertySet name="gui-mdi">
             <Property name="GuiObjectType">PatchPin</Property>
@@ -9249,7 +9249,7 @@ Phase Number: 3</Value>
           </PropertySet>
         </Properties>
       </PatchPin>
-      <PatchPin id="7069" name="Play cat - high">
+      <PatchPin id="7141" name="Play cat - high">
         <Properties>
           <PropertySet name="gui-mdi">
             <Property name="GuiObjectType">PatchPin</Property>
@@ -9263,7 +9263,7 @@ Phase Number: 3</Value>
           </PropertySet>
         </Properties>
       </PatchPin>
-      <PatchPin id="7070" name="Play inst - low">
+      <PatchPin id="7142" name="Play inst - low">
         <Properties>
           <PropertySet name="gui-mdi">
             <Property name="GuiObjectType">PatchPin</Property>
@@ -9277,7 +9277,7 @@ Phase Number: 3</Value>
           </PropertySet>
         </Properties>
       </PatchPin>
-      <PatchPin id="7071" name="Play inst - medium">
+      <PatchPin id="7143" name="Play inst - medium">
         <Properties>
           <PropertySet name="gui-mdi">
             <Property name="GuiObjectType">PatchPin</Property>
@@ -9291,7 +9291,7 @@ Phase Number: 3</Value>
           </PropertySet>
         </Properties>
       </PatchPin>
-      <PatchPin id="7072" name="Play inst - high">
+      <PatchPin id="7144" name="Play inst - high">
         <Properties>
           <PropertySet name="gui-mdi">
             <Property name="GuiObjectType">PatchPin</Property>
@@ -9305,7 +9305,7 @@ Phase Number: 3</Value>
           </PropertySet>
         </Properties>
       </PatchPin>
-      <PatchPin id="7073" name="Play synth - low">
+      <PatchPin id="7145" name="Play synth - low">
         <Properties>
           <PropertySet name="gui-mdi">
             <Property name="GuiObjectType">PatchPin</Property>
@@ -9319,7 +9319,7 @@ Phase Number: 3</Value>
           </PropertySet>
         </Properties>
       </PatchPin>
-      <PatchPin id="7074" name="Play synth - medium">
+      <PatchPin id="7146" name="Play synth - medium">
         <Properties>
           <PropertySet name="gui-mdi">
             <Property name="GuiObjectType">PatchPin</Property>
@@ -9333,7 +9333,7 @@ Phase Number: 3</Value>
           </PropertySet>
         </Properties>
       </PatchPin>
-      <PatchPin id="7075" name="Play synth - high">
+      <PatchPin id="7147" name="Play synth - high">
         <Properties>
           <PropertySet name="gui-mdi">
             <Property name="GuiObjectType">PatchPin</Property>
@@ -9347,7 +9347,7 @@ Phase Number: 3</Value>
           </PropertySet>
         </Properties>
       </PatchPin>
-      <PatchPin id="7076" name="Play cat - low">
+      <PatchPin id="7148" name="Play cat - low">
         <Properties>
           <PropertySet name="gui-mdi">
             <Property name="GuiObjectType">PatchPin</Property>
@@ -9361,7 +9361,7 @@ Phase Number: 3</Value>
           </PropertySet>
         </Properties>
       </PatchPin>
-      <PatchPin id="7077" name="Play cat - medium">
+      <PatchPin id="7149" name="Play cat - medium">
         <Properties>
           <PropertySet name="gui-mdi">
             <Property name="GuiObjectType">PatchPin</Property>
@@ -9375,7 +9375,7 @@ Phase Number: 3</Value>
           </PropertySet>
         </Properties>
       </PatchPin>
-      <PatchPin id="7078" name="Play cat - high">
+      <PatchPin id="7150" name="Play cat - high">
         <Properties>
           <PropertySet name="gui-mdi">
             <Property name="GuiObjectType">PatchPin</Property>
@@ -9389,7 +9389,7 @@ Phase Number: 3</Value>
           </PropertySet>
         </Properties>
       </PatchPin>
-      <PatchPin id="7079" name="Play inst - low">
+      <PatchPin id="7151" name="Play inst - low">
         <Properties>
           <PropertySet name="gui-mdi">
             <Property name="GuiObjectType">PatchPin</Property>
@@ -9403,7 +9403,7 @@ Phase Number: 3</Value>
           </PropertySet>
         </Properties>
       </PatchPin>
-      <PatchPin id="7080" name="Play inst - medium">
+      <PatchPin id="7152" name="Play inst - medium">
         <Properties>
           <PropertySet name="gui-mdi">
             <Property name="GuiObjectType">PatchPin</Property>
@@ -9417,7 +9417,7 @@ Phase Number: 3</Value>
           </PropertySet>
         </Properties>
       </PatchPin>
-      <PatchPin id="7081" name="Play inst - high">
+      <PatchPin id="7153" name="Play inst - high">
         <Properties>
           <PropertySet name="gui-mdi">
             <Property name="GuiObjectType">PatchPin</Property>
@@ -9431,7 +9431,7 @@ Phase Number: 3</Value>
           </PropertySet>
         </Properties>
       </PatchPin>
-      <PatchPin id="7082" name="Play synth - low">
+      <PatchPin id="7154" name="Play synth - low">
         <Properties>
           <PropertySet name="gui-mdi">
             <Property name="GuiObjectType">PatchPin</Property>
@@ -9445,7 +9445,7 @@ Phase Number: 3</Value>
           </PropertySet>
         </Properties>
       </PatchPin>
-      <PatchPin id="7083" name="Play synth - medium">
+      <PatchPin id="7155" name="Play synth - medium">
         <Properties>
           <PropertySet name="gui-mdi">
             <Property name="GuiObjectType">PatchPin</Property>
@@ -9459,7 +9459,7 @@ Phase Number: 3</Value>
           </PropertySet>
         </Properties>
       </PatchPin>
-      <PatchPin id="7084" name="Play synth - high">
+      <PatchPin id="7156" name="Play synth - high">
         <Properties>
           <PropertySet name="gui-mdi">
             <Property name="GuiObjectType">PatchPin</Property>
@@ -9473,11 +9473,11 @@ Phase Number: 3</Value>
           </PropertySet>
         </Properties>
       </PatchPin>
-      <PatchPin id="7085" name="Subject Number">
+      <PatchPin id="7157" name="Subject Number">
         <Properties>
           <PropertySet name="gui-mdi">
             <Property name="GuiObjectType">PatchPin</Property>
-            <Property name="Appearance.Pos">700;290</Property>
+            <Property name="Appearance.Pos">490;100</Property>
             <Property name="Private.Selected">0</Property>
             <Property name="Private.ZOrder">14</Property>
             <Property name="Private.ObjID">125</Property>
@@ -9487,11 +9487,11 @@ Phase Number: 3</Value>
           </PropertySet>
         </Properties>
       </PatchPin>
-      <PatchPin id="7086" name="Phase Number">
+      <PatchPin id="7158" name="Phase Number">
         <Properties>
           <PropertySet name="gui-mdi">
             <Property name="GuiObjectType">PatchPin</Property>
-            <Property name="Appearance.Pos">700;440</Property>
+            <Property name="Appearance.Pos">490;220</Property>
             <Property name="Private.Selected">0</Property>
             <Property name="Private.ZOrder">10</Property>
             <Property name="Private.ObjID">126</Property>
@@ -9535,7 +9535,7 @@ Phase Number: 3</Value>
             <Property name="Private.ZOrder">210</Property>
             <Property name="Private.ObjID">239</Property>
             <Property name="Appearance.Orientation">1</Property>
-            <Property name="Appearance.Size">340;30</Property>
+            <Property name="Appearance.Size">200;30</Property>
             <Property name="Appearance.FillColor">255; 255; 255</Property>
             <Property name="Appearance.Transparent">1</Property>
             <Property name="Appearance.BorderColor">0; 0; 0</Property>
@@ -9553,12 +9553,12 @@ Phase Number: 3</Value>
         <Properties>
           <PropertySet name="gui-mdi">
             <Property name="GuiObjectType">Label</Property>
-            <Property name="Appearance.Pos">400;20</Property>
+            <Property name="Appearance.Pos">490;20</Property>
             <Property name="Private.Selected">0</Property>
             <Property name="Private.ZOrder">203</Property>
             <Property name="Private.ObjID">240</Property>
             <Property name="Appearance.Orientation">1</Property>
-            <Property name="Appearance.Size">340;30</Property>
+            <Property name="Appearance.Size">290;30</Property>
             <Property name="Appearance.FillColor">255; 255; 255</Property>
             <Property name="Appearance.Transparent">1</Property>
             <Property name="Appearance.BorderColor">0; 0; 0</Property>
@@ -9713,8 +9713,8 @@ Phase Number: 3</Value>
     </CustomObjects>
     <Links>
       <Link>
-        <Pin block="91" id="bang" type="source"/>
-        <Pin block="21" id="PAR_CONNECT" target_type="parameter" type="target"/>
+        <Pin block="163" id="bang" type="source"/>
+        <Pin block="93" id="PAR_CONNECT" target_type="parameter" type="target"/>
         <Properties>
           <PropertySet name="gui-mdi">
             <Property name="Private.SrcPinDelta">0;0</Property>
@@ -9729,8 +9729,8 @@ Phase Number: 3</Value>
         </Properties>
       </Link>
       <Link>
-        <Pin block="161" id="bang" type="source"/>
-        <Pin block="21" id="PAR_START" target_type="parameter" type="target"/>
+        <Pin block="233" id="bang" type="source"/>
+        <Pin block="93" id="PAR_START" target_type="parameter" type="target"/>
         <Properties>
           <PropertySet name="gui-mdi">
             <Property name="Private.SrcPinDelta">0;0</Property>
@@ -9745,8 +9745,8 @@ Phase Number: 3</Value>
         </Properties>
       </Link>
       <Link>
-        <Pin block="231" id="video_stream" type="source"/>
-        <Pin block="430" id="video_stream" target_type="input" type="target"/>
+        <Pin block="303" id="video_stream" type="source"/>
+        <Pin block="502" id="video_stream" target_type="input" type="target"/>
         <Properties>
           <PropertySet name="gui-mdi">
             <Property name="Private.SrcPinDelta">0;0</Property>
@@ -9761,8 +9761,8 @@ Phase Number: 3</Value>
         </Properties>
       </Link>
       <Link>
-        <Pin block="571" id="audio_stream" type="source"/>
-        <Pin block="670" id="input_sound_buffer" target_type="input" type="target"/>
+        <Pin block="643" id="audio_stream" type="source"/>
+        <Pin block="742" id="input_sound_buffer" target_type="input" type="target"/>
         <Properties>
           <PropertySet name="gui-mdi">
             <Property name="Private.SrcPinDelta">0;0</Property>
@@ -9777,8 +9777,8 @@ Phase Number: 3</Value>
         </Properties>
       </Link>
       <Link>
-        <Pin block="670" id="output_pcm_buffer" type="source"/>
-        <Pin block="519" id="input" target_type="input" type="target"/>
+        <Pin block="742" id="output_pcm_buffer" type="source"/>
+        <Pin block="591" id="input" target_type="input" type="target"/>
         <Properties>
           <PropertySet name="gui-mdi">
             <Property name="Private.SrcPinDelta">0;0</Property>
@@ -9793,8 +9793,8 @@ Phase Number: 3</Value>
         </Properties>
       </Link>
       <Link>
-        <Pin block="788" id="GetCurrentTime_1::output::time" type="source"/>
-        <Pin patchpin="7051" type="target"/>
+        <Pin block="860" id="GetCurrentTime_1::output::time" type="source"/>
+        <Pin patchpin="7123" type="target"/>
         <Properties>
           <PropertySet name="gui-mdi">
             <Property name="Private.SrcPinDelta">0;0</Property>
@@ -9809,8 +9809,8 @@ Phase Number: 3</Value>
         </Properties>
       </Link>
       <Link>
-        <Pin block="788" id="ClockGenerator_1::output::BangOut" type="source"/>
-        <Pin patchpin="7052" type="target"/>
+        <Pin block="860" id="ClockGenerator_1::output::BangOut" type="source"/>
+        <Pin patchpin="7124" type="target"/>
         <Properties>
           <PropertySet name="gui-mdi">
             <Property name="Private.SrcPinDelta">0;0</Property>
@@ -9825,11 +9825,11 @@ Phase Number: 3</Value>
         </Properties>
       </Link>
       <Link>
-        <Pin patchpin="7054" type="source"/>
-        <Pin block="719" id="kernel::sync_in" target_type="sync-in" type="target"/>
+        <Pin patchpin="7126" type="source"/>
+        <Pin block="791" id="kernel::sync_in" target_type="sync-in" type="target"/>
         <Properties>
           <PropertySet name="gui-mdi">
-            <Property name="Private.SrcPinDelta">2.5;-6</Property>
+            <Property name="Private.SrcPinDelta">2.5;-10</Property>
             <Property name="Private.SrcPinNdx">1</Property>
             <Property name="Private.DstPinDelta">0;0</Property>
             <Property name="Private.DstPinNdx">-1</Property>
@@ -9841,11 +9841,11 @@ Phase Number: 3</Value>
         </Properties>
       </Link>
       <Link>
-        <Pin patchpin="7053" type="source"/>
-        <Pin block="719" id="input_time" target_type="input" type="target"/>
+        <Pin patchpin="7125" type="source"/>
+        <Pin block="791" id="input_time" target_type="input" type="target"/>
         <Properties>
           <PropertySet name="gui-mdi">
-            <Property name="Private.SrcPinDelta">2.5;-4</Property>
+            <Property name="Private.SrcPinDelta">2.5;4</Property>
             <Property name="Private.SrcPinNdx">1</Property>
             <Property name="Private.DstPinDelta">0;0</Property>
             <Property name="Private.DstPinNdx">-1</Property>
@@ -9857,8 +9857,8 @@ Phase Number: 3</Value>
         </Properties>
       </Link>
       <Link>
-        <Pin block="1060" id="bang" type="source"/>
-        <Pin block="231" id="play" target_type="parameter" type="target"/>
+        <Pin block="1132" id="bang" type="source"/>
+        <Pin block="303" id="play" target_type="parameter" type="target"/>
         <Properties>
           <PropertySet name="gui-mdi">
             <Property name="Private.SrcPinDelta">0;0</Property>
@@ -9873,8 +9873,8 @@ Phase Number: 3</Value>
         </Properties>
       </Link>
       <Link>
-        <Pin block="1060" id="bang" type="source"/>
-        <Pin block="571" id="play" target_type="parameter" type="target"/>
+        <Pin block="1132" id="bang" type="source"/>
+        <Pin block="643" id="play" target_type="parameter" type="target"/>
         <Properties>
           <PropertySet name="gui-mdi">
             <Property name="Private.SrcPinDelta">0;0</Property>
@@ -9889,8 +9889,8 @@ Phase Number: 3</Value>
         </Properties>
       </Link>
       <Link>
-        <Pin block="1130" id="bang" type="source"/>
-        <Pin block="231" id="pause" target_type="parameter" type="target"/>
+        <Pin block="1202" id="bang" type="source"/>
+        <Pin block="303" id="pause" target_type="parameter" type="target"/>
         <Properties>
           <PropertySet name="gui-mdi">
             <Property name="Private.SrcPinDelta">0;0</Property>
@@ -9905,8 +9905,8 @@ Phase Number: 3</Value>
         </Properties>
       </Link>
       <Link>
-        <Pin block="1130" id="bang" type="source"/>
-        <Pin block="571" id="pause" target_type="parameter" type="target"/>
+        <Pin block="1202" id="bang" type="source"/>
+        <Pin block="643" id="pause" target_type="parameter" type="target"/>
         <Properties>
           <PropertySet name="gui-mdi">
             <Property name="Private.SrcPinDelta">0;0</Property>
@@ -9921,8 +9921,8 @@ Phase Number: 3</Value>
         </Properties>
       </Link>
       <Link>
-        <Pin block="1200" id="bang" type="source"/>
-        <Pin block="231" id="stop" target_type="parameter" type="target"/>
+        <Pin block="1272" id="bang" type="source"/>
+        <Pin block="303" id="stop" target_type="parameter" type="target"/>
         <Properties>
           <PropertySet name="gui-mdi">
             <Property name="Private.SrcPinDelta">0;0</Property>
@@ -9937,8 +9937,8 @@ Phase Number: 3</Value>
         </Properties>
       </Link>
       <Link>
-        <Pin block="1200" id="bang" type="source"/>
-        <Pin block="571" id="stop" target_type="parameter" type="target"/>
+        <Pin block="1272" id="bang" type="source"/>
+        <Pin block="643" id="stop" target_type="parameter" type="target"/>
         <Properties>
           <PropertySet name="gui-mdi">
             <Property name="Private.SrcPinDelta">0;0</Property>
@@ -9953,11 +9953,11 @@ Phase Number: 3</Value>
         </Properties>
       </Link>
       <Link>
-        <Pin patchpin="7059" type="source"/>
-        <Pin block="719" id="input_00" target_type="input" type="target"/>
+        <Pin patchpin="7131" type="source"/>
+        <Pin block="791" id="input_00" target_type="input" type="target"/>
         <Properties>
           <PropertySet name="gui-mdi">
-            <Property name="Private.SrcPinDelta">2.5;-2</Property>
+            <Property name="Private.SrcPinDelta">2.5;-6</Property>
             <Property name="Private.SrcPinNdx">1</Property>
             <Property name="Private.DstPinDelta">0;0</Property>
             <Property name="Private.DstPinNdx">-1</Property>
@@ -9969,11 +9969,11 @@ Phase Number: 3</Value>
         </Properties>
       </Link>
       <Link>
-        <Pin patchpin="7060" type="source"/>
-        <Pin block="719" id="input_01" target_type="input" type="target"/>
+        <Pin patchpin="7132" type="source"/>
+        <Pin block="791" id="input_01" target_type="input" type="target"/>
         <Properties>
           <PropertySet name="gui-mdi">
-            <Property name="Private.SrcPinDelta">2.5;0</Property>
+            <Property name="Private.SrcPinDelta">2.5;-4</Property>
             <Property name="Private.SrcPinNdx">1</Property>
             <Property name="Private.DstPinDelta">0;0</Property>
             <Property name="Private.DstPinNdx">-1</Property>
@@ -9985,8 +9985,8 @@ Phase Number: 3</Value>
         </Properties>
       </Link>
       <Link>
-        <Pin block="21" id="OUT_PIN1" type="source"/>
-        <Pin block="1270" id="InputMatrix" target_type="input" type="target"/>
+        <Pin block="93" id="OUT_PIN1" type="source"/>
+        <Pin block="1342" id="InputMatrix" target_type="input" type="target"/>
         <Properties>
           <PropertySet name="gui-mdi">
             <Property name="Private.SrcPinDelta">0;0</Property>
@@ -10001,8 +10001,8 @@ Phase Number: 3</Value>
         </Properties>
       </Link>
       <Link>
-        <Pin block="1270" id="OutputItem" type="source"/>
-        <Pin patchpin="7055" type="target"/>
+        <Pin block="1342" id="OutputItem" type="source"/>
+        <Pin patchpin="7127" type="target"/>
         <Properties>
           <PropertySet name="gui-mdi">
             <Property name="Private.SrcPinDelta">0;0</Property>
@@ -10017,8 +10017,8 @@ Phase Number: 3</Value>
         </Properties>
       </Link>
       <Link>
-        <Pin block="21" id="OUT_PIN2" type="source"/>
-        <Pin block="1325" id="InputMatrix" target_type="input" type="target"/>
+        <Pin block="93" id="OUT_PIN2" type="source"/>
+        <Pin block="1397" id="InputMatrix" target_type="input" type="target"/>
         <Properties>
           <PropertySet name="gui-mdi">
             <Property name="Private.SrcPinDelta">0;0</Property>
@@ -10033,8 +10033,8 @@ Phase Number: 3</Value>
         </Properties>
       </Link>
       <Link>
-        <Pin block="1325" id="OutputItem" type="source"/>
-        <Pin patchpin="7056" type="target"/>
+        <Pin block="1397" id="OutputItem" type="source"/>
+        <Pin patchpin="7128" type="target"/>
         <Properties>
           <PropertySet name="gui-mdi">
             <Property name="Private.SrcPinDelta">0;0</Property>
@@ -10049,8 +10049,8 @@ Phase Number: 3</Value>
         </Properties>
       </Link>
       <Link>
-        <Pin patchpin="7061" type="source"/>
-        <Pin block="1694" id="time" target_type="input" type="target"/>
+        <Pin patchpin="7133" type="source"/>
+        <Pin block="1766" id="time" target_type="input" type="target"/>
         <Properties>
           <PropertySet name="gui-mdi">
             <Property name="Private.SrcPinDelta">7;0.5</Property>
@@ -10065,8 +10065,8 @@ Phase Number: 3</Value>
         </Properties>
       </Link>
       <Link>
-        <Pin block="1694" id="string" type="source"/>
-        <Pin block="1622" id="title" target_type="parameter" type="target"/>
+        <Pin block="1766" id="string" type="source"/>
+        <Pin block="1694" id="title" target_type="parameter" type="target"/>
         <Properties>
           <PropertySet name="gui-mdi">
             <Property name="Private.SrcPinDelta">0;0</Property>
@@ -10081,8 +10081,8 @@ Phase Number: 3</Value>
         </Properties>
       </Link>
       <Link>
-        <Pin block="1745" id="bang" type="source"/>
-        <Pin block="1553" id="rec" target_type="parameter" type="target"/>
+        <Pin block="1817" id="bang" type="source"/>
+        <Pin block="1625" id="rec" target_type="parameter" type="target"/>
         <Properties>
           <PropertySet name="gui-mdi">
             <Property name="Private.SrcPinDelta">0;0</Property>
@@ -10097,8 +10097,8 @@ Phase Number: 3</Value>
         </Properties>
       </Link>
       <Link>
-        <Pin block="1815" id="output" type="source"/>
-        <Pin patchpin="7062" type="target"/>
+        <Pin block="1887" id="output" type="source"/>
+        <Pin patchpin="7134" type="target"/>
         <Properties>
           <PropertySet name="gui-mdi">
             <Property name="Private.SrcPinDelta">0;0</Property>
@@ -10113,8 +10113,8 @@ Phase Number: 3</Value>
         </Properties>
       </Link>
       <Link>
-        <Pin block="1863" id="output" type="source"/>
-        <Pin patchpin="7063" type="target"/>
+        <Pin block="1935" id="output" type="source"/>
+        <Pin patchpin="7135" type="target"/>
         <Properties>
           <PropertySet name="gui-mdi">
             <Property name="Private.SrcPinDelta">0;0</Property>
@@ -10129,8 +10129,8 @@ Phase Number: 3</Value>
         </Properties>
       </Link>
       <Link>
-        <Pin patchpin="7064" type="source"/>
-        <Pin block="1911" id="input_2" target_type="input" type="target"/>
+        <Pin patchpin="7136" type="source"/>
+        <Pin block="1983" id="input_2" target_type="input" type="target"/>
         <Properties>
           <PropertySet name="gui-mdi">
             <Property name="Private.SrcPinDelta">21;-2.5</Property>
@@ -10145,8 +10145,8 @@ Phase Number: 3</Value>
         </Properties>
       </Link>
       <Link>
-        <Pin block="1963" id="output" type="source"/>
-        <Pin block="1911" id="input_1" target_type="input" type="target"/>
+        <Pin block="2035" id="output" type="source"/>
+        <Pin block="1983" id="input_1" target_type="input" type="target"/>
         <Properties>
           <PropertySet name="gui-mdi">
             <Property name="Private.SrcPinDelta">0;0</Property>
@@ -10161,8 +10161,8 @@ Phase Number: 3</Value>
         </Properties>
       </Link>
       <Link>
-        <Pin block="2059" id="Output" type="source"/>
-        <Pin block="1911" id="input_3" target_type="input" type="target"/>
+        <Pin block="2131" id="Output" type="source"/>
+        <Pin block="1983" id="input_3" target_type="input" type="target"/>
         <Properties>
           <PropertySet name="gui-mdi">
             <Property name="Private.SrcPinDelta">0;0</Property>
@@ -10177,8 +10177,8 @@ Phase Number: 3</Value>
         </Properties>
       </Link>
       <Link>
-        <Pin block="2011" id="output" type="source"/>
-        <Pin block="1911" id="input_4" target_type="input" type="target"/>
+        <Pin block="2083" id="output" type="source"/>
+        <Pin block="1983" id="input_4" target_type="input" type="target"/>
         <Properties>
           <PropertySet name="gui-mdi">
             <Property name="Private.SrcPinDelta">0;0</Property>
@@ -10193,8 +10193,8 @@ Phase Number: 3</Value>
         </Properties>
       </Link>
       <Link>
-        <Pin patchpin="7065" type="source"/>
-        <Pin block="1911" id="input_5" target_type="input" type="target"/>
+        <Pin patchpin="7137" type="source"/>
+        <Pin block="1983" id="input_5" target_type="input" type="target"/>
         <Properties>
           <PropertySet name="gui-mdi">
             <Property name="Private.SrcPinDelta">21;0.5</Property>
@@ -10209,8 +10209,8 @@ Phase Number: 3</Value>
         </Properties>
       </Link>
       <Link>
-        <Pin block="1622" id="output_video_stream" type="source"/>
-        <Pin block="2107" id="input_video_stream" target_type="input" type="target"/>
+        <Pin block="1694" id="output_video_stream" type="source"/>
+        <Pin block="2179" id="input_video_stream" target_type="input" type="target"/>
         <Properties>
           <PropertySet name="gui-mdi">
             <Property name="Private.SrcPinDelta">0;0</Property>
@@ -10225,8 +10225,8 @@ Phase Number: 3</Value>
         </Properties>
       </Link>
       <Link>
-        <Pin block="1911" id="output" type="source"/>
-        <Pin block="2107" id="title" target_type="parameter" type="target"/>
+        <Pin block="1983" id="output" type="source"/>
+        <Pin block="2179" id="title" target_type="parameter" type="target"/>
         <Properties>
           <PropertySet name="gui-mdi">
             <Property name="Private.SrcPinDelta">0;0</Property>
@@ -10241,8 +10241,8 @@ Phase Number: 3</Value>
         </Properties>
       </Link>
       <Link>
-        <Pin block="2179" id="audio_stream" type="source"/>
-        <Pin block="1553" id="Audio Stream(0) - 312 Kbps" target_type="input" type="target"/>
+        <Pin block="2251" id="audio_stream" type="source"/>
+        <Pin block="1625" id="Audio Stream(0) - 312 Kbps" target_type="input" type="target"/>
         <Properties>
           <PropertySet name="gui-mdi">
             <Property name="Private.SrcPinDelta">0;0</Property>
@@ -10257,8 +10257,8 @@ Phase Number: 3</Value>
         </Properties>
       </Link>
       <Link>
-        <Pin block="1469" id="video_stream" type="source"/>
-        <Pin block="1622" id="input_video_stream" target_type="input" type="target"/>
+        <Pin block="1541" id="video_stream" type="source"/>
+        <Pin block="1694" id="input_video_stream" target_type="input" type="target"/>
         <Properties>
           <PropertySet name="gui-mdi">
             <Property name="Private.SrcPinDelta">0;0</Property>
@@ -10273,8 +10273,8 @@ Phase Number: 3</Value>
         </Properties>
       </Link>
       <Link>
-        <Pin block="2107" id="output_video_stream" type="source"/>
-        <Pin block="1553" id="Video Stream(1) - 2929 Kbps" target_type="input" type="target"/>
+        <Pin block="2179" id="output_video_stream" type="source"/>
+        <Pin block="1625" id="Video Stream(1) - 2929 Kbps" target_type="input" type="target"/>
         <Properties>
           <PropertySet name="gui-mdi">
             <Property name="Private.SrcPinDelta">0;0</Property>
@@ -10289,8 +10289,8 @@ Phase Number: 3</Value>
         </Properties>
       </Link>
       <Link>
-        <Pin block="2107" id="output_video_stream" type="source"/>
-        <Pin block="1380" id="video_stream" target_type="input" type="target"/>
+        <Pin block="2179" id="output_video_stream" type="source"/>
+        <Pin block="1452" id="video_stream" target_type="input" type="target"/>
         <Properties>
           <PropertySet name="gui-mdi">
             <Property name="Private.SrcPinDelta">0;0</Property>
@@ -10305,8 +10305,8 @@ Phase Number: 3</Value>
         </Properties>
       </Link>
       <Link>
-        <Pin patchpin="7066" type="source"/>
-        <Pin block="2237" id="input_time" target_type="input" type="target"/>
+        <Pin patchpin="7138" type="source"/>
+        <Pin block="2309" id="input_time" target_type="input" type="target"/>
         <Properties>
           <PropertySet name="gui-mdi">
             <Property name="Private.SrcPinDelta">0.5;-4</Property>
@@ -10321,8 +10321,8 @@ Phase Number: 3</Value>
         </Properties>
       </Link>
       <Link>
-        <Pin block="2305" id="OutStringValue" type="source"/>
-        <Pin block="2237" id="input_00" target_type="input" type="target"/>
+        <Pin block="2377" id="OutStringValue" type="source"/>
+        <Pin block="2309" id="input_00" target_type="input" type="target"/>
         <Properties>
           <PropertySet name="gui-mdi">
             <Property name="Private.SrcPinDelta">0;0</Property>
@@ -10337,8 +10337,8 @@ Phase Number: 3</Value>
         </Properties>
       </Link>
       <Link>
-        <Pin block="2305" id="OutStringValue" type="source"/>
-        <Pin block="2237" id="kernel::sync_in" target_type="sync-in" type="target"/>
+        <Pin block="2377" id="OutStringValue" type="source"/>
+        <Pin block="2309" id="kernel::sync_in" target_type="sync-in" type="target"/>
         <Properties>
           <PropertySet name="gui-mdi">
             <Property name="Private.SrcPinDelta">0;0</Property>
@@ -10353,8 +10353,8 @@ Phase Number: 3</Value>
         </Properties>
       </Link>
       <Link>
-        <Pin block="2426" id="bang" type="source"/>
-        <Pin block="2305" id="Input 1" target_type="input" type="target"/>
+        <Pin block="2498" id="bang" type="source"/>
+        <Pin block="2377" id="Input 1" target_type="input" type="target"/>
         <Properties>
           <PropertySet name="gui-mdi">
             <Property name="Private.SrcPinDelta">0;0</Property>
@@ -10369,8 +10369,8 @@ Phase Number: 3</Value>
         </Properties>
       </Link>
       <Link>
-        <Pin block="2496" id="bang" type="source"/>
-        <Pin block="2305" id="Input 2" target_type="input" type="target"/>
+        <Pin block="2568" id="bang" type="source"/>
+        <Pin block="2377" id="Input 2" target_type="input" type="target"/>
         <Properties>
           <PropertySet name="gui-mdi">
             <Property name="Private.SrcPinDelta">0;0</Property>
@@ -10385,8 +10385,8 @@ Phase Number: 3</Value>
         </Properties>
       </Link>
       <Link>
-        <Pin block="2566" id="bang" type="source"/>
-        <Pin block="2305" id="Input 3" target_type="input" type="target"/>
+        <Pin block="2638" id="bang" type="source"/>
+        <Pin block="2377" id="Input 3" target_type="input" type="target"/>
         <Properties>
           <PropertySet name="gui-mdi">
             <Property name="Private.SrcPinDelta">0;0</Property>
@@ -10401,8 +10401,8 @@ Phase Number: 3</Value>
         </Properties>
       </Link>
       <Link>
-        <Pin block="2636" id="bang" type="source"/>
-        <Pin block="2305" id="Input 4" target_type="input" type="target"/>
+        <Pin block="2708" id="bang" type="source"/>
+        <Pin block="2377" id="Input 4" target_type="input" type="target"/>
         <Properties>
           <PropertySet name="gui-mdi">
             <Property name="Private.SrcPinDelta">0;0</Property>
@@ -10417,8 +10417,8 @@ Phase Number: 3</Value>
         </Properties>
       </Link>
       <Link>
-        <Pin block="2706" id="bang" type="source"/>
-        <Pin block="2305" id="Input 5" target_type="input" type="target"/>
+        <Pin block="2778" id="bang" type="source"/>
+        <Pin block="2377" id="Input 5" target_type="input" type="target"/>
         <Properties>
           <PropertySet name="gui-mdi">
             <Property name="Private.SrcPinDelta">0;0</Property>
@@ -10433,8 +10433,8 @@ Phase Number: 3</Value>
         </Properties>
       </Link>
       <Link>
-        <Pin block="2776" id="bang" type="source"/>
-        <Pin block="2305" id="Input 6" target_type="input" type="target"/>
+        <Pin block="2848" id="bang" type="source"/>
+        <Pin block="2377" id="Input 6" target_type="input" type="target"/>
         <Properties>
           <PropertySet name="gui-mdi">
             <Property name="Private.SrcPinDelta">0;0</Property>
@@ -10449,8 +10449,8 @@ Phase Number: 3</Value>
         </Properties>
       </Link>
       <Link>
-        <Pin block="2846" id="bang" type="source"/>
-        <Pin block="2305" id="Input 7" target_type="input" type="target"/>
+        <Pin block="2918" id="bang" type="source"/>
+        <Pin block="2377" id="Input 7" target_type="input" type="target"/>
         <Properties>
           <PropertySet name="gui-mdi">
             <Property name="Private.SrcPinDelta">0;0</Property>
@@ -10465,8 +10465,8 @@ Phase Number: 3</Value>
         </Properties>
       </Link>
       <Link>
-        <Pin block="2916" id="bang" type="source"/>
-        <Pin block="2305" id="Input 8" target_type="input" type="target"/>
+        <Pin block="2988" id="bang" type="source"/>
+        <Pin block="2377" id="Input 8" target_type="input" type="target"/>
         <Properties>
           <PropertySet name="gui-mdi">
             <Property name="Private.SrcPinDelta">0;0</Property>
@@ -10481,8 +10481,8 @@ Phase Number: 3</Value>
         </Properties>
       </Link>
       <Link>
-        <Pin block="2986" id="bang" type="source"/>
-        <Pin block="2305" id="Input 9" target_type="input" type="target"/>
+        <Pin block="3058" id="bang" type="source"/>
+        <Pin block="2377" id="Input 9" target_type="input" type="target"/>
         <Properties>
           <PropertySet name="gui-mdi">
             <Property name="Private.SrcPinDelta">0;0</Property>
@@ -10497,8 +10497,8 @@ Phase Number: 3</Value>
         </Properties>
       </Link>
       <Link>
-        <Pin block="3056" id="bang" type="source"/>
-        <Pin block="2305" id="Input 10" target_type="input" type="target"/>
+        <Pin block="3128" id="bang" type="source"/>
+        <Pin block="2377" id="Input 10" target_type="input" type="target"/>
         <Properties>
           <PropertySet name="gui-mdi">
             <Property name="Private.SrcPinDelta">0;0</Property>
@@ -10513,8 +10513,8 @@ Phase Number: 3</Value>
         </Properties>
       </Link>
       <Link>
-        <Pin block="3126" id="bang" type="source"/>
-        <Pin block="2305" id="Input 11" target_type="input" type="target"/>
+        <Pin block="3198" id="bang" type="source"/>
+        <Pin block="2377" id="Input 11" target_type="input" type="target"/>
         <Properties>
           <PropertySet name="gui-mdi">
             <Property name="Private.SrcPinDelta">0;0</Property>
@@ -10529,8 +10529,8 @@ Phase Number: 3</Value>
         </Properties>
       </Link>
       <Link>
-        <Pin block="3196" id="bang" type="source"/>
-        <Pin block="2305" id="Input 12" target_type="input" type="target"/>
+        <Pin block="3268" id="bang" type="source"/>
+        <Pin block="2377" id="Input 12" target_type="input" type="target"/>
         <Properties>
           <PropertySet name="gui-mdi">
             <Property name="Private.SrcPinDelta">0;0</Property>
@@ -10545,8 +10545,8 @@ Phase Number: 3</Value>
         </Properties>
       </Link>
       <Link>
-        <Pin block="3266" id="bang" type="source"/>
-        <Pin block="2305" id="Input 13" target_type="input" type="target"/>
+        <Pin block="3338" id="bang" type="source"/>
+        <Pin block="2377" id="Input 13" target_type="input" type="target"/>
         <Properties>
           <PropertySet name="gui-mdi">
             <Property name="Private.SrcPinDelta">0;0</Property>
@@ -10561,8 +10561,8 @@ Phase Number: 3</Value>
         </Properties>
       </Link>
       <Link>
-        <Pin block="3336" id="bang" type="source"/>
-        <Pin block="2305" id="Input 14" target_type="input" type="target"/>
+        <Pin block="3408" id="bang" type="source"/>
+        <Pin block="2377" id="Input 14" target_type="input" type="target"/>
         <Properties>
           <PropertySet name="gui-mdi">
             <Property name="Private.SrcPinDelta">0;0</Property>
@@ -10577,8 +10577,8 @@ Phase Number: 3</Value>
         </Properties>
       </Link>
       <Link>
-        <Pin block="3406" id="bang" type="source"/>
-        <Pin block="2305" id="Input 15" target_type="input" type="target"/>
+        <Pin block="3478" id="bang" type="source"/>
+        <Pin block="2377" id="Input 15" target_type="input" type="target"/>
         <Properties>
           <PropertySet name="gui-mdi">
             <Property name="Private.SrcPinDelta">0;0</Property>
@@ -10593,8 +10593,8 @@ Phase Number: 3</Value>
         </Properties>
       </Link>
       <Link>
-        <Pin block="3476" id="bang" type="source"/>
-        <Pin block="2305" id="Input 16" target_type="input" type="target"/>
+        <Pin block="3548" id="bang" type="source"/>
+        <Pin block="2377" id="Input 16" target_type="input" type="target"/>
         <Properties>
           <PropertySet name="gui-mdi">
             <Property name="Private.SrcPinDelta">0;0</Property>
@@ -10609,8 +10609,8 @@ Phase Number: 3</Value>
         </Properties>
       </Link>
       <Link>
-        <Pin block="3546" id="bang" type="source"/>
-        <Pin block="2305" id="Input 17" target_type="input" type="target"/>
+        <Pin block="3618" id="bang" type="source"/>
+        <Pin block="2377" id="Input 17" target_type="input" type="target"/>
         <Properties>
           <PropertySet name="gui-mdi">
             <Property name="Private.SrcPinDelta">0;0</Property>
@@ -10625,8 +10625,8 @@ Phase Number: 3</Value>
         </Properties>
       </Link>
       <Link>
-        <Pin block="3616" id="bang" type="source"/>
-        <Pin block="2305" id="Input 18" target_type="input" type="target"/>
+        <Pin block="3688" id="bang" type="source"/>
+        <Pin block="2377" id="Input 18" target_type="input" type="target"/>
         <Properties>
           <PropertySet name="gui-mdi">
             <Property name="Private.SrcPinDelta">0;0</Property>
@@ -10641,8 +10641,8 @@ Phase Number: 3</Value>
         </Properties>
       </Link>
       <Link>
-        <Pin block="3686" id="bang" type="source"/>
-        <Pin block="2305" id="Input 19" target_type="input" type="target"/>
+        <Pin block="3758" id="bang" type="source"/>
+        <Pin block="2377" id="Input 19" target_type="input" type="target"/>
         <Properties>
           <PropertySet name="gui-mdi">
             <Property name="Private.SrcPinDelta">0;0</Property>
@@ -10657,8 +10657,8 @@ Phase Number: 3</Value>
         </Properties>
       </Link>
       <Link>
-        <Pin block="3756" id="bang" type="source"/>
-        <Pin block="2305" id="Input 20" target_type="input" type="target"/>
+        <Pin block="3828" id="bang" type="source"/>
+        <Pin block="2377" id="Input 20" target_type="input" type="target"/>
         <Properties>
           <PropertySet name="gui-mdi">
             <Property name="Private.SrcPinDelta">0;0</Property>
@@ -10673,8 +10673,8 @@ Phase Number: 3</Value>
         </Properties>
       </Link>
       <Link>
-        <Pin block="3826" id="bang" type="source"/>
-        <Pin block="2305" id="Input 21" target_type="input" type="target"/>
+        <Pin block="3898" id="bang" type="source"/>
+        <Pin block="2377" id="Input 21" target_type="input" type="target"/>
         <Properties>
           <PropertySet name="gui-mdi">
             <Property name="Private.SrcPinDelta">0;0</Property>
@@ -10689,8 +10689,8 @@ Phase Number: 3</Value>
         </Properties>
       </Link>
       <Link>
-        <Pin block="3896" id="bang" type="source"/>
-        <Pin block="2305" id="Input 22" target_type="input" type="target"/>
+        <Pin block="3968" id="bang" type="source"/>
+        <Pin block="2377" id="Input 22" target_type="input" type="target"/>
         <Properties>
           <PropertySet name="gui-mdi">
             <Property name="Private.SrcPinDelta">0;0</Property>
@@ -10705,8 +10705,8 @@ Phase Number: 3</Value>
         </Properties>
       </Link>
       <Link>
-        <Pin block="3966" id="bang" type="source"/>
-        <Pin block="2305" id="Input 23" target_type="input" type="target"/>
+        <Pin block="4038" id="bang" type="source"/>
+        <Pin block="2377" id="Input 23" target_type="input" type="target"/>
         <Properties>
           <PropertySet name="gui-mdi">
             <Property name="Private.SrcPinDelta">0;0</Property>
@@ -10721,8 +10721,8 @@ Phase Number: 3</Value>
         </Properties>
       </Link>
       <Link>
-        <Pin block="4036" id="bang" type="source"/>
-        <Pin block="2305" id="Input 24" target_type="input" type="target"/>
+        <Pin block="4108" id="bang" type="source"/>
+        <Pin block="2377" id="Input 24" target_type="input" type="target"/>
         <Properties>
           <PropertySet name="gui-mdi">
             <Property name="Private.SrcPinDelta">0;0</Property>
@@ -10737,8 +10737,8 @@ Phase Number: 3</Value>
         </Properties>
       </Link>
       <Link>
-        <Pin block="4106" id="bang" type="source"/>
-        <Pin block="2305" id="Input 25" target_type="input" type="target"/>
+        <Pin block="4178" id="bang" type="source"/>
+        <Pin block="2377" id="Input 25" target_type="input" type="target"/>
         <Properties>
           <PropertySet name="gui-mdi">
             <Property name="Private.SrcPinDelta">0;0</Property>
@@ -10753,8 +10753,8 @@ Phase Number: 3</Value>
         </Properties>
       </Link>
       <Link>
-        <Pin block="4228" id="audio_stream" type="source"/>
-        <Pin block="4327" id="input_sound_buffer" target_type="input" type="target"/>
+        <Pin block="4300" id="audio_stream" type="source"/>
+        <Pin block="4399" id="input_sound_buffer" target_type="input" type="target"/>
         <Properties>
           <PropertySet name="gui-mdi">
             <Property name="Private.SrcPinDelta">0;0</Property>
@@ -10769,8 +10769,8 @@ Phase Number: 3</Value>
         </Properties>
       </Link>
       <Link>
-        <Pin block="4327" id="output_pcm_buffer" type="source"/>
-        <Pin block="4176" id="input" target_type="input" type="target"/>
+        <Pin block="4399" id="output_pcm_buffer" type="source"/>
+        <Pin block="4248" id="input" target_type="input" type="target"/>
         <Properties>
           <PropertySet name="gui-mdi">
             <Property name="Private.SrcPinDelta">0;0</Property>
@@ -10785,8 +10785,8 @@ Phase Number: 3</Value>
         </Properties>
       </Link>
       <Link>
-        <Pin patchpin="7067" type="source"/>
-        <Pin block="4228" id="play" target_type="parameter" type="target"/>
+        <Pin patchpin="7139" type="source"/>
+        <Pin block="4300" id="play" target_type="parameter" type="target"/>
         <Properties>
           <PropertySet name="gui-mdi">
             <Property name="Private.SrcPinDelta">21;-1.5</Property>
@@ -10801,8 +10801,8 @@ Phase Number: 3</Value>
         </Properties>
       </Link>
       <Link>
-        <Pin block="4428" id="audio_stream" type="source"/>
-        <Pin block="4527" id="input_sound_buffer" target_type="input" type="target"/>
+        <Pin block="4500" id="audio_stream" type="source"/>
+        <Pin block="4599" id="input_sound_buffer" target_type="input" type="target"/>
         <Properties>
           <PropertySet name="gui-mdi">
             <Property name="Private.SrcPinDelta">0;0</Property>
@@ -10817,8 +10817,8 @@ Phase Number: 3</Value>
         </Properties>
       </Link>
       <Link>
-        <Pin block="4527" id="output_pcm_buffer" type="source"/>
-        <Pin block="4376" id="input" target_type="input" type="target"/>
+        <Pin block="4599" id="output_pcm_buffer" type="source"/>
+        <Pin block="4448" id="input" target_type="input" type="target"/>
         <Properties>
           <PropertySet name="gui-mdi">
             <Property name="Private.SrcPinDelta">0;0</Property>
@@ -10833,8 +10833,8 @@ Phase Number: 3</Value>
         </Properties>
       </Link>
       <Link>
-        <Pin patchpin="7068" type="source"/>
-        <Pin block="4428" id="play" target_type="parameter" type="target"/>
+        <Pin patchpin="7140" type="source"/>
+        <Pin block="4500" id="play" target_type="parameter" type="target"/>
         <Properties>
           <PropertySet name="gui-mdi">
             <Property name="Private.SrcPinDelta">21;0.5</Property>
@@ -10849,8 +10849,8 @@ Phase Number: 3</Value>
         </Properties>
       </Link>
       <Link>
-        <Pin block="4628" id="audio_stream" type="source"/>
-        <Pin block="4727" id="input_sound_buffer" target_type="input" type="target"/>
+        <Pin block="4700" id="audio_stream" type="source"/>
+        <Pin block="4799" id="input_sound_buffer" target_type="input" type="target"/>
         <Properties>
           <PropertySet name="gui-mdi">
             <Property name="Private.SrcPinDelta">0;0</Property>
@@ -10865,8 +10865,8 @@ Phase Number: 3</Value>
         </Properties>
       </Link>
       <Link>
-        <Pin block="4727" id="output_pcm_buffer" type="source"/>
-        <Pin block="4576" id="input" target_type="input" type="target"/>
+        <Pin block="4799" id="output_pcm_buffer" type="source"/>
+        <Pin block="4648" id="input" target_type="input" type="target"/>
         <Properties>
           <PropertySet name="gui-mdi">
             <Property name="Private.SrcPinDelta">0;0</Property>
@@ -10881,8 +10881,8 @@ Phase Number: 3</Value>
         </Properties>
       </Link>
       <Link>
-        <Pin patchpin="7069" type="source"/>
-        <Pin block="4628" id="play" target_type="parameter" type="target"/>
+        <Pin patchpin="7141" type="source"/>
+        <Pin block="4700" id="play" target_type="parameter" type="target"/>
         <Properties>
           <PropertySet name="gui-mdi">
             <Property name="Private.SrcPinDelta">21;2.5</Property>
@@ -10897,8 +10897,8 @@ Phase Number: 3</Value>
         </Properties>
       </Link>
       <Link>
-        <Pin block="4828" id="audio_stream" type="source"/>
-        <Pin block="4927" id="input_sound_buffer" target_type="input" type="target"/>
+        <Pin block="4900" id="audio_stream" type="source"/>
+        <Pin block="4999" id="input_sound_buffer" target_type="input" type="target"/>
         <Properties>
           <PropertySet name="gui-mdi">
             <Property name="Private.SrcPinDelta">0;0</Property>
@@ -10913,8 +10913,8 @@ Phase Number: 3</Value>
         </Properties>
       </Link>
       <Link>
-        <Pin block="4927" id="output_pcm_buffer" type="source"/>
-        <Pin block="4776" id="input" target_type="input" type="target"/>
+        <Pin block="4999" id="output_pcm_buffer" type="source"/>
+        <Pin block="4848" id="input" target_type="input" type="target"/>
         <Properties>
           <PropertySet name="gui-mdi">
             <Property name="Private.SrcPinDelta">0;0</Property>
@@ -10929,8 +10929,8 @@ Phase Number: 3</Value>
         </Properties>
       </Link>
       <Link>
-        <Pin patchpin="7070" type="source"/>
-        <Pin block="4828" id="play" target_type="parameter" type="target"/>
+        <Pin patchpin="7142" type="source"/>
+        <Pin block="4900" id="play" target_type="parameter" type="target"/>
         <Properties>
           <PropertySet name="gui-mdi">
             <Property name="Private.SrcPinDelta">21;2.5</Property>
@@ -10945,8 +10945,8 @@ Phase Number: 3</Value>
         </Properties>
       </Link>
       <Link>
-        <Pin block="5028" id="audio_stream" type="source"/>
-        <Pin block="5127" id="input_sound_buffer" target_type="input" type="target"/>
+        <Pin block="5100" id="audio_stream" type="source"/>
+        <Pin block="5199" id="input_sound_buffer" target_type="input" type="target"/>
         <Properties>
           <PropertySet name="gui-mdi">
             <Property name="Private.SrcPinDelta">0;0</Property>
@@ -10961,8 +10961,8 @@ Phase Number: 3</Value>
         </Properties>
       </Link>
       <Link>
-        <Pin block="5127" id="output_pcm_buffer" type="source"/>
-        <Pin block="4976" id="input" target_type="input" type="target"/>
+        <Pin block="5199" id="output_pcm_buffer" type="source"/>
+        <Pin block="5048" id="input" target_type="input" type="target"/>
         <Properties>
           <PropertySet name="gui-mdi">
             <Property name="Private.SrcPinDelta">0;0</Property>
@@ -10977,8 +10977,8 @@ Phase Number: 3</Value>
         </Properties>
       </Link>
       <Link>
-        <Pin patchpin="7071" type="source"/>
-        <Pin block="5028" id="play" target_type="parameter" type="target"/>
+        <Pin patchpin="7143" type="source"/>
+        <Pin block="5100" id="play" target_type="parameter" type="target"/>
         <Properties>
           <PropertySet name="gui-mdi">
             <Property name="Private.SrcPinDelta">21;2.5</Property>
@@ -10993,8 +10993,8 @@ Phase Number: 3</Value>
         </Properties>
       </Link>
       <Link>
-        <Pin block="5228" id="audio_stream" type="source"/>
-        <Pin block="5327" id="input_sound_buffer" target_type="input" type="target"/>
+        <Pin block="5300" id="audio_stream" type="source"/>
+        <Pin block="5399" id="input_sound_buffer" target_type="input" type="target"/>
         <Properties>
           <PropertySet name="gui-mdi">
             <Property name="Private.SrcPinDelta">0;0</Property>
@@ -11009,8 +11009,8 @@ Phase Number: 3</Value>
         </Properties>
       </Link>
       <Link>
-        <Pin block="5327" id="output_pcm_buffer" type="source"/>
-        <Pin block="5176" id="input" target_type="input" type="target"/>
+        <Pin block="5399" id="output_pcm_buffer" type="source"/>
+        <Pin block="5248" id="input" target_type="input" type="target"/>
         <Properties>
           <PropertySet name="gui-mdi">
             <Property name="Private.SrcPinDelta">0;0</Property>
@@ -11025,8 +11025,8 @@ Phase Number: 3</Value>
         </Properties>
       </Link>
       <Link>
-        <Pin patchpin="7072" type="source"/>
-        <Pin block="5228" id="play" target_type="parameter" type="target"/>
+        <Pin patchpin="7144" type="source"/>
+        <Pin block="5300" id="play" target_type="parameter" type="target"/>
         <Properties>
           <PropertySet name="gui-mdi">
             <Property name="Private.SrcPinDelta">21;-2.5</Property>
@@ -11041,8 +11041,8 @@ Phase Number: 3</Value>
         </Properties>
       </Link>
       <Link>
-        <Pin block="5428" id="audio_stream" type="source"/>
-        <Pin block="5527" id="input_sound_buffer" target_type="input" type="target"/>
+        <Pin block="5500" id="audio_stream" type="source"/>
+        <Pin block="5599" id="input_sound_buffer" target_type="input" type="target"/>
         <Properties>
           <PropertySet name="gui-mdi">
             <Property name="Private.SrcPinDelta">0;0</Property>
@@ -11057,8 +11057,8 @@ Phase Number: 3</Value>
         </Properties>
       </Link>
       <Link>
-        <Pin block="5527" id="output_pcm_buffer" type="source"/>
-        <Pin block="5376" id="input" target_type="input" type="target"/>
+        <Pin block="5599" id="output_pcm_buffer" type="source"/>
+        <Pin block="5448" id="input" target_type="input" type="target"/>
         <Properties>
           <PropertySet name="gui-mdi">
             <Property name="Private.SrcPinDelta">0;0</Property>
@@ -11073,8 +11073,8 @@ Phase Number: 3</Value>
         </Properties>
       </Link>
       <Link>
-        <Pin patchpin="7073" type="source"/>
-        <Pin block="5428" id="play" target_type="parameter" type="target"/>
+        <Pin patchpin="7145" type="source"/>
+        <Pin block="5500" id="play" target_type="parameter" type="target"/>
         <Properties>
           <PropertySet name="gui-mdi">
             <Property name="Private.SrcPinDelta">21;-1.5</Property>
@@ -11089,8 +11089,8 @@ Phase Number: 3</Value>
         </Properties>
       </Link>
       <Link>
-        <Pin block="5628" id="audio_stream" type="source"/>
-        <Pin block="5727" id="input_sound_buffer" target_type="input" type="target"/>
+        <Pin block="5700" id="audio_stream" type="source"/>
+        <Pin block="5799" id="input_sound_buffer" target_type="input" type="target"/>
         <Properties>
           <PropertySet name="gui-mdi">
             <Property name="Private.SrcPinDelta">0;0</Property>
@@ -11105,8 +11105,8 @@ Phase Number: 3</Value>
         </Properties>
       </Link>
       <Link>
-        <Pin block="5727" id="output_pcm_buffer" type="source"/>
-        <Pin block="5576" id="input" target_type="input" type="target"/>
+        <Pin block="5799" id="output_pcm_buffer" type="source"/>
+        <Pin block="5648" id="input" target_type="input" type="target"/>
         <Properties>
           <PropertySet name="gui-mdi">
             <Property name="Private.SrcPinDelta">0;0</Property>
@@ -11121,8 +11121,8 @@ Phase Number: 3</Value>
         </Properties>
       </Link>
       <Link>
-        <Pin patchpin="7074" type="source"/>
-        <Pin block="5628" id="play" target_type="parameter" type="target"/>
+        <Pin patchpin="7146" type="source"/>
+        <Pin block="5700" id="play" target_type="parameter" type="target"/>
         <Properties>
           <PropertySet name="gui-mdi">
             <Property name="Private.SrcPinDelta">21;0.5</Property>
@@ -11137,8 +11137,8 @@ Phase Number: 3</Value>
         </Properties>
       </Link>
       <Link>
-        <Pin block="5828" id="audio_stream" type="source"/>
-        <Pin block="5927" id="input_sound_buffer" target_type="input" type="target"/>
+        <Pin block="5900" id="audio_stream" type="source"/>
+        <Pin block="5999" id="input_sound_buffer" target_type="input" type="target"/>
         <Properties>
           <PropertySet name="gui-mdi">
             <Property name="Private.SrcPinDelta">0;0</Property>
@@ -11153,8 +11153,8 @@ Phase Number: 3</Value>
         </Properties>
       </Link>
       <Link>
-        <Pin block="5927" id="output_pcm_buffer" type="source"/>
-        <Pin block="5776" id="input" target_type="input" type="target"/>
+        <Pin block="5999" id="output_pcm_buffer" type="source"/>
+        <Pin block="5848" id="input" target_type="input" type="target"/>
         <Properties>
           <PropertySet name="gui-mdi">
             <Property name="Private.SrcPinDelta">0;0</Property>
@@ -11169,8 +11169,8 @@ Phase Number: 3</Value>
         </Properties>
       </Link>
       <Link>
-        <Pin patchpin="7075" type="source"/>
-        <Pin block="5828" id="play" target_type="parameter" type="target"/>
+        <Pin patchpin="7147" type="source"/>
+        <Pin block="5900" id="play" target_type="parameter" type="target"/>
         <Properties>
           <PropertySet name="gui-mdi">
             <Property name="Private.SrcPinDelta">21;2.5</Property>
@@ -11185,13 +11185,13 @@ Phase Number: 3</Value>
         </Properties>
       </Link>
       <Link>
-        <Pin block="3476" id="bang" type="source"/>
-        <Pin patchpin="7076" type="target"/>
+        <Pin block="3548" id="bang" type="source"/>
+        <Pin patchpin="7148" type="target"/>
         <Properties>
           <PropertySet name="gui-mdi">
             <Property name="Private.SrcPinDelta">0;0</Property>
             <Property name="Private.SrcPinNdx">-1</Property>
-            <Property name="Private.DstPinDelta">-29;-2.5</Property>
+            <Property name="Private.DstPinDelta">-25;-2.5</Property>
             <Property name="Private.DstPinNdx">0</Property>
             <Property name="Private.NumPins">0</Property>
             <Property name="Private.Selected">0</Property>
@@ -11201,13 +11201,13 @@ Phase Number: 3</Value>
         </Properties>
       </Link>
       <Link>
-        <Pin block="3546" id="bang" type="source"/>
-        <Pin patchpin="7077" type="target"/>
+        <Pin block="3618" id="bang" type="source"/>
+        <Pin patchpin="7149" type="target"/>
         <Properties>
           <PropertySet name="gui-mdi">
             <Property name="Private.SrcPinDelta">0;0</Property>
             <Property name="Private.SrcPinNdx">-1</Property>
-            <Property name="Private.DstPinDelta">-29;-0.5</Property>
+            <Property name="Private.DstPinDelta">-25;-2.5</Property>
             <Property name="Private.DstPinNdx">0</Property>
             <Property name="Private.NumPins">0</Property>
             <Property name="Private.Selected">0</Property>
@@ -11217,13 +11217,13 @@ Phase Number: 3</Value>
         </Properties>
       </Link>
       <Link>
-        <Pin block="3616" id="bang" type="source"/>
-        <Pin patchpin="7078" type="target"/>
+        <Pin block="3688" id="bang" type="source"/>
+        <Pin patchpin="7150" type="target"/>
         <Properties>
           <PropertySet name="gui-mdi">
             <Property name="Private.SrcPinDelta">0;0</Property>
             <Property name="Private.SrcPinNdx">-1</Property>
-            <Property name="Private.DstPinDelta">-29;1.5</Property>
+            <Property name="Private.DstPinDelta">-25;-2.5</Property>
             <Property name="Private.DstPinNdx">0</Property>
             <Property name="Private.NumPins">0</Property>
             <Property name="Private.Selected">0</Property>
@@ -11233,13 +11233,13 @@ Phase Number: 3</Value>
         </Properties>
       </Link>
       <Link>
-        <Pin block="3686" id="bang" type="source"/>
-        <Pin patchpin="7079" type="target"/>
+        <Pin block="3758" id="bang" type="source"/>
+        <Pin patchpin="7151" type="target"/>
         <Properties>
           <PropertySet name="gui-mdi">
             <Property name="Private.SrcPinDelta">0;0</Property>
             <Property name="Private.SrcPinNdx">-1</Property>
-            <Property name="Private.DstPinDelta">-29;-2.5</Property>
+            <Property name="Private.DstPinDelta">-25;-2.5</Property>
             <Property name="Private.DstPinNdx">0</Property>
             <Property name="Private.NumPins">0</Property>
             <Property name="Private.Selected">0</Property>
@@ -11249,13 +11249,13 @@ Phase Number: 3</Value>
         </Properties>
       </Link>
       <Link>
-        <Pin block="3756" id="bang" type="source"/>
-        <Pin patchpin="7080" type="target"/>
+        <Pin block="3828" id="bang" type="source"/>
+        <Pin patchpin="7152" type="target"/>
         <Properties>
           <PropertySet name="gui-mdi">
             <Property name="Private.SrcPinDelta">0;0</Property>
             <Property name="Private.SrcPinNdx">-1</Property>
-            <Property name="Private.DstPinDelta">-29;-2.5</Property>
+            <Property name="Private.DstPinDelta">-25;-2.5</Property>
             <Property name="Private.DstPinNdx">0</Property>
             <Property name="Private.NumPins">0</Property>
             <Property name="Private.Selected">0</Property>
@@ -11265,13 +11265,13 @@ Phase Number: 3</Value>
         </Properties>
       </Link>
       <Link>
-        <Pin block="3826" id="bang" type="source"/>
-        <Pin patchpin="7081" type="target"/>
+        <Pin block="3898" id="bang" type="source"/>
+        <Pin patchpin="7153" type="target"/>
         <Properties>
           <PropertySet name="gui-mdi">
             <Property name="Private.SrcPinDelta">0;0</Property>
             <Property name="Private.SrcPinNdx">-1</Property>
-            <Property name="Private.DstPinDelta">-29;-2.5</Property>
+            <Property name="Private.DstPinDelta">-25;-2.5</Property>
             <Property name="Private.DstPinNdx">0</Property>
             <Property name="Private.NumPins">0</Property>
             <Property name="Private.Selected">0</Property>
@@ -11281,13 +11281,13 @@ Phase Number: 3</Value>
         </Properties>
       </Link>
       <Link>
-        <Pin block="3896" id="bang" type="source"/>
-        <Pin patchpin="7082" type="target"/>
+        <Pin block="3968" id="bang" type="source"/>
+        <Pin patchpin="7154" type="target"/>
         <Properties>
           <PropertySet name="gui-mdi">
             <Property name="Private.SrcPinDelta">0;0</Property>
             <Property name="Private.SrcPinNdx">-1</Property>
-            <Property name="Private.DstPinDelta">-29;-2.5</Property>
+            <Property name="Private.DstPinDelta">-25;-2.5</Property>
             <Property name="Private.DstPinNdx">0</Property>
             <Property name="Private.NumPins">0</Property>
             <Property name="Private.Selected">0</Property>
@@ -11297,13 +11297,13 @@ Phase Number: 3</Value>
         </Properties>
       </Link>
       <Link>
-        <Pin block="3966" id="bang" type="source"/>
-        <Pin patchpin="7083" type="target"/>
+        <Pin block="4038" id="bang" type="source"/>
+        <Pin patchpin="7155" type="target"/>
         <Properties>
           <PropertySet name="gui-mdi">
             <Property name="Private.SrcPinDelta">0;0</Property>
             <Property name="Private.SrcPinNdx">-1</Property>
-            <Property name="Private.DstPinDelta">-29;-0.5</Property>
+            <Property name="Private.DstPinDelta">-25;-2.5</Property>
             <Property name="Private.DstPinNdx">0</Property>
             <Property name="Private.NumPins">0</Property>
             <Property name="Private.Selected">0</Property>
@@ -11313,13 +11313,13 @@ Phase Number: 3</Value>
         </Properties>
       </Link>
       <Link>
-        <Pin block="4036" id="bang" type="source"/>
-        <Pin patchpin="7084" type="target"/>
+        <Pin block="4108" id="bang" type="source"/>
+        <Pin patchpin="7156" type="target"/>
         <Properties>
           <PropertySet name="gui-mdi">
             <Property name="Private.SrcPinDelta">0;0</Property>
             <Property name="Private.SrcPinNdx">-1</Property>
-            <Property name="Private.DstPinDelta">-29;1.5</Property>
+            <Property name="Private.DstPinDelta">-25;-2.5</Property>
             <Property name="Private.DstPinNdx">0</Property>
             <Property name="Private.NumPins">0</Property>
             <Property name="Private.Selected">0</Property>
@@ -11329,8 +11329,8 @@ Phase Number: 3</Value>
         </Properties>
       </Link>
       <Link>
-        <Pin patchpin="7057" type="source"/>
-        <Pin block="5976" id="CyclicalBuffer_1::input::InputPin" target_type="input" type="target"/>
+        <Pin patchpin="7129" type="source"/>
+        <Pin block="6048" id="CyclicalBuffer_1::input::InputPin" target_type="input" type="target"/>
         <Properties>
           <PropertySet name="gui-mdi">
             <Property name="Private.SrcPinDelta">2.5;24</Property>
@@ -11345,11 +11345,11 @@ Phase Number: 3</Value>
         </Properties>
       </Link>
       <Link>
-        <Pin patchpin="7058" type="source"/>
-        <Pin block="5976" id="CyclicalBuffer_2::input::InputPin" target_type="input" type="target"/>
+        <Pin patchpin="7130" type="source"/>
+        <Pin block="6048" id="CyclicalBuffer_2::input::InputPin" target_type="input" type="target"/>
         <Properties>
           <PropertySet name="gui-mdi">
-            <Property name="Private.SrcPinDelta">2.5;-24</Property>
+            <Property name="Private.SrcPinDelta">2.5;-22</Property>
             <Property name="Private.SrcPinNdx">1</Property>
             <Property name="Private.DstPinDelta">0;0</Property>
             <Property name="Private.DstPinNdx">-1</Property>
@@ -11361,11 +11361,11 @@ Phase Number: 3</Value>
         </Properties>
       </Link>
       <Link>
-        <Pin patchpin="7085" type="source"/>
-        <Pin block="6715" id="input_2" target_type="input" type="target"/>
+        <Pin patchpin="7157" type="source"/>
+        <Pin block="6787" id="input_2" target_type="input" type="target"/>
         <Properties>
           <PropertySet name="gui-mdi">
-            <Property name="Private.SrcPinDelta">23;-2.5</Property>
+            <Property name="Private.SrcPinDelta">29;-2.5</Property>
             <Property name="Private.SrcPinNdx">1</Property>
             <Property name="Private.DstPinDelta">0;0</Property>
             <Property name="Private.DstPinNdx">-1</Property>
@@ -11377,8 +11377,8 @@ Phase Number: 3</Value>
         </Properties>
       </Link>
       <Link>
-        <Pin block="6767" id="output" type="source"/>
-        <Pin block="6715" id="input_1" target_type="input" type="target"/>
+        <Pin block="6839" id="output" type="source"/>
+        <Pin block="6787" id="input_1" target_type="input" type="target"/>
         <Properties>
           <PropertySet name="gui-mdi">
             <Property name="Private.SrcPinDelta">0;0</Property>
@@ -11393,8 +11393,8 @@ Phase Number: 3</Value>
         </Properties>
       </Link>
       <Link>
-        <Pin block="6815" id="output" type="source"/>
-        <Pin block="6715" id="input_3" target_type="input" type="target"/>
+        <Pin block="6887" id="output" type="source"/>
+        <Pin block="6787" id="input_3" target_type="input" type="target"/>
         <Properties>
           <PropertySet name="gui-mdi">
             <Property name="Private.SrcPinDelta">0;0</Property>
@@ -11409,11 +11409,11 @@ Phase Number: 3</Value>
         </Properties>
       </Link>
       <Link>
-        <Pin patchpin="7086" type="source"/>
-        <Pin block="6715" id="input_4" target_type="input" type="target"/>
+        <Pin patchpin="7158" type="source"/>
+        <Pin block="6787" id="input_4" target_type="input" type="target"/>
         <Properties>
           <PropertySet name="gui-mdi">
-            <Property name="Private.SrcPinDelta">35;0.5</Property>
+            <Property name="Private.SrcPinDelta">29;2.5</Property>
             <Property name="Private.SrcPinNdx">1</Property>
             <Property name="Private.DstPinDelta">0;0</Property>
             <Property name="Private.DstPinNdx">-1</Property>
@@ -11425,8 +11425,8 @@ Phase Number: 3</Value>
         </Properties>
       </Link>
       <Link>
-        <Pin block="6863" id="output" type="source"/>
-        <Pin block="6715" id="input_5" target_type="input" type="target"/>
+        <Pin block="6935" id="output" type="source"/>
+        <Pin block="6787" id="input_5" target_type="input" type="target"/>
         <Properties>
           <PropertySet name="gui-mdi">
             <Property name="Private.SrcPinDelta">0;0</Property>
@@ -11441,8 +11441,8 @@ Phase Number: 3</Value>
         </Properties>
       </Link>
       <Link>
-        <Pin block="6715" id="output" type="source"/>
-        <Pin block="719" id="file_name" target_type="parameter" type="target"/>
+        <Pin block="6787" id="output" type="source"/>
+        <Pin block="791" id="file_name" target_type="parameter" type="target"/>
         <Properties>
           <PropertySet name="gui-mdi">
             <Property name="Private.SrcPinDelta">0;0</Property>
@@ -11457,8 +11457,8 @@ Phase Number: 3</Value>
         </Properties>
       </Link>
       <Link>
-        <Pin block="6911" id="bang" type="source"/>
-        <Pin block="21" id="PAR_STOP" target_type="parameter" type="target"/>
+        <Pin block="6983" id="bang" type="source"/>
+        <Pin block="93" id="PAR_STOP" target_type="parameter" type="target"/>
         <Properties>
           <PropertySet name="gui-mdi">
             <Property name="Private.SrcPinDelta">0;0</Property>
@@ -11473,8 +11473,8 @@ Phase Number: 3</Value>
         </Properties>
       </Link>
       <Link>
-        <Pin block="6981" id="bang" type="source"/>
-        <Pin block="21" id="PAR_DISCONNECT" target_type="parameter" type="target"/>
+        <Pin block="7053" id="bang" type="source"/>
+        <Pin block="93" id="PAR_DISCONNECT" target_type="parameter" type="target"/>
         <Properties>
           <PropertySet name="gui-mdi">
             <Property name="Private.SrcPinDelta">0;0</Property>
