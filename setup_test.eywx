@@ -1399,7 +1399,7 @@
             <InitInfo/>
           </Parameter>
           <Parameter catalog="kernel" class-id="double" description="Frames per second of the output streams. Usually 25 (PAL) or 30 (NTSC)." design-time="0" enabled="1" id="fps" name="Frames per second" run-time="0">
-            <Value>29.970089850329373</Value>
+            <Value>0</Value>
             <Domain catalog="kernel" class-id="double-domain">0;1;0;0</Domain>
             <Layout/>
             <InitInfo/>
@@ -1548,7 +1548,7 @@
             <Property name="Appearance.Size">520;210</Property>
             <Property name="Appearance.Orientation">1</Property>
             <Property name="Private.ExportedParams"></Property>
-            <Property name="Private.Selected">0</Property>
+            <Property name="Private.Selected">1</Property>
             <Property name="Private.ParamsOrder">kernel::active_status;kernel::active_trigger;kernel::run_level;kernel::sync_in_mode;kernel::log_level;letterbox_mode;filtering;delay;kernel::window_title;kernel::window_rect_x;kernel::window_rect_y;kernel::window_rect_width;kernel::window_rect_height;kernel::window_docked;kernel::window_full_screen;kernel::window_full_screen_monitor_index;kernel::window_zoom;kernel::window_keep_aspect_ratio;kernel::window_horizontal_scroll_pos;kernel::window_vertical_scroll_pos;kernel::window_title_visible;kernel::window_refresh_rate_mode;kernel::window_refresh_rate_min_interval;kernel::window_refresh_rate_max_frequency;kernel::fit_mode</Property>
             <Property name="Private.FullPath">ImageAndVideo.Output.DisplayDirectX</Property>
             <Property name="DisplaySyncInVisible">0</Property>
@@ -2024,12 +2024,12 @@
         </Outputs>
         <PrivateData/>
       </Block>
-      <Block active="1" catalog="system" class-id="image_display" id="1659" label="DisplayDirectX_2" log_info="2" run_level="1" sync-in_mode="1" window_docked="1" window_fit_mode="1" window_full_screen="0" window_full_screen_monitor_index="0" window_horizontal_scroll_pos="0" window_keep_aspect_ratio="1" window_rect_height="38" window_rect_width="160" window_rect_x="0" window_rect_y="873" window_refresh_rate_max_frequency="25" window_refresh_rate_min_interval="400000" window_refresh_rate_mode="0" window_title="Recording Preview" window_title_bar_visible="1" window_vertical_scroll_pos="0" window_zoom="0.1302083283662796">
+      <Block active="1" catalog="system" class-id="image_display" id="1639" label="DisplayDirectX_2" log_info="2" run_level="1" sync-in_mode="1" window_docked="1" window_fit_mode="1" window_full_screen="0" window_full_screen_monitor_index="0" window_horizontal_scroll_pos="0" window_keep_aspect_ratio="1" window_rect_height="38" window_rect_width="160" window_rect_x="0" window_rect_y="873" window_refresh_rate_max_frequency="25" window_refresh_rate_min_interval="400000" window_refresh_rate_mode="0" window_title="Recording Preview" window_title_bar_visible="1" window_vertical_scroll_pos="0" window_zoom="0.1302083283662796">
         <Properties>
           <PropertySet name="gui-mdi">
             <Property name="Appearance.Pos">670;220</Property>
             <Property name="Private.ZOrder">40</Property>
-            <Property name="Private.ObjID">38</Property>
+            <Property name="Private.ObjID">19</Property>
             <Property name="Appearance.Size">450;260</Property>
             <Property name="Appearance.Orientation">1</Property>
             <Property name="Private.ExportedParams"></Property>
@@ -2071,12 +2071,12 @@
         <Outputs/>
         <PrivateData/>
       </Block>
-      <Block active="1" catalog="system" class-id="wdmvideo_input" id="1748" label="FrameGrabber_1" log_info="2" run_level="1" sync-in_mode="0">
+      <Block active="1" catalog="system" class-id="wdmvideo_input" id="1728" label="FrameGrabber_1" log_info="2" run_level="1" sync-in_mode="0">
         <Properties>
           <PropertySet name="gui-mdi">
             <Property name="Appearance.Pos">670;270</Property>
             <Property name="Private.ZOrder">41</Property>
-            <Property name="Private.ObjID">39</Property>
+            <Property name="Private.ObjID">20</Property>
             <Property name="Appearance.Size">48;48</Property>
             <Property name="Appearance.Orientation">1</Property>
             <Property name="Private.ExportedParams"></Property>
@@ -2179,12 +2179,12 @@
         </Outputs>
         <PrivateData/>
       </Block>
-      <Block active="1" catalog="system" class-id="dsound_input" id="1832" label="DirectSoundInput_1" log_info="2" run_level="1" sync-in_mode="1">
+      <Block active="1" catalog="system" class-id="dsound_input" id="1812" label="DirectSoundInput_1" log_info="2" run_level="1" sync-in_mode="1">
         <Properties>
           <PropertySet name="gui-mdi">
             <Property name="Appearance.Pos">670;220</Property>
             <Property name="Private.ZOrder">42</Property>
-            <Property name="Private.ObjID">40</Property>
+            <Property name="Private.ObjID">21</Property>
             <Property name="Appearance.Size">48;48</Property>
             <Property name="Appearance.Orientation">1</Property>
             <Property name="Private.ExportedParams"></Property>
@@ -2239,16 +2239,16 @@
         </Outputs>
         <PrivateData/>
       </Block>
-      <Block active="1" catalog="system" class-id="audio_display_gdi" id="27273" label="AudioDisplay_1" log_info="2" run_level="1" sync-in_mode="1" window_docked="1" window_fit_mode="0" window_full_screen="0" window_full_screen_monitor_index="0" window_horizontal_scroll_pos="0" window_keep_aspect_ratio="1" window_rect_height="0" window_rect_width="0" window_rect_x="0" window_rect_y="0" window_refresh_rate_max_frequency="25" window_refresh_rate_min_interval="400000" window_refresh_rate_mode="0" window_title="AudioDisplay" window_title_bar_visible="1" window_vertical_scroll_pos="0" window_zoom="1">
+      <Block active="1" catalog="system" class-id="audio_display_gdi" id="1870" label="AudioDisplay_1" log_info="2" run_level="1" sync-in_mode="1" window_docked="1" window_fit_mode="0" window_full_screen="0" window_full_screen_monitor_index="0" window_horizontal_scroll_pos="0" window_keep_aspect_ratio="1" window_rect_height="0" window_rect_width="0" window_rect_x="0" window_rect_y="0" window_refresh_rate_max_frequency="25" window_refresh_rate_min_interval="400000" window_refresh_rate_mode="0" window_title="AudioDisplay" window_title_bar_visible="1" window_vertical_scroll_pos="0" window_zoom="1">
         <Properties>
           <PropertySet name="gui-mdi">
             <Property name="Appearance.Pos">670;490</Property>
             <Property name="Private.ZOrder">1</Property>
-            <Property name="Private.ObjID">65</Property>
+            <Property name="Private.ObjID">22</Property>
             <Property name="Appearance.Size">450;220</Property>
             <Property name="Appearance.Orientation">1</Property>
             <Property name="Private.ExportedParams"></Property>
-            <Property name="Private.Selected">1</Property>
+            <Property name="Private.Selected">0</Property>
             <Property name="Private.ParamsOrder">kernel::active_status;kernel::active_trigger;kernel::run_level;kernel::sync_in_mode;kernel::log_level;Label;Merge channels;kernel::window_title;kernel::window_rect_x;kernel::window_rect_y;kernel::window_rect_width;kernel::window_rect_height;kernel::window_docked;kernel::window_full_screen;kernel::window_full_screen_monitor_index;kernel::window_zoom;kernel::window_keep_aspect_ratio;kernel::window_horizontal_scroll_pos;kernel::window_vertical_scroll_pos;kernel::window_title_visible;kernel::window_refresh_rate_mode;kernel::window_refresh_rate_min_interval;kernel::window_refresh_rate_max_frequency;kernel::fit_mode</Property>
             <Property name="Private.FullPath">Audio.Output.AudioDisplay</Property>
             <Property name="DisplaySyncInVisible">0</Property>
@@ -2289,7 +2289,7 @@
             <Property name="Appearance.Pos">10;180</Property>
             <Property name="Private.Selected">0</Property>
             <Property name="Private.ZOrder">24</Property>
-            <Property name="Private.ObjID">36</Property>
+            <Property name="Private.ObjID">42</Property>
             <Property name="Appearance.Orientation">1</Property>
             <Property name="Appearance.Size">630;260</Property>
             <Property name="Appearance.FillColor">192; 192; 192</Property>
@@ -2312,7 +2312,7 @@
             <Property name="Appearance.Pos">10;460</Property>
             <Property name="Private.Selected">0</Property>
             <Property name="Private.ZOrder">35</Property>
-            <Property name="Private.ObjID">37</Property>
+            <Property name="Private.ObjID">43</Property>
             <Property name="Appearance.Orientation">1</Property>
             <Property name="Appearance.Size">630;260</Property>
             <Property name="Appearance.FillColor">192; 192; 192</Property>
@@ -2335,7 +2335,7 @@
             <Property name="Appearance.Pos">660;180</Property>
             <Property name="Private.Selected">0</Property>
             <Property name="Private.ZOrder">43</Property>
-            <Property name="Private.ObjID">41</Property>
+            <Property name="Private.ObjID">44</Property>
             <Property name="Appearance.Orientation">1</Property>
             <Property name="Appearance.Size">470;540</Property>
             <Property name="Appearance.FillColor">192; 192; 192</Property>
@@ -2365,7 +2365,7 @@
             <Property name="Private.NumPins">0</Property>
             <Property name="Private.Selected">0</Property>
             <Property name="Private.ZOrder">12</Property>
-            <Property name="Private.ObjID">19</Property>
+            <Property name="Private.ObjID">23</Property>
           </PropertySet>
         </Properties>
       </Link>
@@ -2381,7 +2381,7 @@
             <Property name="Private.NumPins">0</Property>
             <Property name="Private.Selected">0</Property>
             <Property name="Private.ZOrder">11</Property>
-            <Property name="Private.ObjID">20</Property>
+            <Property name="Private.ObjID">24</Property>
           </PropertySet>
         </Properties>
       </Link>
@@ -2397,7 +2397,7 @@
             <Property name="Private.NumPins">0</Property>
             <Property name="Private.Selected">0</Property>
             <Property name="Private.ZOrder">10</Property>
-            <Property name="Private.ObjID">21</Property>
+            <Property name="Private.ObjID">25</Property>
           </PropertySet>
         </Properties>
       </Link>
@@ -2413,7 +2413,7 @@
             <Property name="Private.NumPins">0</Property>
             <Property name="Private.Selected">0</Property>
             <Property name="Private.ZOrder">9</Property>
-            <Property name="Private.ObjID">22</Property>
+            <Property name="Private.ObjID">26</Property>
           </PropertySet>
         </Properties>
       </Link>
@@ -2429,7 +2429,7 @@
             <Property name="Private.NumPins">0</Property>
             <Property name="Private.Selected">0</Property>
             <Property name="Private.ZOrder">8</Property>
-            <Property name="Private.ObjID">23</Property>
+            <Property name="Private.ObjID">27</Property>
           </PropertySet>
         </Properties>
       </Link>
@@ -2445,7 +2445,7 @@
             <Property name="Private.NumPins">0</Property>
             <Property name="Private.Selected">0</Property>
             <Property name="Private.ZOrder">7</Property>
-            <Property name="Private.ObjID">24</Property>
+            <Property name="Private.ObjID">28</Property>
           </PropertySet>
         </Properties>
       </Link>
@@ -2461,7 +2461,7 @@
             <Property name="Private.NumPins">0</Property>
             <Property name="Private.Selected">0</Property>
             <Property name="Private.ZOrder">6</Property>
-            <Property name="Private.ObjID">25</Property>
+            <Property name="Private.ObjID">29</Property>
           </PropertySet>
         </Properties>
       </Link>
@@ -2477,7 +2477,7 @@
             <Property name="Private.NumPins">0</Property>
             <Property name="Private.Selected">0</Property>
             <Property name="Private.ZOrder">5</Property>
-            <Property name="Private.ObjID">26</Property>
+            <Property name="Private.ObjID">30</Property>
           </PropertySet>
         </Properties>
       </Link>
@@ -2493,7 +2493,7 @@
             <Property name="Private.NumPins">0</Property>
             <Property name="Private.Selected">0</Property>
             <Property name="Private.ZOrder">4</Property>
-            <Property name="Private.ObjID">27</Property>
+            <Property name="Private.ObjID">31</Property>
           </PropertySet>
         </Properties>
       </Link>
@@ -2509,7 +2509,7 @@
             <Property name="Private.NumPins">0</Property>
             <Property name="Private.Selected">0</Property>
             <Property name="Private.ZOrder">3</Property>
-            <Property name="Private.ObjID">28</Property>
+            <Property name="Private.ObjID">32</Property>
           </PropertySet>
         </Properties>
       </Link>
@@ -2525,7 +2525,7 @@
             <Property name="Private.NumPins">0</Property>
             <Property name="Private.Selected">0</Property>
             <Property name="Private.ZOrder">26</Property>
-            <Property name="Private.ObjID">29</Property>
+            <Property name="Private.ObjID">33</Property>
           </PropertySet>
         </Properties>
       </Link>
@@ -2541,7 +2541,7 @@
             <Property name="Private.NumPins">0</Property>
             <Property name="Private.Selected">0</Property>
             <Property name="Private.ZOrder">27</Property>
-            <Property name="Private.ObjID">30</Property>
+            <Property name="Private.ObjID">34</Property>
           </PropertySet>
         </Properties>
       </Link>
@@ -2557,7 +2557,7 @@
             <Property name="Private.NumPins">0</Property>
             <Property name="Private.Selected">0</Property>
             <Property name="Private.ZOrder">28</Property>
-            <Property name="Private.ObjID">31</Property>
+            <Property name="Private.ObjID">35</Property>
           </PropertySet>
         </Properties>
       </Link>
@@ -2573,7 +2573,7 @@
             <Property name="Private.NumPins">0</Property>
             <Property name="Private.Selected">0</Property>
             <Property name="Private.ZOrder">31</Property>
-            <Property name="Private.ObjID">32</Property>
+            <Property name="Private.ObjID">36</Property>
           </PropertySet>
         </Properties>
       </Link>
@@ -2589,7 +2589,7 @@
             <Property name="Private.NumPins">0</Property>
             <Property name="Private.Selected">0</Property>
             <Property name="Private.ZOrder">32</Property>
-            <Property name="Private.ObjID">33</Property>
+            <Property name="Private.ObjID">37</Property>
           </PropertySet>
         </Properties>
       </Link>
@@ -2605,7 +2605,7 @@
             <Property name="Private.NumPins">0</Property>
             <Property name="Private.Selected">0</Property>
             <Property name="Private.ZOrder">33</Property>
-            <Property name="Private.ObjID">34</Property>
+            <Property name="Private.ObjID">38</Property>
           </PropertySet>
         </Properties>
       </Link>
@@ -2621,13 +2621,13 @@
             <Property name="Private.NumPins">0</Property>
             <Property name="Private.Selected">0</Property>
             <Property name="Private.ZOrder">34</Property>
-            <Property name="Private.ObjID">35</Property>
+            <Property name="Private.ObjID">39</Property>
           </PropertySet>
         </Properties>
       </Link>
       <Link>
-        <Pin block="1748" id="video_stream" type="source"/>
-        <Pin block="1659" id="video_stream" target_type="input" type="target"/>
+        <Pin block="1728" id="video_stream" type="source"/>
+        <Pin block="1639" id="video_stream" target_type="input" type="target"/>
         <Properties>
           <PropertySet name="gui-mdi">
             <Property name="Private.SrcPinDelta">0;0</Property>
@@ -2637,13 +2637,13 @@
             <Property name="Private.NumPins">0</Property>
             <Property name="Private.Selected">0</Property>
             <Property name="Private.ZOrder">2</Property>
-            <Property name="Private.ObjID">42</Property>
+            <Property name="Private.ObjID">40</Property>
           </PropertySet>
         </Properties>
       </Link>
       <Link>
-        <Pin block="1832" id="audio_stream" type="source"/>
-        <Pin block="27273" id="input_audio" target_type="input" type="target"/>
+        <Pin block="1812" id="audio_stream" type="source"/>
+        <Pin block="1870" id="input_audio" target_type="input" type="target"/>
         <Properties>
           <PropertySet name="gui-mdi">
             <Property name="Private.SrcPinDelta">0;0</Property>
@@ -2653,7 +2653,7 @@
             <Property name="Private.NumPins">0</Property>
             <Property name="Private.Selected">0</Property>
             <Property name="Private.ZOrder">0</Property>
-            <Property name="Private.ObjID">66</Property>
+            <Property name="Private.ObjID">41</Property>
           </PropertySet>
         </Properties>
       </Link>

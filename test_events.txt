@@ -1,0 +1,3 @@
+Ver. 1.0
+f_time*25*100 string # 
+ 00:00:11:11::02 Begin audio/video playback

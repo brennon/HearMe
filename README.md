@@ -4,34 +4,16 @@
 
 ### Before Experiment (Before Subject Arrives)
 
-- Ensure that all 9V batteries are fully charged.
-- Connect sensors to Wi-microDig. Connect EDA sensor to input 0 and ECG sensor to input 1.
-- Connect 9V battery to Wi-microDig.
-- Open `setup_test` patch.
-- Click the play button to start the patch.
-- Wait several seconds for the patch to fully initialize.
-- Sensor Data
-  - Click "Connect to Sensor".
-  - Once blue LED illuminates and indicator on microDig block turns green, click "Start Data Streaming from Sensor".
-  - If blue LED does not illuminate or block indicator does not turn green, confirm that the selected COM port in the microDig block properties matches that shown for the Bluetooth device by Windows.
-  - Visually confirm with the visualization that data is flowing.
-  - Click "Stop Streaming Data from Sensor".
-  - Click "Disconnect from Sensor".
-- Audio/Video Playback
-  - Click "Play". Confirm that both audio and video playback.
-  - Click "Stop".
-- Video Recording
-  - Confirm that a live camera image is being displayed.
-  - Adjust focus/zoom of camera as necessary.
-  - Visually confirm with visualization that sound from the microphone is being received.
-- Click stop to stop patch.
-- Close EyesWeb.
-- Disconnect 9V battery from transmitter.
-- Sterilize sensor electrodes.
+- Ensure that 9V battery is fully charged.
+- Power on audio interface.
+- Power on speakers.
+- Power on computer.
+- 
 
 ### Before Experiment (After Subject Arrives)
 
 - Attach sensors to subject.
+- Connect sensors to Wi-microDig. Connect EDA sensor to input 0 and ECG sensor to input 1.
 - Connect 9V battery to Wi-microDig.
 - Open EyesWeb patch.
 - In EyesWeb, set subject number in the patch's "Session Metadata" section.
